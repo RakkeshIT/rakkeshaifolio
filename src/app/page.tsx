@@ -5,7 +5,6 @@ import Skill from "@/components/pages/Skill";
 export default function Home() {
   return (
     <>
-    
       <HomePage/>
       <About/>
       <Skill/>
