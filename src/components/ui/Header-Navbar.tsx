@@ -13,7 +13,6 @@ const HeaderNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isWorksOpen, setIsWorksOpen] = useState(false);
 
-
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 80);
@@ -73,44 +72,43 @@ const HeaderNavbar = () => {
         </div>
       </nav>
 
-
       <nav className="bg-neutral-secondary-soft border-y border-default border-default ">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
-              {/* MOBILE HEADER */}
-<div className="flex w-full items-center md:hidden">
-  <button
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-    aria-label="Toggle menu"
-    className="rounded-md p-2 text-heading hover:bg-neutral-100 transition"
-  >
-    <AnimatePresence mode="wait" initial={false}>
-      {isMenuOpen ? (
-        <motion.div
-          key="close"
-          initial={{ rotate: -90, opacity: 0 }}
-          animate={{ rotate: 0, opacity: 1 }}
-          exit={{ rotate: 90, opacity: 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <X size={26} />
-        </motion.div>
-      ) : (
-        <motion.div
-          key="menu"
-          initial={{ rotate: 90, opacity: 0 }}
-          animate={{ rotate: 0, opacity: 1 }}
-          exit={{ rotate: -90, opacity: 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Menu size={26} />
-        </motion.div>
-      )}
-    </AnimatePresence>
-  </button>
-</div>
+          {/* MOBILE HEADER */}
+          <div className="flex w-full items-center md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+              className="rounded-md text-heading hover:bg-neutral-100 transition"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {isMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X size={26} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu size={26} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
           <div
             className={`flex items-center transition-all duration-700 ${
-              isScrolled ? "py-2 justify-between" : ""
+              isScrolled ? "md:py-2 md:justify-between" : ""
             } `}
           >
             <a
@@ -124,7 +122,7 @@ const HeaderNavbar = () => {
               <Image src={Logo} width={80} height={80} alt="Rakkesh Kumar" />
             </a>
 
-            <ul className="hidden md:flex flex-row font-medium space-x-8 text-sm">
+            <ul className="hidden md:flex md:flex-row font-medium space-x-8 text-sm">
               <li>
                 <a
                   href="#"
@@ -194,7 +192,7 @@ const HeaderNavbar = () => {
                 </ul>
               </li>
 
-                <li>
+              <li>
                 <a href="#" className="text-heading hover:underline">
                   Contact
                 </a>
@@ -204,7 +202,7 @@ const HeaderNavbar = () => {
             <div
               className={`flex items-center space-x-6 rtl:space-x-reverse ${
                 isScrolled
-                  ? "transition-opacity opacity-0 md:opacity-100"
+                  ? "md:transition-opacity opacity-0 hidden md:flex md:opacity-100"
                   : "opacity-0 hidden pointer-events-none"
               }`}
             >
@@ -235,118 +233,126 @@ const HeaderNavbar = () => {
             </div>
           </div>
         </div>
-      <AnimatePresence>
-  {isMenuOpen && (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.25 }}
-      className="md:hidden absolute left-0 top-full w-full bg-white/95 backdrop-blur-md border-t border-gray-200 z-50"
-    >
-     <ul className="flex flex-col space-y-2 px-6 py-6 text-base font-medium">
-
-  {/* Home */}
-  <li>
-    <a
-      href="#"
-      onClick={() => setIsMenuOpen(false)}
-      className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
-    >
-      Home
-    </a>
-  </li>
-
-  {/* About */}
-  <li>
-    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
-      About
-    </a>
-  </li>
-
-  {/* Skills */}
-  <li>
-    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
-      Skills
-    </a>
-  </li>
-
-  {/* Projects */}
-  <li>
-    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
-      Projects
-    </a>
-  </li>
-
-  {/* 🔽 My Works (Dropdown) */}
-  <li>
-    <button
-      onClick={() => setIsWorksOpen(!isWorksOpen)}
-      className="flex w-full items-center justify-between rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
-    >
-      <span>My Works</span>
-
-      <motion.span
-        animate={{ rotate: isWorksOpen ? 180 : 0 }}
-        transition={{ duration: 0.2 }}
-        className="ml-2"
-      >
-        ▾
-      </motion.span>
-    </button>
-
-    <AnimatePresence>
-      {isWorksOpen && (
-        <motion.ul
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          transition={{ duration: 0.25 }}
-          className="ml-4 mt-2 flex flex-col overflow-hidden border-l border-neutral-200"
-        >
-          <li>
-            <a
-              href="#web"
-              className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="md:hidden absolute left-0 top-full w-full bg-white/95 backdrop-blur-md border-t border-gray-200 z-50"
             >
-              My Webinars [Free]
-            </a>
-          </li>
-          <li>
-            <a
-              href="#courses"
-              className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
-            >
-              Courses [Free]
-            </a>
-          </li>
-          <li>
-            <a
-              href="#community"
-              className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
-            >
-              My Student Community
-            </a>
-          </li>
-        </motion.ul>
-      )}
-    </AnimatePresence>
-  </li>
+              <ul className="flex flex-col space-y-2 px-6 py-6 text-base font-medium">
+                {/* Home */}
+                <li>
+                  <a
+                    href="#"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
+                  >
+                    Home
+                  </a>
+                </li>
 
-  {/* Contact */}
-  <li>
-    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
-      Contact
-    </a>
-  </li>
-</ul>
+                {/* About */}
+                <li>
+                  <a
+                    href="#"
+                    className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                  >
+                    About
+                  </a>
+                </li>
 
-    </motion.div>
-  )}
-</AnimatePresence>
+                {/* Skills */}
+                <li>
+                  <a
+                    href="#"
+                    className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                  >
+                    Skills
+                  </a>
+                </li>
+
+                {/* Projects */}
+                <li>
+                  <a
+                    href="#"
+                    className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                  >
+                    Projects
+                  </a>
+                </li>
+
+                {/* 🔽 My Works (Dropdown) */}
+                <li>
+                  <button
+                    onClick={() => setIsWorksOpen(!isWorksOpen)}
+                    className="flex w-full items-center justify-between rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
+                  >
+                    <span>My Works</span>
+
+                    <motion.span
+                      animate={{ rotate: isWorksOpen ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="ml-2"
+                    >
+                      ▾
+                    </motion.span>
+                  </button>
+
+                  <AnimatePresence>
+                    {isWorksOpen && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="ml-4 mt-2 flex flex-col overflow-hidden border-l border-neutral-200"
+                      >
+                        <li>
+                          <a
+                            href="#web"
+                            className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+                          >
+                            My Webinars [Free]
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#courses"
+                            className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+                          >
+                            Courses [Free]
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#community"
+                            className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+                          >
+                            My Student Community
+                          </a>
+                        </li>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* Contact */}
+                <li>
+                  <a
+                    href="#"
+                    className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
-
-
     </header>
   );
 };
