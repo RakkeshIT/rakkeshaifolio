@@ -1,8 +1,12 @@
+'use client'
 import React from 'react'
-
+import { File, Search, Settings } from "lucide-react"
+import { OrbitingCirclesDemo } from '../ui/OrbitingCircles'
 const About = () => {
   return (
-    <div className='h-screen'>About</div>
+    <>
+      <OrbitingCirclesDemo />
+    </>
   )
 }
 
