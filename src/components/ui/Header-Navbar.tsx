@@ -5,8 +5,14 @@ import Image from "next/image";
 import Logo from "@/assets/NavLogo.png";
 import LinkedIn from "@/assets/linkedin.svg";
 import Git from "@/assets/github.svg";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 const HeaderNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isWorksOpen, setIsWorksOpen] = useState(false);
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,13 +26,13 @@ const HeaderNavbar = () => {
   }, []);
   return (
     <header
-      className="fixed w-full z-20 top-0 start-0 z-50  bg-white/8
-  backdrop-blur
-  border-b border-white/20"
+      className={
+        "fixed w-full z-20 top-0 start-0 z-50  bg-white/8 backdrop-blur border-b border-white/20"
+      }
     >
       <nav
         className={`bg-neutral-primary transition-all duration-700 overflow-hidden ${
-          isScrolled ? "transition-opacity opacity-0 h-0" : "opacity-100"
+          isScrolled ? "transition-opacity md:opacity-0 md:h-0" : "opacity-100"
         }`}
       >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
@@ -37,8 +43,9 @@ const HeaderNavbar = () => {
             <Image src={Logo} width={80} height={80} alt="Rakkesh Kumar" />
           </a>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <a
-              href="#"
+            <Link
+              href="https://github.com/RakkeshIT"
+              target="_blank"
               className="text-sm font-medium text-fg-brand hover:underline"
             >
               <Image
@@ -48,9 +55,10 @@ const HeaderNavbar = () => {
                 className="hover:drop-shadow-[0_0_8px_#181717] transition-all"
                 alt="Rakkesh Kumar"
               />
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/rakkeshit/"
+              target="_blank"
               className="text-sm font-medium text-fg-brand hover:underline"
             >
               <Image
@@ -60,13 +68,46 @@ const HeaderNavbar = () => {
                 alt="Rakkesh Kumar"
                 className="hover:drop-shadow-[0_0_8px_#0A66C2] transition-all"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
 
-      <nav className="bg-neutral-secondary-soft border-y border-default border-default">
+
+      <nav className="bg-neutral-secondary-soft border-y border-default border-default ">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
+              {/* MOBILE HEADER */}
+<div className="flex w-full items-center md:hidden">
+  <button
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+    aria-label="Toggle menu"
+    className="rounded-md p-2 text-heading hover:bg-neutral-100 transition"
+  >
+    <AnimatePresence mode="wait" initial={false}>
+      {isMenuOpen ? (
+        <motion.div
+          key="close"
+          initial={{ rotate: -90, opacity: 0 }}
+          animate={{ rotate: 0, opacity: 1 }}
+          exit={{ rotate: 90, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <X size={26} />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="menu"
+          initial={{ rotate: 90, opacity: 0 }}
+          animate={{ rotate: 0, opacity: 1 }}
+          exit={{ rotate: -90, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <Menu size={26} />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </button>
+</div>
           <div
             className={`flex items-center transition-all duration-700 ${
               isScrolled ? "py-2 justify-between" : ""
@@ -76,14 +117,14 @@ const HeaderNavbar = () => {
               href="https://flowbite.com"
               className={`flex items-center space-x-3 rtl:space-x-reverse transition-all duration-700 ${
                 isScrolled
-                  ? "transition-opacity opacity-100"
+                  ? "transition-opacity max-md:hidden opacity-0 md:opacity-100"
                   : "opacity-0 hidden pointer-events-none"
               }`}
             >
               <Image src={Logo} width={80} height={80} alt="Rakkesh Kumar" />
             </a>
 
-            <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+            <ul className="hidden md:flex flex-row font-medium space-x-8 text-sm">
               <li>
                 <a
                   href="#"
@@ -109,16 +150,13 @@ const HeaderNavbar = () => {
                 </a>
               </li>
               <li className="relative group">
-  <a
-    href="#"
-    className="text-heading hover:underline"
-  >
-    My Works
-  </a>
+                <a href="#" className="text-heading hover:underline">
+                  My Works
+                </a>
 
-  {/* Dropdown */}
-  <ul
-    className="
+                {/* Dropdown */}
+                <ul
+                  className="
       absolute left-0 mt-6 w-60
       bg-white/90 backdrop-blur-md border border-gray-200
       rounded-md shadow-lg
@@ -128,40 +166,45 @@ const HeaderNavbar = () => {
       transform -translate-y-2 group-hover:translate-y-0
       z-50
     "
-  >
-    <li>
-      <a
-        href="#web"
-        className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
-      >
-        My Webinars [Free]
-      </a>
-    </li>
-    <li>
-      <a
-        href="#mobile"
-        className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
-      >
-       Courses [Free]
-      </a>
-    </li>
-    <li>
-      <a
-        href="#design"
-        className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
-      >
-        My Student Community
-      </a>
-    </li>
-  </ul>
-</li>
+                >
+                  <li>
+                    <a
+                      href="#web"
+                      className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
+                    >
+                      My Webinars [Free]
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#mobile"
+                      className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
+                    >
+                      Courses [Free]
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#design"
+                      className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
+                    >
+                      My Student Community
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
+                <li>
+                <a href="#" className="text-heading hover:underline">
+                  Contact
+                </a>
+              </li>
             </ul>
 
             <div
               className={`flex items-center space-x-6 rtl:space-x-reverse ${
                 isScrolled
-                  ? "transition-opacity opacity-100"
+                  ? "transition-opacity opacity-0 md:opacity-100"
                   : "opacity-0 hidden pointer-events-none"
               }`}
             >
@@ -192,7 +235,118 @@ const HeaderNavbar = () => {
             </div>
           </div>
         </div>
+      <AnimatePresence>
+  {isMenuOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.25 }}
+      className="md:hidden absolute left-0 top-full w-full bg-white/95 backdrop-blur-md border-t border-gray-200 z-50"
+    >
+     <ul className="flex flex-col space-y-2 px-6 py-6 text-base font-medium">
+
+  {/* Home */}
+  <li>
+    <a
+      href="#"
+      onClick={() => setIsMenuOpen(false)}
+      className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
+    >
+      Home
+    </a>
+  </li>
+
+  {/* About */}
+  <li>
+    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
+      About
+    </a>
+  </li>
+
+  {/* Skills */}
+  <li>
+    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
+      Skills
+    </a>
+  </li>
+
+  {/* Projects */}
+  <li>
+    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
+      Projects
+    </a>
+  </li>
+
+  {/* 🔽 My Works (Dropdown) */}
+  <li>
+    <button
+      onClick={() => setIsWorksOpen(!isWorksOpen)}
+      className="flex w-full items-center justify-between rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
+    >
+      <span>My Works</span>
+
+      <motion.span
+        animate={{ rotate: isWorksOpen ? 180 : 0 }}
+        transition={{ duration: 0.2 }}
+        className="ml-2"
+      >
+        ▾
+      </motion.span>
+    </button>
+
+    <AnimatePresence>
+      {isWorksOpen && (
+        <motion.ul
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="ml-4 mt-2 flex flex-col overflow-hidden border-l border-neutral-200"
+        >
+          <li>
+            <a
+              href="#web"
+              className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+            >
+              My Webinars [Free]
+            </a>
+          </li>
+          <li>
+            <a
+              href="#courses"
+              className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+            >
+              Courses [Free]
+            </a>
+          </li>
+          <li>
+            <a
+              href="#community"
+              className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
+            >
+              My Student Community
+            </a>
+          </li>
+        </motion.ul>
+      )}
+    </AnimatePresence>
+  </li>
+
+  {/* Contact */}
+  <li>
+    <a href="#" className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100">
+      Contact
+    </a>
+  </li>
+</ul>
+
+    </motion.div>
+  )}
+</AnimatePresence>
       </nav>
+
+
     </header>
   );
 };
