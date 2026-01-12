@@ -153,18 +153,7 @@ const HeaderNavbar = () => {
                 </a>
 
                 {/* Dropdown */}
-                <ul
-                  className="
-      absolute left-0 mt-6 w-60
-      bg-white/90 backdrop-blur-md border border-gray-200
-      rounded-md shadow-lg
-      opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible
-      transition-all duration-300 ease-in-out
-      transform -translate-y-2 group-hover:translate-y-0
-      z-50
-    "
-                >
+                <ul className=" absolute left-0 mt-6 w-60 bg-white/90 backdrop-blur-md border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform -translate-y-2 group-hover:translate-y-0 z-50">
                   <li>
                     <a
                       href="#web"
