@@ -1,0 +1,183 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "mongodb",
+      "label": "MongoDB"
+    },
+    {
+      "id": 2,
+      "name": "express",
+      "label": "Express.js"
+    },
+    {
+      "id": 3,
+      "name": "react",
+      "label": "React"
+    },
+    {
+      "id": 4,
+      "name": "nextjs",
+      "label": "Next.js"
+    },
+    {
+      "id": 5,
+      "name": "nodejs",
+      "label": "Node.js"
+    },
+    {
+      "id": 6,
+      "name": "html",
+      "label": "HTML5"
+    },
+    {
+      "id": 7,
+      "name": "css",
+      "label": "CSS3"
+    },
+    {
+      "id": 8,
+      "name": "javascript",
+      "label": "JavaScript"
+    },
+    {
+      "id": 9,
+      "name": "typescript",
+      "label": "TypeScript"
+    },
+    {
+      "id": 10,
+      "name": "tailwind",
+      "label": "Tailwind CSS"
+    },
+    {
+      "id": 11,
+      "name": "bootstrap",
+      "label": "Bootstrap"
+    },
+    {
+      "id": 12,
+      "name": "antdesign",
+      "label": "Ant Design"
+    },
+    {
+      "id": 13,
+      "name": "python",
+      "label": "Python"
+    },
+    {
+      "id": 14,
+      "name": "numpy",
+      "label": "NumPy"
+    },
+    {
+      "id": 15,
+      "name": "pandas",
+      "label": "Pandas"
+    }
+  ],
+  "tools": [
+    {
+      "id": 1,
+      "name": "git",
+      "label": "Git"
+    },
+    {
+      "id": 2,
+      "name": "github",
+      "label": "GitHub"
+    },
+    {
+      "id": 3,
+      "name": "vscode",
+      "label": "VS Code"
+    },
+    {
+      "id": 4,
+      "name": "postman",
+      "label": "Postman"
+    },
+    {
+      "id": 5,
+      "name": "docker",
+      "label": "Docker"
+    },
+    {
+      "id": 6,
+      "name": "npm",
+      "label": "NPM"
+    },
+    {
+      "id": 7,
+      "name": "yarn",
+      "label": "Yarn"
+    },
+    {
+      "id": 8,
+      "name": "eslint",
+      "label": "ESLint"
+    },
+    {
+      "id": 9,
+      "name": "prettier",
+      "label": "Prettier"
+    },
+    {
+      "id": 10,
+      "name": "jest",
+      "label": "Jest"
+    }
+  ],
+  "platforms": [
+    {
+      "id": 1,
+      "name": "windows",
+      "label": "Windows"
+    },
+    {
+      "id": 2,
+      "name": "macos",
+      "label": "macOS"
+    },
+    {
+      "id": 3,
+      "name": "linux",
+      "label": "Linux"
+    },
+    {
+      "id": 4,
+      "name": "vercel",
+      "label": "Vercel"
+    },
+    {
+      "id": 5,
+      "name": "netlify",
+      "label": "Netlify"
+    },
+    {
+      "id": 6,
+      "name": "aws",
+      "label": "AWS"
+    },
+    {
+      "id": 7,
+      "name": "firebase",
+      "label": "Firebase"
+    },
+    {
+      "id": 8,
+      "name": "supabase",
+      "label": "Supabase"
+    },
+    {
+      "id": 9,
+      "name": "dockerhub",
+      "label": "Docker Hub"
+    },
+    {
+      "id": 10,
+      "name": "cloudflare",
+      "label": "Cloudflare"
+    }
+  ]
+}
