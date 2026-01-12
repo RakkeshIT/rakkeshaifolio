@@ -37,7 +37,7 @@ export function OrbitingCircles({
         <img
           src={centerImage}
           alt="Center Imgage"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+          className="absolute top-[52%] left-[51%] -translate-x-1/2 -translate-y-1/2 rounded-full"
           style={{ width: centerSize, height: centerSize }}
         />
       )}
@@ -51,8 +51,8 @@ export function OrbitingCircles({
         >
           <circle
             className="stroke-black/10 stroke-1 dark:stroke-white/10"
-            cx="50%"
-            cy="50%"
+            cx="51%"
+            cy="53%"
             r={radius}
             fill="none"
           />
@@ -77,7 +77,7 @@ export function OrbitingCircles({
               { "[animation-direction:reverse]": reverse },
               className
             )}
-            {...props}
+            // {...props}
           >
             {child}
           </div>

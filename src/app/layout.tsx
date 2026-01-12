@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderNavbar from "@/components/ui/Header-Navbar";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,9 +16,7 @@ export const metadata: Metadata = {
   title: "Rakkesh developer portfolio",
   description: "Rakkesh developer portfolio website showcasing skills and projects.",
   icons: {
-    icon: "/NavLogo.png",
-    shortcut: "/NavLogo.png",
-    apple: "/NavLogo.png",
+    icon: "/titlelogo.png",
     
   }
 };
