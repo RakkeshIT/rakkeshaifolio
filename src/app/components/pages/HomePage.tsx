@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { InteractiveGridPattern } from "../ui/interactive-grid-pattern";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Coding from "../assets/coding.png";
 import { motion } from "framer-motion";
+import { cn } from "@/app/lib/utils";
 const HomePage = () => {
   return (
     <>

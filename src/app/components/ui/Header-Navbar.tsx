@@ -2,9 +2,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/assets/NavLogo.png";
-import LinkedIn from "@/assets/linkedin.svg";
-import Git from "@/assets/github.svg";
+import Logo from "../assets/NavLogo.png";
+import LinkedIn from "../assets/linkedin.svg";
+import Git from "../assets/github.svg";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
