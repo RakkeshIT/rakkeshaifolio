@@ -15,12 +15,12 @@ export const IconGrid = ({data, iconMap, bg}: {data: any[], iconMap: Record<stri
       key={item.id}
       className={`${bg} rounded-xl flex flex-col items-center justify-center p-3`}
     >
-      <Image
+      {iconMap[item.name] && (<Image
         src={iconMap[item.name]}
         alt={item.label}
         width={28}
         height={28}
-      />
+      />)}
       <span className="text-[10px] mt-1 text-center">{item.label}</span>
     </div>
   ))}
