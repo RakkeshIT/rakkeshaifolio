@@ -8,6 +8,7 @@ import Git from "../assets/github.svg";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import {AuroraText} from '../../../components/ui/aurora-text'
 const HeaderNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const HeaderNavbar = () => {
             href="https://flowbite.com"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <Image src={Logo} width={80} height={80} alt="Rakkesh Kumar" />
+            <AuroraText className="font-bold text-lg">Developer</AuroraText>
           </a>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <Link
