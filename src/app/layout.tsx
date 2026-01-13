@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderNavbar from "./components/ui/Header-Navbar";
-import ClickSpark from '../components/ClickSpark';
+import ClickSpark from "../components/ClickSpark";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,14 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rakkesh developer portfolio",
-  description: "Rakkesh developer portfolio website showcasing skills and projects.",
+  title:"Rakkesh developer portfolio",
+  description:
+    "Rakkesh developer portfolio website showcasing skills and projects.",
   icons: {
     icon: "/titlelogo.png",
-    
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -34,14 +33,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ClickSpark sparkColor="red">
-
-        <main className="pt-[120px]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {children}
-          </div>
-        </main>
+          <HeaderNavbar />
+          <main>
+          {children}
+          </main>
         </ClickSpark>
-        <HeaderNavbar />
       </body>
     </html>
   );
