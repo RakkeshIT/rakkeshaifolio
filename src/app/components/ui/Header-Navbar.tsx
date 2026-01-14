@@ -9,11 +9,19 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import {AuroraText} from '../../../components/ui/aurora-text'
-const HeaderNavbar = () => {
+
+type Props = {
+  homeRef: React.RefObject<HTMLDivElement>
+  aboutRef: React.RefObject<HTMLDivElement>
+  skillRef: React.RefObject<HTMLDivElement>
+  projectsRef: React.RefObject<HTMLDivElement>
+  contactRef: React.RefObject<HTMLDivElement>
+}
+const HeaderNavbar = ({section}: {section: Props}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isWorksOpen, setIsWorksOpen] = useState(false);
-
+  const [isContact, setIsContact] = useState(false);
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 80);
@@ -24,10 +32,27 @@ const HeaderNavbar = () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if(!section.contactRef) return;
+
+    const observed = new IntersectionObserver(([entry]) => {
+        setIsContact(entry.isIntersecting)
+    }, {threshold: 0.4})
+
+    observed.observe(section.contactRef.current)
+
+    return () => observed.disconnect()
+  }, [section.contactRef])
+
+  const scrollTo = (e:React.MouseEvent<HTMLAnchorElement>,ref: React.RefObject<HTMLDivElement>) => {
+    e.preventDefault()
+    ref.current?.scrollIntoView({behavior: "smooth"})
+  } 
   return (
     <header
       className={
-        "fixed w-full z-20 top-0 start-0 z-50  bg-white/8 backdrop-blur border-b border-white/20"
+        `fixed w-full z-20 top-0 start-0 z-50  ${isContact ?  'text-white': 'bg-white/8 backdrop-blur border-b border-white/20'}`
       }
     >
       <nav
@@ -120,7 +145,10 @@ const HeaderNavbar = () => {
                   : "opacity-0 hidden pointer-events-none"
               }`}
             >
-              <Image src={Logo} width={80} height={80} alt="Rakkesh Kumar" />
+              {
+                isContact ? ( <AuroraText className="font-bold text-lg">Developer</AuroraText>) : ( <Image src={Logo} width={80} height={80} alt="Rakkesh Kumar" />)
+              }
+             
             </a>
 
             <ul className="hidden md:flex md:flex-row font-medium space-x-8 text-sm">
@@ -129,22 +157,23 @@ const HeaderNavbar = () => {
                   href="#"
                   className="text-heading hover:underline"
                   aria-current="page"
+                  onClick={(e) => scrollTo(e, section.homeRef)}
                 >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-heading hover:underline">
+                <a href="#" className="text-heading hover:underline" onClick={(e) => scrollTo(e, section.aboutRef)}>
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-heading hover:underline">
+                <a href="#" className="text-heading hover:underline" onClick={(e) => scrollTo(e, section.skillRef)}>
                   Skils
                 </a>
               </li>
               <li>
-                <a href="#" className="text-heading hover:underline">
+                <a href="#" className="text-heading hover:underline" onClick={(e) => scrollTo(e, section.projectsRef)}>
                   Projects
                 </a>
               </li>
@@ -183,7 +212,7 @@ const HeaderNavbar = () => {
               </li>
 
               <li>
-                <a href="#" className="text-heading hover:underline">
+                <a href="#" className="text-heading hover:underline"onClick={(e) => scrollTo(e, section.contactRef)}>
                   Contact
                 </a>
               </li>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import HeaderNavbar from "./components/ui/Header-Navbar";
 import ClickSpark from "../components/ClickSpark";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +32,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ClickSpark sparkColor="red">
-          <HeaderNavbar />
           <main>
           {children}
           </main>
