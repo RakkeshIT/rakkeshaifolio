@@ -49,6 +49,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
     e.preventDefault()
     ref.current?.scrollIntoView({behavior: "smooth"})
   } 
+
   return (
     <header
       className={
