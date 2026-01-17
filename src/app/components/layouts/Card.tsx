@@ -1,7 +1,9 @@
+import { Link2 } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
-const ProjectCard = ({image, title, techStack, onView }: {image: any, title: string, techStack: string, onView?: () => void}) => {
+const ProjectCard = ({image, title, techStack, liveLink, onView }: {image: any, title: string, liveLink:string, techStack: string, onView?: () => void}) => {
   return (
      <div className="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
           
@@ -25,9 +27,14 @@ const ProjectCard = ({image, title, techStack, onView }: {image: any, title: str
               {techStack}
             </p>
     
+            <div className='flex justify-between items-center'>
             <button onClick={onView} className="mt-4 w-fit rounded-lg bg-white px-4 py-2 text-sm font-medium text-black hover:bg-gray-200">
               View Project
             </button>
+            <Link href={liveLink} className='mt-3' target='_blank'>
+              <Link2/>
+            </Link>
+            </div>
           </div>
         </div>
   )

@@ -50,6 +50,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
     ref.current?.scrollIntoView({behavior: "smooth"})
   } 
 
+
   return (
     <header
       className={
@@ -267,7 +268,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                 <li>
                   <a
                     href="#"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {setIsMenuOpen(false), scrollTo(e, section.homeRef)}}
                     className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100 transition"
                   >
                     Home
@@ -279,6 +280,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                   <a
                     href="#"
                     className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                     onClick={(e) => {setIsMenuOpen(false), scrollTo(e, section.aboutRef)}}
                   >
                     About
                   </a>
@@ -289,6 +291,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                   <a
                     href="#"
                     className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                     onClick={(e) => {setIsMenuOpen(false), scrollTo(e, section.skillRef)}}
                   >
                     Skills
                   </a>
@@ -299,6 +302,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                   <a
                     href="#"
                     className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                     onClick={(e) => {setIsMenuOpen(false), scrollTo(e, section.projectsRef)}}
                   >
                     Projects
                   </a>
@@ -364,6 +368,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                   <a
                     href="#"
                     className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                     onClick={(e) => {setIsMenuOpen(false), scrollTo(e, section.contactRef)}}
                   >
                     Contact
                   </a>
