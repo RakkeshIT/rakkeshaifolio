@@ -21,6 +21,7 @@
   "registries": {
     "@magicui": "https://magicui.design/r/{name}.json",
     "@react-bits": "https://reactbits.dev/r/{name}.json",
-    "@ss-components": "https://shadcnstudio.com/r/components/{name}.json"
+    "@ss-components": "https://shadcnstudio.com/r/components/{name}.json",
+    "@creative-tim": "https://www.creative-tim.com/ui/r/{name}.json"
   }
 }

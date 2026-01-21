@@ -1,0 +1,75 @@
+[
+    {
+  "id": 1,
+  "title": "Roles and Permissions Web Application",
+  "tagline": "A secure web app with dynamic roles and permissions management using React and Laravel.",
+  "description": "Developed a web application with a robust roles and permissions system using React and Laravel. Implemented user authentication, authorization, and dynamic role management. Enhanced security and streamlined user access control.",
+  "techStack": [
+    "React",
+    "PHP Laravel",
+    "MySQL",
+    "Ant Design",
+    "Inertia.js",
+    "Spatie Permissions"
+  ],
+  "links": {
+    "live": "https://your-live-link.com",
+    "github": "https://github.com/your-username/laravel-react-roles-permissions"
+  },
+  "preview": {
+    "image": "Laravel",
+    "video": null
+  },
+  "overview": {
+    "problem": "Managing users with different access levels and permissions manually is inefficient and insecure.",
+    "solution": "A web application with dynamic roles and permissions, enabling secure access control and role-based functionalities.",
+    "goal": "Build a secure, scalable, and user-friendly platform for role-based user management."
+  },
+  "projectInfo": {
+    "role": "Full-Stack Developer",
+    "duration": "Apr 2024 – May 2024",
+    "type": "Professional Project",
+    "status": "Completed"
+  },
+  "features": [
+    "User authentication and authorization",
+    "Role-based access control",
+    "Dynamic role and permission management",
+    "Responsive UI with Ant Design",
+    "Integration with Laravel backend using Inertia.js",
+    "Secure user data handling"
+  ],
+  "architecture": {
+    "description": "The app follows a modular architecture separating frontend (React), backend (Laravel), and database layers, with Inertia.js bridging them.",
+    "flow": [
+      "User → React Frontend",
+      "Frontend → Inertia API",
+      "API → Laravel Controllers",
+      "Controllers → MySQL Database"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": "Handling complex roles and permissions logic dynamically",
+      "solution": "Used Spatie Permissions package with middleware for scalable access control"
+    },
+    {
+      "problem": "Integrating React frontend seamlessly with Laravel backend",
+      "solution": "Used Inertia.js for smooth SPA-like experience without full page reloads"
+    }
+  ],
+  "results": {
+    "metrics": [
+      "Streamlined user management for multiple roles",
+      "Secured sensitive routes and actions",
+      "Enhanced maintainability and scalability of the system"
+    ]
+  },
+  "futureImprovements": [
+    "Add audit logs for user actions",
+    "Implement real-time notifications for role changes",
+    "Enhance analytics for user activity",
+    "Introduce multi-tenant support"
+  ]
+}
+]
