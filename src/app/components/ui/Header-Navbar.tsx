@@ -187,12 +187,12 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                 {/* Dropdown */}
                 <ul className=" absolute left-0 mt-6 w-60 bg-white/90 backdrop-blur-md border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform -translate-y-2 group-hover:translate-y-0 z-50">
                   <li>
-                    <a
-                      href="#web"
+                    <Link
+                      href="/webinar"
                       className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
                     >
                       My Webinars [Free]
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a

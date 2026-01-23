@@ -1,7 +1,9 @@
+'use client'
+import ProjectGithunDialog from "@/components/shadcn-studio/dialog/dialog-02";
 import { Link2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const ProjectCard = ({
   image,
@@ -13,11 +15,22 @@ const ProjectCard = ({
 }: {
   image: any;
   title: string;
-  liveLink: string;
+  liveLink?: string;
   techStack: string;
   href?: string;
-  gitHubView?: () => void;
+  gitHubView?: string | {client: string, server: string};
 }) => {
+  const [openModel, setOpenModel] = useState(false)
+  const handleViewCode = () => {
+    if(typeof gitHubView == 'string'){
+      window.open(gitHubView, '_blank')
+    }else {
+      setOpenModel(true)
+    }
+  }
+  const handleClose = () => {
+    setOpenModel(false)
+  }
   return (
     <div className="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
       {/* Image Section */}
@@ -41,7 +54,7 @@ const ProjectCard = ({
         <div className="flex justify-between items-center">
           <div className="flex flex-row gap-2">
             <button
-              onClick={gitHubView}
+              onClick={handleViewCode}
               className="mt-4 w-fit rounded-lg bg-white px-4 py-1 text-sm font-medium text-black hover:bg-gray-200 cursor-pointer"
             >
               View Project
@@ -55,12 +68,20 @@ const ProjectCard = ({
               </Link>
             )}
           </div>
-
-          <Link href={liveLink} className="mt-3" target="_blank">
+          {
+            liveLink && (
+               <Link href={liveLink} className="mt-3" target="_blank">
             <Link2 />
           </Link>
+            )
+          }
+         
         </div>
       </div>
+
+      {openModel && gitHubView && typeof gitHubView !== 'string' && (
+        <ProjectGithunDialog showDialog={openModel} close={handleClose} title={title} server={gitHubView.server} client={gitHubView.client}/>
+      )}
     </div>
   );
 };
