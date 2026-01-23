@@ -4,9 +4,6 @@ import { ProjectMaper } from "@/app/Data/projectData";
 import { useRouter } from "next/navigation";
 const Projects = () => {
   const router = useRouter();
-  // const ViewCode = (link: any) => {
-  //   window.open(link, '__blank');
-  // };
   return (
     <div className="min-h-screen w-full px-4 py-10">
       {/* Card Container */}
