@@ -31,6 +31,7 @@ const ProjectCard = ({
   const handleClose = () => {
     setOpenModel(false)
   }
+  
   return (
     <div className="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
       {/* Image Section */}
