@@ -14,7 +14,6 @@ import ProjectCarousel from "@/app/components/layouts/ProjectCarousel";
 type Props = {
   params: { id: string };
 };
-
 const Project = async ({ params }: Props) => {
   const { id } = await params;
   // Find project by id
