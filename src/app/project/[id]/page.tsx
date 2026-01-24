@@ -17,7 +17,6 @@ type Props = {
 
 const Project = async ({ params }: Props) => {
   const { id } = await params;
-
   // Find project by id
   const project: ProjectProps | undefined = (
     ProjectsData as ProjectProps[]
