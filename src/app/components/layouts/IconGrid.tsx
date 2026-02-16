@@ -24,6 +24,16 @@ export const IconGrid = ({data, iconMap, bg}: {data: any[], iconMap: Record<stri
       <span className="text-[10px] mt-1 text-center">{item.label}</span>
     </div>
   ))}
+  <div
+      className={`${bg} rounded-xl flex flex-col items-center justify-center p-3 animate-pulse border border-dashed border-gray-400`}
+    >
+      <span className="text-[10px] text-center font-semibold">
+        I'm Learning
+      </span>
+      <span className="text-[10px] text-center">
+        Other Skills...
+      </span>
+    </div>  
 </div>
 
 )

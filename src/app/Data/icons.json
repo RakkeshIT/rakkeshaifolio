@@ -84,7 +84,7 @@
     },
     {
       "id": 2,
-      "name": "github",
+      "name": "GitHub",
       "label": "GitHub"
     },
     {
@@ -92,40 +92,25 @@
       "name": "vscode",
       "label": "VS Code"
     },
-    {
+      {
       "id": 4,
+      "name": "anaconda",
+      "label": "Anaconda"
+    },
+    {
+      "id": 5,
+      "name": "jupyter",
+      "label": "Jupyter"
+    },
+    {
+      "id": 6,
       "name": "postman",
       "label": "Postman"
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "docker",
       "label": "Docker"
-    },
-    {
-      "id": 6,
-      "name": "npm",
-      "label": "NPM"
-    },
-    {
-      "id": 7,
-      "name": "yarn",
-      "label": "Yarn"
-    },
-    {
-      "id": 8,
-      "name": "eslint",
-      "label": "ESLint"
-    },
-    {
-      "id": 9,
-      "name": "prettier",
-      "label": "Prettier"
-    },
-    {
-      "id": 10,
-      "name": "jest",
-      "label": "Jest"
     }
   ],
   "platforms": [
@@ -156,28 +141,8 @@
     },
     {
       "id": 6,
-      "name": "aws",
-      "label": "AWS"
-    },
-    {
-      "id": 7,
-      "name": "firebase",
-      "label": "Firebase"
-    },
-    {
-      "id": 8,
-      "name": "supabase",
-      "label": "Supabase"
-    },
-    {
-      "id": 9,
-      "name": "dockerhub",
-      "label": "Docker Hub"
-    },
-    {
-      "id": 10,
-      "name": "cloudflare",
-      "label": "Cloudflare"
+      "name": "vite",
+      "label": "Vite"
     }
   ]
 }

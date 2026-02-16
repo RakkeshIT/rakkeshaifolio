@@ -19,7 +19,7 @@ const Skill = () => {
           <IconGrid
             data={icons.skills}
             iconMap={skillIcons}
-            bg="bg-indigo-100 dark:bg-indigo-900"
+            bg="bg-pink-100 dark:bg-pink-900"
           />
         </section>
 
@@ -43,7 +43,7 @@ const Skill = () => {
           <IconGrid
             data={icons.platforms}
             iconMap={platformIcons}
-            bg="bg-indigo-100 dark:bg-indigo-900"
+            bg="bg-yellow-100 dark:bg-yellow-900"
           />
         </section>
       </div>
