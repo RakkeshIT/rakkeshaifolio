@@ -31,39 +31,40 @@ export default function ProjectTabs({ active, setActive }: Props) {
     }
   }, [active]);
 
-  return (
-    <div className="flex justify-center mb-12">
-      <div className="relative flex bg-neutral-900 rounded-full p-1">
-        
-        {/* Sliding Background */}
-        <motion.div
-          animate={{
-            left: slider.left,
-            width: slider.width,
-          }}
-          transition={{ type: "spring", stiffness: 400, damping: 30 }}
-          className="absolute top-1 bottom-1 bg-orange-500 rounded-full"
-        />
+return (
+  <div className="flex justify-center mb-12 px-4">
+    <div className="relative flex w-full max-w-2xl bg-neutral-900 rounded-full p-1">
+      
+      {/* Sliding Background */}
+      <motion.div
+        animate={{
+          left: `${tabs.indexOf(active) * 100 / tabs.length}%`,
+          width: `${100 / tabs.length}%`,
+        }}
+        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+        className="absolute top-1 bottom-1 bg-orange-500 rounded-full"
+      />
 
-        {tabs.map((tab, index) => (
-          <button
-            key={tab}
-            ref={(el) => {
-              tabsRef.current[index] = el;
-            }}
-            onClick={() => setActive(tab)}
-            className={`relative z-10 px-6 py-2 text-sm md:text-base font-medium transition-colors duration-300
-              ${
-                active === tab
-                  ? "text-white"
-                  : "text-gray-300 hover:text-white"
-              }
-            `}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
+      {tabs.map((tab) => (
+        <button
+          key={tab}
+          onClick={() => setActive(tab)}
+          className={`relative z-10 flex-1 py-1 sm:py-2
+            text-xs sm:text-sm md:text-base font-medium
+            text-center transition-colors duration-300
+            ${
+              active === tab
+                ? "text-white"
+                : "text-gray-300 hover:text-white"
+            }
+          `}
+        >
+          {tab}
+        </button>
+      ))}
     </div>
-  );
+  </div>
+);
+
+
 }

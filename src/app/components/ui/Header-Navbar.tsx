@@ -313,6 +313,15 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                   </a>
                 </li>
 
+                  <li>
+                  <Link
+                    href="/experience"
+                    className="block rounded-md px-3 py-2 text-heading hover:bg-neutral-100"
+                  >
+                    Experience
+                  </Link>
+                </li>
+
                 {/* 🔽 My Works (Dropdown) */}
                 <li>
                   <button
