@@ -22,7 +22,7 @@ const ProjectCarousel = ({ folder }: props) => {
       setLoading(true)
       try {
         const res = await axios.get(`/api/project-images?folder=${folder}`)
-      const data = res.data;
+      const data: any = res.data;
       setImages(data)
       } catch (error) {
         console.log("Errom form fethc images", error);
