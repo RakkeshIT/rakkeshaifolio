@@ -5,14 +5,12 @@ import { ProjectProps } from "@/app/Data/ProjectTypes";
 import ProjectCarousel from "@/app/components/layouts/ProjectCarousel";
 import ProjectGithunDialog from "@/components/shadcn-studio/dialog/dialog-02";
 type Props = {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 };
 const Project = ({
   params,
-}: {
-  params: Props;
-}) => {
-  const { id } = use(params);
+}: Props) => {
+  const { id } = params;
   const [openModel, setOpenModel] = useState(false);
 
   const handleClose = () => setOpenModel(false);
