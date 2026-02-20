@@ -179,6 +179,11 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                   Projects
                 </a>
               </li>
+              <li>
+                <Link href="/experience" className="text-heading hover:underline">
+                  Experience
+                </Link>
+              </li>
               <li className="relative group">
                 <a href="#" className="text-heading hover:underline">
                   My Works

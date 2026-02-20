@@ -20,7 +20,7 @@ const Contacts = () => {
   const [showDialog, setShowDialog] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({
@@ -35,8 +35,8 @@ const Contacts = () => {
     try {
       console.log("Form Data: ", form);
       const res = await coreAPI.post("/api/contact", form);
-      if(res.status == 200){
-        setShowDialog(true)
+      if (res.status == 200) {
+        setShowDialog(true);
       }
     } catch (error) {
       console.log("Error: ", error);
@@ -47,11 +47,15 @@ const Contacts = () => {
 
   // DialogBox Closing
   const handloDialogClose = () => {
-    setShowDialog(false)
-  }
+    setShowDialog(false);
+  };
   return (
     <>
-      <div className=" relative min-h-screen bg-black px-4 py-10 flex flex-col md:flex-row items-center justify-around gap-10 text-white">
+      <div
+        className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+                min-h-screen bg-black px-4 py-10
+                flex flex-col md:flex-row items-center justify-around gap-10 text-white"
+      >
         {loading && (
           <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 backdrop-blur-md">
             <div className="flex w-100 flex-col items-center gap-4 bg-white/10 border border-white/20 px-10 py-8 rounded-2xl shadow-2xl">
@@ -69,13 +73,14 @@ const Contacts = () => {
           </div>
         )}
 
-        {showDialog && !loading &&
-          (
+        {showDialog && !loading && (
           <div className="fixed inset-0 z-[9999] flex items-center justify-center">
-               <AlertDialogDemo showDialog={showDialog} close={handloDialogClose}/>
-            </div>
-          )
-        }
+            <AlertDialogDemo
+              showDialog={showDialog}
+              close={handloDialogClose}
+            />
+          </div>
+        )}
 
         {/* LEFT — PROFILE */}
         <div>

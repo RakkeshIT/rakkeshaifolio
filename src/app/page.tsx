@@ -28,7 +28,6 @@ export default function Home() {
 
       <div ref={homeRef}>
       <HomePage/>
-
       </div>
       <div ref={aboutRef}>
       <About/>

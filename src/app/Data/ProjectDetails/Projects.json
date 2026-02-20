@@ -1,75 +1,352 @@
 [
-    {
-  "id": 1,
-  "title": "Roles and Permissions Web Application",
-  "tagline": "A secure web app with dynamic roles and permissions management using React and Laravel.",
-  "description": "Developed a web application with a robust roles and permissions system using React and Laravel. Implemented user authentication, authorization, and dynamic role management. Enhanced security and streamlined user access control.",
+  {
+    "id": 1,
+    "title": "Roles and Permissions Web Application",
+    "tagline": "A secure web app with dynamic roles and permissions management using React and Laravel.",
+    "description": "Developed a web application with a robust roles and permissions system using React and Laravel. Implemented user authentication, authorization, and dynamic role management. Enhanced security and streamlined user access control.",
+    "techStack": [
+      "React",
+      "PHP Laravel",
+      "MySQL",
+      "Ant Design",
+      "Inertia.js",
+      "Spatie Permissions"
+    ],
+    "links": {
+      "live": "https://your-live-link.com",
+      "gitHubCode": "https://github.com/RakkeshIT/Projects/tree/main/react-breez-inertia-A1"
+    },
+    "preview": {
+      "image": "Laravel",
+      "video": null
+    },
+    "overview": {
+      "problem": "Managing users with different access levels and permissions manually is inefficient and insecure.",
+      "solution": "A web application with dynamic roles and permissions, enabling secure access control and role-based functionalities.",
+      "goal": "Build a secure, scalable, and user-friendly platform for role-based user management."
+    },
+    "projectInfo": {
+      "role": "Full-Stack Developer",
+      "duration": "Apr 2024 – May 2024",
+      "type": "Professional Project",
+      "status": "Completed"
+    },
+    "features": [
+      "User authentication and authorization",
+      "Role-based access control",
+      "Dynamic role and permission management",
+      "Responsive UI with Ant Design",
+      "Integration with Laravel backend using Inertia.js",
+      "Secure user data handling"
+    ],
+    "architecture": {
+      "description": "The app follows a modular architecture separating frontend (React), backend (Laravel), and database layers, with Inertia.js bridging them.",
+      "flow": [
+        "User → React Frontend",
+        "Frontend → Inertia API",
+        "API → Laravel Controllers",
+        "Controllers → MySQL Database"
+      ]
+    },
+    "challenges": [
+      {
+        "problem": "Handling complex roles and permissions logic dynamically",
+        "solution": "Used Spatie Permissions package with middleware for scalable access control"
+      },
+      {
+        "problem": "Integrating React frontend seamlessly with Laravel backend",
+        "solution": "Used Inertia.js for smooth SPA-like experience without full page reloads"
+      }
+    ],
+    "results": {
+      "metrics": [
+        "Streamlined user management for multiple roles",
+        "Secured sensitive routes and actions",
+        "Enhanced maintainability and scalability of the system"
+      ]
+    },
+    "futureImprovements": [
+      "Add audit logs for user actions",
+      "Implement real-time notifications for role changes",
+      "Enhance analytics for user activity",
+      "Introduce multi-tenant support"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Magic Link Authentication Web Application",
+    "tagline": "Passwordless authentication system using secure Magic Links built with MERN stack.",
+    "description": "Developed a secure passwordless authentication system using the MERN stack. Implemented Magic Link login via email, JWT-based verification, and secure token expiration handling. Enhanced user experience by eliminating passwords while maintaining strong security standards.",
+    "techStack": [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "JWT",
+      "Nodemailer",
+      "Tailwind CSS"
+    ],
+    "links": {
+      "live": "https://magiclinkfrontend.vercel.app/",
+      "gitHubCode": {
+        "client": "https://github.com/RakkeshIT/magiclinkfrontend",
+        "server": "https://github.com/RakkeshIT/mgiclinkserver"
+      }
+    },
+    "preview": {
+      "image": "MagicLink",
+      "video": null
+    },
+    "overview": {
+      "problem": "Traditional password-based authentication is vulnerable to security risks like weak passwords, phishing, and credential leaks.",
+      "solution": "Implemented passwordless authentication using time-limited secure magic links sent to user email for login verification.",
+      "goal": "Provide a secure, scalable, and seamless passwordless authentication experience."
+    },
+    "projectInfo": {
+      "role": "Full-Stack Developer",
+      "duration": "Jan 2025 – Feb 2025",
+      "type": "Professional Project",
+      "status": "Completed"
+    },
+    "features": [
+      "Passwordless authentication using Magic Links",
+      "Secure token generation with expiration",
+      "JWT-based session management",
+      "Email verification with Nodemailer",
+      "Responsive UI using React and Tailwind CSS",
+      "Protected routes with middleware",
+      "Token invalidation after single use"
+    ],
+    "architecture": {
+      "description": "The application follows a modular MERN architecture separating frontend, backend, and database layers with secure token-based communication.",
+      "flow": [
+        "User enters email → React Frontend",
+        "Frontend sends request → Express API",
+        "Server generates secure token → MongoDB stores hashed token with expiry",
+        "Magic link sent via email → User clicks link",
+        "Server verifies token → Issues JWT session",
+        "Access granted to protected routes"
+      ]
+    },
+    "challenges": [
+      {
+        "problem": "Ensuring token security and preventing reuse attacks",
+        "solution": "Stored hashed tokens in MongoDB with strict expiration and one-time usage validation"
+      },
+      {
+        "problem": "Handling expired or invalid links gracefully",
+        "solution": "Implemented frontend and backend validation with proper error handling and regeneration option"
+      }
+    ],
+    "results": {
+      "metrics": [
+        "Improved login security by eliminating password vulnerabilities",
+        "Reduced user friction during authentication",
+        "Enhanced scalability with JWT-based session handling"
+      ]
+    },
+    "futureImprovements": [
+      "Add multi-device session tracking",
+      "Implement OAuth login integration",
+      "Introduce biometric authentication support",
+      "Add admin dashboard for login analytics"
+    ]
+  },
+  {
+  "id": 3,
+  "title": "College Event Management System (EMS)",
+  "tagline": "Role-Based Event Management System with Student Panel and Admin Dashboard built using Next.js.",
+  "description": "Developed a full-stack Event Management System for handling college events using Next.js 15. The platform includes a Student Panel and Admin Dashboard with Role-Based Authentication (RBA). Implemented secure authentication using NextAuth and JWT, event creation and approval workflows, participant registration, and dynamic PDF generation for reports. Designed a responsive UI using Tailwind CSS and Flowbite-React.",
   "techStack": [
-    "React",
-    "PHP Laravel",
-    "MySQL",
-    "Ant Design",
-    "Inertia.js",
-    "Spatie Permissions"
+    "Next.js 15",
+    "React 19",
+    "MongoDB",
+    "Mongoose",
+    "NextAuth",
+    "JWT",
+    "bcryptjs",
+    "Tailwind CSS",
+    "Flowbite-React",
+    "Axios",
+    "jsPDF"
   ],
   "links": {
-    "live": "https://your-live-link.com",
-    "github": "https://github.com/your-username/laravel-react-roles-permissions"
+    "live": "https://next-js-project-omega-smoky.vercel.app/client",
+    "gitHubCode":"https://github.com/RakkeshIT/NEXT__JS__PROJECT"
   },
   "preview": {
-    "image": "Laravel",
+    "image": "EMS",
     "video": null
   },
   "overview": {
-    "problem": "Managing users with different access levels and permissions manually is inefficient and insecure.",
-    "solution": "A web application with dynamic roles and permissions, enabling secure access control and role-based functionalities.",
-    "goal": "Build a secure, scalable, and user-friendly platform for role-based user management."
+    "problem": "Managing college events manually leads to inefficiencies in registrations, approvals, tracking participants, and report generation.",
+    "solution": "Built a centralized web-based Event Management System with separate dashboards for students and admins, including role-based access control and automated event workflows.",
+    "goal": "Provide a scalable and secure platform to efficiently manage college events with structured user roles and automated processes."
   },
   "projectInfo": {
     "role": "Full-Stack Developer",
-    "duration": "Apr 2024 – May 2024",
-    "type": "Professional Project",
+    "duration": "Feb 2025 – Mar 2025",
+    "type": "Academic / Professional Project",
     "status": "Completed"
   },
   "features": [
-    "User authentication and authorization",
-    "Role-based access control",
-    "Dynamic role and permission management",
-    "Responsive UI with Ant Design",
-    "Integration with Laravel backend using Inertia.js",
-    "Secure user data handling"
+    "Role-Based Authentication (Admin & Student)",
+    "Secure login system using NextAuth and JWT",
+    "Event creation and management by Admin",
+    "Student event registration system",
+    "Admin approval and participant tracking",
+    "Protected routes with middleware",
+    "Dynamic PDF report generation using jsPDF",
+    "Responsive UI using Tailwind CSS and Flowbite",
+    "Secure password hashing using bcryptjs",
+    "MongoDB database integration with Mongoose"
   ],
   "architecture": {
-    "description": "The app follows a modular architecture separating frontend (React), backend (Laravel), and database layers, with Inertia.js bridging them.",
+    "description": "The application follows a modern Next.js full-stack architecture using App Router with API routes, MongoDB database, and secure authentication layer.",
     "flow": [
-      "User → React Frontend",
-      "Frontend → Inertia API",
-      "API → Laravel Controllers",
-      "Controllers → MySQL Database"
+      "User registers/login → NextAuth Authentication",
+      "Role verified (Admin / Student)",
+      "Student views & registers for events",
+      "Admin creates/updates/deletes events",
+      "Registration data stored in MongoDB",
+      "Admin generates reports → PDF export"
     ]
+  },
+  "roleBasedAccess": {
+    "roles": [
+      "Admin",
+      "Student"
+    ],
+    "permissions": {
+      "Admin": [
+        "Create events",
+        "Edit/Delete events",
+        "View all registrations",
+        "Approve or manage participants",
+        "Generate reports"
+      ],
+      "Student": [
+        "View available events",
+        "Register for events",
+        "View registration status"
+      ]
+    }
   },
   "challenges": [
     {
-      "problem": "Handling complex roles and permissions logic dynamically",
-      "solution": "Used Spatie Permissions package with middleware for scalable access control"
+      "problem": "Implementing secure role-based route protection in Next.js App Router",
+      "solution": "Used middleware and session validation with NextAuth and JWT to restrict routes based on user roles"
     },
     {
-      "problem": "Integrating React frontend seamlessly with Laravel backend",
-      "solution": "Used Inertia.js for smooth SPA-like experience without full page reloads"
+      "problem": "Managing dynamic event registration data efficiently",
+      "solution": "Designed optimized MongoDB schemas with proper indexing and relational references using Mongoose"
     }
   ],
   "results": {
     "metrics": [
-      "Streamlined user management for multiple roles",
-      "Secured sensitive routes and actions",
-      "Enhanced maintainability and scalability of the system"
+      "Improved event management efficiency",
+      "Reduced manual paperwork and tracking errors",
+      "Centralized dashboard for streamlined event handling",
+      "Enhanced security with role-based access control"
     ]
   },
   "futureImprovements": [
-    "Add audit logs for user actions",
-    "Implement real-time notifications for role changes",
-    "Enhance analytics for user activity",
-    "Introduce multi-tenant support"
+    "Email notification system for event updates",
+    "QR code-based event check-in system",
+    "Real-time dashboard analytics",
+    "Multi-role system (Faculty / Organizer)",
+    "Cloud file storage integration for event materials"
+  ]
+},
+{
+  "id": 4,
+  "title": "Smart CRUD – Multi-Workspace Task Management System",
+  "tagline": "Advanced MERN-based task management platform with workspace segmentation and analytics dashboard.",
+  "description": "Smart CRUD is a full-stack MERN application designed to manage daily tasks across multiple workspaces such as Students, Working Professionals, Government Aspirants, and Job Seekers. The system allows users to create, track, analyze, and download daily task reports. Built with Next.js 16, Clerk authentication, Express 5, and MongoDB, the platform focuses on productivity tracking, analytics visualization, and structured workspace management.",
+  "techStack": [
+    "Next.js 16",
+    "React 19",
+    "TypeScript",
+    "Clerk Authentication",
+    "MongoDB",
+    "Mongoose",
+    "Express 5",
+    "Tailwind CSS v4",
+    "Material UI (MUI)",
+    "Axios",
+    "Framer Motion"
+  ],
+  "links": {
+    "live": "https://smart-crud-umber.vercel.app/",
+      "gitHubCode":  {
+      "client": "https://github.com/RakkeshIT/smart_crud",
+      "server": "https://github.com/RakkeshIT/mgiclinkserver"
+    }
+  },
+  "preview": {
+    "image": "SmartCRUD",
+    "video": null
+  },
+  "overview": {
+    "problem": "Individuals from different backgrounds struggle to consistently track and analyze their daily productivity across various goals and domains.",
+    "solution": "Built a multi-workspace task management system where users can categorize tasks by role (Student, Professional, Govt Aspirant, Job Seeker), track daily progress, and generate analytical reports.",
+    "goal": "Provide a scalable productivity system with structured workspace separation, real-time tracking, and downloadable performance reports."
+  },
+  "projectInfo": {
+    "role": "Full-Stack Developer",
+    "duration": "Mar 2025 – Present",
+    "type": "Personal / Professional Project",
+    "status": "Under Development"
+  },
+  "coreModules": [
+    "Multi-workspace management",
+    "Daily task CRUD operations",
+    "Role-based workspace segmentation",
+    "Analytics dashboard",
+    "Report download system",
+    "Secure authentication with Clerk",
+    "REST API architecture using Express 5",
+    "MongoDB schema design with Mongoose"
+  ],
+  "features": [
+    "Create, update, delete daily tasks",
+    "Separate workspaces for Students, Professionals, Govt Aspirants, and Job Seekers",
+    "Daily productivity tracking",
+    "Performance analytics dashboard",
+    "Downloadable task reports",
+    "Responsive UI with Tailwind CSS v4 and MUI",
+    "Smooth animations using Framer Motion",
+    "Secure backend API with Express and MongoDB"
+  ],
+  "architecture": {
+    "description": "The application follows a modern MERN architecture with Next.js frontend, Express TypeScript backend, and MongoDB database. Authentication is handled via Clerk with secure API communication through Axios.",
+    "flow": [
+      "User authenticates via Clerk",
+      "Workspace selection (Student / Professional / etc.)",
+      "Task CRUD operations via Express API",
+      "Data stored and retrieved from MongoDB",
+      "Analytics generated from task data",
+      "User downloads performance reports"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": "Designing scalable workspace-based task architecture",
+      "solution": "Structured MongoDB schemas with workspace-based references and optimized queries"
+    },
+    {
+      "problem": "Managing real-time analytics computation",
+      "solution": "Implemented backend aggregation pipelines for productivity metrics"
+    }
+  ],
+  "futureImprovements": [
+    "AI-based productivity suggestions",
+    "Weekly and monthly performance insights",
+    "Gamification system (streaks & rewards)",
+    "Team workspace collaboration",
+    "Mobile app integration"
   ]
 }
+
+
 ]

@@ -6,7 +6,7 @@ export interface ProjectProps {
   techStack: string[];
   links: {
     live: string;
-    github: string;
+    gitHubCode: {server: string, client: string};
   };
   preview: {
     image: string;

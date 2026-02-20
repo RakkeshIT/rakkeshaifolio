@@ -1,25 +1,41 @@
-import React from "react";
+"use client";
+import React, { use, useState } from "react";
 import ProjectsData from "../../Data/ProjectDetails/Projects.json";
 import { ProjectProps } from "@/app/Data/ProjectTypes";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Image from "next/image";
-import Admin from "../../assets/ProjectDetails/Laravel/AdminPage.png";
 import ProjectCarousel from "@/app/components/layouts/ProjectCarousel";
+import ProjectGithunDialog from "@/components/shadcn-studio/dialog/dialog-02";
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
-const Project = async ({ params }: Props) => {
-  const { id } = await params;
+const Project = ({
+  params,
+}: {
+  params: Props;
+}) => {
+  const { id } = use(params);
+  const [openModel, setOpenModel] = useState(false);
+
+  const handleClose = () => setOpenModel(false);
+
   // Find project by id
   const project: ProjectProps | undefined = (
     ProjectsData as ProjectProps[]
   ).find((p) => p.id === Number(id));
+
+  console.log("Projects: ", project);
+ const handleOpen = () => {
+  if (!project) return;
+
+  const gitHubCode = project.links.gitHubCode;
+
+  if (typeof gitHubCode === "string") {
+    window.open(gitHubCode, "_blank");
+  } else {
+    setOpenModel(true);
+  }
+};
+
+
 
   if (!project) return <div>Project not found</div>;
 
@@ -71,12 +87,12 @@ const Project = async ({ params }: Props) => {
             >
               Live Demo
             </a>
-            <a
-              href={project.links.github}
-              className="rounded-lg border border-white/20 px-5 py-2 text-sm font-medium"
+            <button
+              onClick={handleOpen}
+              className="rounded-lg border border-white/20 px-5 py-2 text-sm font-medium cursor-pointer"
             >
               GitHub Repo
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -175,6 +191,16 @@ const Project = async ({ params }: Props) => {
           </ul>
         </div>
       </section>
+
+      {openModel && (
+        <ProjectGithunDialog
+          showDialog={openModel}
+          close={handleClose}
+          title={project.title}
+          server={project.links.gitHubCode.server}
+          client={project.links.gitHubCode.client}
+        />
+      )}
     </main>
   );
 };

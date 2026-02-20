@@ -18,20 +18,21 @@ import tailwind from "./assets/skills/Tailwindcss.svg";
 import antdesign from "./assets/skills/AntDesign.svg";
 import bootstrap from "./assets/skills/Bootstrap.svg";
 
-
 // Tools
 import anaconda from "./assets/Tools/Anaconda.svg";
 import jupyter from "./assets/Tools/Jupyter.svg";
 import vscode from "./assets/Tools/vs.svg";
-import git from './assets/Tools/Git.svg'
-import GitHub from './assets/Tools/GitHub.svg'
-import postman from './assets/Tools/Postman.svg'
-import docker from './assets/Tools/Docker.svg'
+import git from "./assets/Tools/Git.svg";
+import GitHub from "./assets/Tools/GitHub.svg";
+import postman from "./assets/Tools/Postman.svg";
+import docker from "./assets/Tools/Docker.svg";
 // Platforms
 import vercel from "./assets/Platforms/Vercel.svg";
 import linux from "./assets/Platforms/Linux.svg";
 import windows from "./assets/Platforms/Windows.svg";
 import vite from "./assets/Platforms/Vite.js.svg";
+import macos from "./assets/Platforms/macos.png";
+import netlify from "./assets/Platforms/netlify.png";
 
 export const skillIcons: Record<string, any> = {
   react,
@@ -64,7 +65,9 @@ export const toolsIcon: Record<string, any> = {
 };
 export const platformIcons: Record<string, any> = {
   vercel,
-    linux,
+  linux,
   windows,
   vite,
+  macos,
+  netlify,
 };

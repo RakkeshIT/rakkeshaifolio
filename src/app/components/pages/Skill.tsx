@@ -5,7 +5,7 @@ import { IconGrid } from "../layouts/IconGrid";
 const Skill = () => {
   return (
     <div className="min-h-screen w-full px-6 py-12">
-      <div className="max-w-6xl mx-auto">
+      <div className="px-12 mx-auto">
         {/* Page Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center mb-12">
           My <span className="text-indigo-500">Skills & Tools</span>

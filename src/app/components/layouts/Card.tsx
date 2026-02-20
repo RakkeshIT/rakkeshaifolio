@@ -34,7 +34,7 @@ const ProjectCard = ({
   return (
     <div className="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
       {/* Image Section */}
-      <div className="relative h-56 w-full overflow-hidden">
+     <div className="relative aspect-video w-full overflow-hidden rounded-t-xl">
         <Image
           src={image}
           alt={image}
