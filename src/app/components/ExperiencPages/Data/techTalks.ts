@@ -24,10 +24,7 @@ export const techTalks = [
       s3,
       invite1
     ],
-    // feedbackVideos: [
-    //   "https://youtube.com/xxxx1",
-    //   "https://youtube.com/xxxx2"
-    // ], 
+    feedbackVideos: [], 
     highlights: {
       studentCount: 60,
       hourse: 3
@@ -38,7 +35,7 @@ export const techTalks = [
   //   title: "Power BI & Advanced Excel Training Program",
   //   college: "Annai Theresa Women’s College",
   //   department: "Naan Mudhalvan Skill Development Initiative",
-  //   coverImage: annaiTheresa,
+  //   coverImage: "annaiTheresa",
   //   location: "Nagapattinam",
   //   date: "February 2025 – April 2025",
   //   duration: "3 Months Program",
@@ -50,10 +47,7 @@ export const techTalks = [
   //     "Delivered a comprehensive Power BI and Advanced Excel training program under the Naan Mudhalvan initiative. The sessions focused on real-world data analysis, dashboard building, data visualization, advanced formulas, pivot tables, and industry-driven reporting techniques. Students gained hands-on experience through live projects and practical assignments.",
 
   //   images: [
-  //     nm1,
-  //     nm2,
-  //     nm3,
-  //     inviteNM
+  //    ""
   //   ],
 
   //   highlights: {
