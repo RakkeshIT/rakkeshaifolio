@@ -32,57 +32,52 @@ const ProjectCard = ({
     setOpenModel(false)
   }
   return (
-    <div className="group relative overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
-      {/* Image Section */}
-     <div className="relative aspect-video w-full overflow-hidden rounded-t-xl">
-        <Image
-          src={image}
-          alt={image}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-      </div>
+ <div className="group relative flex flex-col overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+  {/* Image Section */}
+  <div className="relative h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] w-full overflow-hidden">
+    <Image
+      src={image}
+      alt={title}
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+  </div>
 
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-end p-5 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="mt-1 text-sm text-gray-200">{techStack}</p>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-        <div className="flex justify-between items-center">
-          <div className="flex flex-row gap-2">
-            <button
-              onClick={handleViewCode}
-              className="mt-4 w-fit rounded-lg bg-white px-4 py-1 text-sm font-medium text-black hover:bg-gray-200 cursor-pointer"
-            >
-              View Project
-            </button>
-            {href && (
-              <Link
-                href={href}
-                className="mt-4 w-fit rounded-lg px-4 py-1 text-sm font-medium text-white border-1 border-white cursor-pointer"
-              >
-                More Details
-              </Link>
-            )}
-          </div>
-          {
-            liveLink && (
-               <Link href={liveLink} className="mt-3" target="_blank">
-            <Link2 />
-          </Link>
-            )
-          }
-         
-        </div>
-      </div>
+  {/* Content */}
+  <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-5 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
 
-      {openModel && gitHubView && typeof gitHubView !== 'string' && (
-        <ProjectGithunDialog showDialog={openModel} close={handleClose} title={title} server={gitHubView.server} client={gitHubView.client}/>
+    <h3 className="text-base sm:text-lg md:text-xl font-bold line-clamp-1">
+      {title}
+    </h3>
+
+    <p className="mt-1 text-xs sm:text-sm text-gray-200 line-clamp-2">
+      {techStack}
+    </p>
+
+    <div className="mt-3 flex flex-wrap gap-2">
+      <button
+        onClick={handleViewCode}
+        className="rounded-lg bg-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-black hover:bg-gray-200"
+      >
+        View Project
+      </button>
+
+      {href && (
+        <Link
+          href={href}
+          className="rounded-lg border border-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-white"
+        >
+          More Details
+        </Link>
       )}
     </div>
+  </div>
+
+</div>
   );
 };
 

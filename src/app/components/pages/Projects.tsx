@@ -15,7 +15,7 @@ const Projects = () => {
     <div className="min-h-screen w-full px-12 py-10">
       {/* Card Container */}
       <ProjectTabs active={active} setActive={setActive} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filterProjectCard.map((items, index) => (
           <ProjectCard
             key={index}

@@ -6,6 +6,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProjectCarousel from "@/app/components/layouts/ProjectCarousel";
 import Link from "next/link";
 export default function TechTalkDetails() {
   const { id } = useParams();
@@ -90,37 +91,12 @@ export default function TechTalkDetails() {
         </div>
 
         {/* Image Carousel */}
-        <div className="relative mb-20">
-          <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
-            <div className="flex">
-              {talk.images.map((img, index) => (
-                <div key={index} className="relative min-w-full h-[450px]">
-                  <Image
-                    src={img}
-                    alt="Workshop"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+        <section className="mx-auto max-w-6xl px-6 py-16">
+         <div className="h-[50vh] min-h-[300px] max-h-[500px] w-full">
+            <ProjectCarousel folder={talk.images} />
           </div>
+        </section>
 
-          {/* Controls */}
-          <button
-            onClick={scrollPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-600 p-3 rounded-full transition"
-          >
-            <ChevronLeft />
-          </button>
-
-          <button
-            onClick={scrollNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-orange-600 p-3 rounded-full transition"
-          >
-            <ChevronRight />
-          </button>
-        </div>
 
         {/* Feedback Videos */}
         {talk.feedbackVideos && (

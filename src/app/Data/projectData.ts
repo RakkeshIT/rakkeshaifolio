@@ -40,7 +40,7 @@ export const ProjectMaper = [
   id: 4,
   image: SmartCrud,
   title: "Smart CRUD – Multi-Workspace Task Management System",
-  desc: "Advanced MERN-based task management system with multi-workspace support, analytics dashboard, and downloadable daily performance reports.",
+  desc: "Advanced MERN-based task management system with multi-workspace support.",
   liveLink: "https://smart-crud-umber.vercel.app/",
   moreDetails: "Smart CRUD is a full-stack productivity management platform built with Next.js 16, Express 5, and MongoDB. It allows users to manage daily tasks across multiple workspaces such as Students, Working Professionals, Govt Aspirants, and Job Seekers. Includes secure Clerk authentication, analytics dashboard, and report generation system.",
   gitHubCode: {

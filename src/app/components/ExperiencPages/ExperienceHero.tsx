@@ -21,7 +21,7 @@ export default function ExperienceHero({section}: {section: Props}) {
         ref.current?.scrollIntoView({behavior: "smooth"})
     }
   return (
-    <section className="relative min-h-screen bg-black text-white flex items-center overflow-hidden">
+    <section className="relative min-h-screen bg-black text-white flex items-center overflow-hidden  py-8">
 
       {/* Background Glow */}
       <div className="absolute w-[600px] h-[600px] bg-orange-600/20 blur-[150px] rounded-full top-[-120px] right-[-120px]" />

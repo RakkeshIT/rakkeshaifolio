@@ -18,12 +18,7 @@ export const techTalks = [
     organizedBy: "G-TEC Computer Education, Mayiladuthurai",
     role: "Software Trainer",
     description: "Delivered a hands-on workshop covering React fundamentals, component architecture, routing, and SPA concepts.",
-    images: [
-      s1,
-      s2,
-      s3,
-      invite1
-    ],
+    images: "jhosaph",
     feedbackVideos: [], 
     highlights: {
       studentCount: 60,

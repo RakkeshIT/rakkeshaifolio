@@ -32,38 +32,28 @@ export default function ProjectTabs({ active, setActive }: Props) {
   }, [active]);
 
 return (
-  <div className="flex justify-center mb-12 px-4">
-    <div className="relative flex w-full max-w-2xl bg-neutral-900 rounded-full p-1">
-      
-      {/* Sliding Background */}
-      <motion.div
-        animate={{
-          left: `${tabs.indexOf(active) * 100 / tabs.length}%`,
-          width: `${100 / tabs.length}%`,
-        }}
-        transition={{ type: "spring", stiffness: 400, damping: 30 }}
-        className="absolute top-1 bottom-1 bg-orange-500 rounded-full"
-      />
-
-      {tabs.map((tab) => (
-        <button
-          key={tab}
-          onClick={() => setActive(tab)}
-          className={`relative z-10 flex-1 py-1 sm:py-2
-            text-xs sm:text-sm md:text-base font-medium
-            text-center transition-colors duration-300
-            ${
-              active === tab
-                ? "text-white"
-                : "text-gray-300 hover:text-white"
-            }
-          `}
-        >
-          {tab}
-        </button>
-      ))}
-    </div>
+<div className="mb-12 border-b border-neutral-800 px-4">
+  <div className="flex gap-6 overflow-x-auto scrollbar-hide">
+    {tabs.map((tab) => (
+      <button
+        key={tab}
+        onClick={() => setActive(tab)}
+        className={`relative pb-3 text-sm sm:text-base whitespace-nowrap transition-colors duration-300
+          ${
+            active === tab
+              ? "text-orange-500"
+              : "text-gray-400 hover:text-white"
+          }
+        `}
+      >
+        {tab}
+        {active === tab && (
+          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-orange-500" />
+        )}
+      </button>
+    ))}
   </div>
+</div>
 );
 
 

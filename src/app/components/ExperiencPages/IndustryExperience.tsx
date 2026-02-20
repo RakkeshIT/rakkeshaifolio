@@ -115,6 +115,41 @@ export default function IndustryExperience() {
             </div>
           </div>
 
+           {/* Internship */}
+          <div className="relative">
+
+            <div className="absolute -left-[10px] top-2 w-4 h-4 bg-orange-600 rounded-full" />
+
+            <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+
+              <div className="flex items-center gap-3 mb-2">
+                <Briefcase className="text-orange-600" size={20} />
+                <h3 className="text-xl font-semibold">
+                 Full Stack Developer Intern
+                </h3>
+              </div>
+
+              <p className="text-gray-600 font-medium">
+               A1IDEAZ
+              </p>
+
+              <div className="flex items-center gap-2 text-sm text-gray-500 mt-1 mb-6">
+                <Calendar size={16} />
+Apr 2024 - Jun 2024 · 
+              </div>
+
+              <ul className="space-y-3 text-gray-700 leading-relaxed">
+                <li>
+                  • Developed and maintained full-stack web applications using Laravel for backend and React.js for frontend.
+                </li>
+                <li>
+                  • Implemented authentication systems, RESTful APIs, and database integration.
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
