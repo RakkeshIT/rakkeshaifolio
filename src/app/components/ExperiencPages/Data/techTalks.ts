@@ -33,39 +33,39 @@ export const techTalks = [
       hourse: 3
     }
   },
-  {
-    id: "naan-mudhalvan-powerbi-2025",
-    title: "Power BI & Advanced Excel Training Program",
-    college: "Annai Theresa Women’s College",
-    department: "Naan Mudhalvan Skill Development Initiative",
-    coverImage: annaiTheresa,
-    location: "Nagapattinam",
-    date: "February 2025 – April 2025",
-    duration: "3 Months Program",
-    venue: "College Computer Lab",
-    participants: "UG & PG Students",
-    organizedBy: "Naan Mudhalvan Government Initiative",
-    role: "Power BI & Advanced Excel Trainer",
-    description:
-      "Delivered a comprehensive Power BI and Advanced Excel training program under the Naan Mudhalvan initiative. The sessions focused on real-world data analysis, dashboard building, data visualization, advanced formulas, pivot tables, and industry-driven reporting techniques. Students gained hands-on experience through live projects and practical assignments.",
+  // {
+  //   id: "naan-mudhalvan-powerbi-2025",
+  //   title: "Power BI & Advanced Excel Training Program",
+  //   college: "Annai Theresa Women’s College",
+  //   department: "Naan Mudhalvan Skill Development Initiative",
+  //   coverImage: annaiTheresa,
+  //   location: "Nagapattinam",
+  //   date: "February 2025 – April 2025",
+  //   duration: "3 Months Program",
+  //   venue: "College Computer Lab",
+  //   participants: "UG & PG Students",
+  //   organizedBy: "Naan Mudhalvan Government Initiative",
+  //   role: "Power BI & Advanced Excel Trainer",
+  //   description:
+  //     "Delivered a comprehensive Power BI and Advanced Excel training program under the Naan Mudhalvan initiative. The sessions focused on real-world data analysis, dashboard building, data visualization, advanced formulas, pivot tables, and industry-driven reporting techniques. Students gained hands-on experience through live projects and practical assignments.",
 
-    images: [
-      nm1,
-      nm2,
-      nm3,
-      inviteNM
-    ],
+  //   images: [
+  //     nm1,
+  //     nm2,
+  //     nm3,
+  //     inviteNM
+  //   ],
 
-    highlights: {
-      studentCount: 250,
-      hours: 90,   // approx 3 months structured sessions
-      skillsCovered: [
-        "Power BI Dashboards",
-        "Advanced Excel Formulas",
-        "Data Visualization",
-        "Business Reporting",
-        "Career Guidance & Industry Insights"
-      ]
-    }
-  }
+  //   highlights: {
+  //     studentCount: 250,
+  //     hours: 90,   // approx 3 months structured sessions
+  //     skillsCovered: [
+  //       "Power BI Dashboards",
+  //       "Advanced Excel Formulas",
+  //       "Data Visualization",
+  //       "Business Reporting",
+  //       "Career Guidance & Industry Insights"
+  //     ]
+  //   }
+  // }
 ]
