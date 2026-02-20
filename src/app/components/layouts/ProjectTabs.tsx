@@ -2,15 +2,22 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+
 type Props = {
   active: string;
   setActive: (value: string) => void;
 };
+
 const tabs = ["All", "Full Stack", "AI Projects", "Frontend", "Upcoming"];
 
-export default function ProjectTabs({active, setActive}: Props) {
-  const [slider, setSlider] = useState({ left: 0, width: 0 });
-  const tabsRef = useRef([]);
+export default function ProjectTabs({ active, setActive }: Props) {
+  const [slider, setSlider] = useState<{ left: number; width: number }>({
+    left: 0,
+    width: 0,
+  });
+
+  // ✅ Proper typing for button refs
+  const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
     const index = tabs.indexOf(active);
@@ -27,7 +34,7 @@ export default function ProjectTabs({active, setActive}: Props) {
   return (
     <div className="flex justify-center mb-12">
       <div className="relative flex bg-neutral-900 rounded-full p-1">
-
+        
         {/* Sliding Background */}
         <motion.div
           animate={{
@@ -41,12 +48,16 @@ export default function ProjectTabs({active, setActive}: Props) {
         {tabs.map((tab, index) => (
           <button
             key={tab}
-            ref={(el) => (tabsRef.current[index] = el)}
+            ref={(el) => {
+              tabsRef.current[index] = el;
+            }}
             onClick={() => setActive(tab)}
             className={`relative z-10 px-6 py-2 text-sm md:text-base font-medium transition-colors duration-300
-              ${active === tab
-                ? "text-white"
-                : "text-gray-300 hover:text-white"}
+              ${
+                active === tab
+                  ? "text-white"
+                  : "text-gray-300 hover:text-white"
+              }
             `}
           >
             {tab}
