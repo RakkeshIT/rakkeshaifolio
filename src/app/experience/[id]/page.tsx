@@ -101,12 +101,12 @@ export default function TechTalkDetails() {
         {/* Feedback Videos */}
         {talk.feedbackVideos && (
           <>    
-            <h2 className="text-3xl font-semibold mb-8">Student Feedback</h2>
+            <h2 className="text-3xl font-semibold mb-8">Feedback</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {talk.feedbackVideos.map((video, index) => (
                 <div
                   key={index}
-                  className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden shadow-lg"
+                  className="bg-neutral-900 border-4 border-white overflow-hidden shadow-lg"
                 >
                   <iframe src={video} className="w-full h-72" allowFullScreen />
                 </div>

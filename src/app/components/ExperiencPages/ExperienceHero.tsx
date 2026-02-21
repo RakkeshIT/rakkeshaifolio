@@ -9,6 +9,7 @@ import {
   Download,
   Mic,
 } from "lucide-react";
+import Link from "next/link";
 type Props = {
     industry: React.RefObject<HTMLDivElement>,
     techTalk: React.RefObject<HTMLDivElement>
@@ -21,8 +22,7 @@ export default function ExperienceHero({section}: {section: Props}) {
         ref.current?.scrollIntoView({behavior: "smooth"})
     }
   return (
-    <section className="relative min-h-screen bg-black text-white flex items-center overflow-hidden  py-8">
-
+    <section className="relative min-h-screen bg-black text-white flex items-center overflow-hidden  py-8 md:py-2">
       {/* Background Glow */}
       <div className="absolute w-[600px] h-[600px] bg-orange-600/20 blur-[150px] rounded-full top-[-120px] right-[-120px]" />
 
@@ -30,8 +30,8 @@ export default function ExperienceHero({section}: {section: Props}) {
 
         {/* LEFT CONTENT */}
         <div>
-
-          <p className="text-orange-500 uppercase tracking-widest text-sm mb-4">
+         <Link href='/' className="underline">Back to Home</Link>
+          <p className="text-orange-500 uppercase tracking-widest text-sm mb-4 mt-5">
             Full Stack Developer with AI
           </p>
 
@@ -80,7 +80,7 @@ export default function ExperienceHero({section}: {section: Props}) {
             </a>
 
             <a
-              href="#webinars"
+              href=""
               onClick={(e) => scrollTo(e, section.techTalk)}
               className="relative flex items-center gap-2 px-8 py-3 rounded-full border border-neutral-700 overflow-hidden group"
             >
