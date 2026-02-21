@@ -25,13 +25,13 @@ export default function TechTalkDetails() {
   if (!talk) return <div className="p-20 text-white">Talk Not Found</div>;
 
   return (
-    <section className="relative bg-black text-white py-24 overflow-hidden">
+    <section className="relative bg-black text-white py-24 overflow-hidden ">
       {/* Background Glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/20 blur-[140px] rounded-full top-[-100px] right-[-100px]" />
       <div className="absolute w-[400px] h-[400px] bg-purple-600/20 blur-[120px] rounded-full bottom-[-100px] left-[-100px]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <Link href="/experience" className="underline text-blue-800 ">
+        <Link href="/experience" className="underline text-blue-300 ">
           Back to Past Page
         </Link>
 
@@ -64,7 +64,7 @@ export default function TechTalkDetails() {
               <div className="absolute w-40 h-40 bg-purple-600/20 blur-3xl rounded-full -top-10 -right-10 group-hover:bg-purple-600/30 transition" />
 
               <h3 className="text-5xl font-bold text-purple-500 relative z-10">
-                {talk.highlights.hourse} Hrs
+                {talk.highlights.hours} Hrs
               </h3>
               <p className="text-gray-400 mt-3 relative z-10">
                 Workshop Duration
@@ -76,7 +76,7 @@ export default function TechTalkDetails() {
               <div className="absolute w-40 h-40 bg-blue-600/20 blur-3xl rounded-full -top-10 -right-10 group-hover:bg-blue-600/30 transition" />
 
               <h3 className="text-2xl font-semibold text-blue-400 relative z-10">
-                React SPA
+               {talk?.highlights?.skillsCovered.length}+ Skills
               </h3>
               <p className="text-gray-400 mt-3 relative z-10">
                 Core Topic Covered
@@ -91,8 +91,8 @@ export default function TechTalkDetails() {
         </div>
 
         {/* Image Carousel */}
-        <section className="mx-auto max-w-6xl px-6 py-16">
-         <div className="h-[50vh] min-h-[300px] max-h-[500px] w-full">
+        <section className="mx-auto max-w-6xl px-6 py-16 ">
+         <div className=" w-full">
             <ProjectCarousel folder={talk.images} />
           </div>
         </section>
