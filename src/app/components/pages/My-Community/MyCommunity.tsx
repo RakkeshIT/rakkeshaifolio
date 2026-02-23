@@ -1,67 +1,42 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type * as THREEType from "three";
+import * as THREE from "three";
 
-declare global {
-  interface Window {
-    THREE: typeof THREEType;
-  }
-}
-
- type VantaOptions =  {
-    el: HTMLElement;
-    mouseControls?: boolean;
-    touchControls?: boolean;
-    gyroControls?: boolean;
-    minHeight?: number;
-    minWidth?: number;
-    backgroundColor?: number;
-    color?: number;
-  }
+type VantaEffect = {
+  destroy: () => void;
+};
 
 export default function MyCommunityBg3D() {
   const vantaRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let effect: { destroy: () => void } | null = null;
+    let effect: VantaEffect | null = null;
 
-    const init = async () => {
+    const initVanta = async () => {
       if (!vantaRef.current) return;
 
-      // 1️⃣ Import THREE
-      const THREEImport = await import("three");
-      const THREE = THREEImport.default ?? THREEImport;
+      const VANTA = (await import("vanta/dist/vanta.dots.min")).default;
 
-      // 2️⃣ Attach to window (typed)
-      window.THREE = THREE as typeof THREEType;
-
-      // 3️⃣ Import Vanta AFTER attaching THREE
-      const VANTA = (await import("vanta/dist/vanta.dots.min")).default as unknown as VantaOptions;
-
-      // 4️⃣ Initialize
       effect = VANTA({
         el: vantaRef.current,
+        THREE: THREE, // ✅ IMPORTANT FIX
         mouseControls: true,
         touchControls: true,
+        gyroControls: false,
+        minHeight: 200,
+        minWidth: 200,
         backgroundColor: 0x23153c,
-        color: 0xff3f81,
+        color: 0xff6b00,
       });
     };
 
-    init();
+    initVanta();
 
     return () => {
-      if (effect) {
-        effect.destroy();
-      }
+      if (effect) effect.destroy();
     };
   }, []);
 
-  return (
-    <div
-      ref={vantaRef}
-      style={{ height: "100vh", width: "100%" }}
-    />
-  );
+  return <div ref={vantaRef} className="absolute inset-0 -z-10" />;
 }
