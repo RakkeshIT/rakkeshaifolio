@@ -21,7 +21,7 @@ const owners = [
     linkedin: "https://www.linkedin.com/in/rakkeshit/",
     email: "mailto:vairaacoders@gmail.com",
   }
-];
+];      
 
 export default function OwnersSection() {
   return (
