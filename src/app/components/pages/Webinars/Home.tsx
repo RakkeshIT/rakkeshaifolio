@@ -1,53 +1,69 @@
 "use client";
 
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { useRef } from "react";
-const WebinarHome = () => {
-  const ref = useRef(null)
-  
-  const {scrollYProgress} = useScroll(
-    {
-      target: ref
-    }
-  )
-  return (
-    <section ref={ref} className="relative min-h-[100vh] flex items-center justify-center  px-6">
-      {/* Left Side Image */}
-      <div className=" absolute left-4 bg-white rounded-xl shadow-xl p-2 w-[120px] md:w-[160px]">
-        <Image
-          src="/webinar1.jpg"
-          alt="Webinar"
-          width={200}
-          height={150}
-          className="rounded-lg object-cover"
-        />
-      </div>
+import { useRef, useEffect } from "react";
+import * as THREE from "three";
 
-      <div className=" absolute top-4 left-6 bg-white rounded-xl shadow-xl p-2 w-[120px] md:w-[160px]">
-        <Image
-        src="/webinar1.jpg"
-        alt="Webinar"
-        width={200}
-        height={150}
-        className="rounded-lg object-cover"
-        />
-    </div>
-      <div className=" absolute left-4 bottom-2 bg-white rounded-xl shadow-xl p-2 w-[120px] md:w-[160px]">
-        <Image
-          src="/webinar1.jpg"
-          alt="Webinar"
-          width={200}
-          height={150}
-          className="rounded-lg object-cover"
-        />
-    </div>
+
+type VantaEffect = {
+  destroy: () => void;
+};
+
+type VantaGlobe = (options: {
+  el: HTMLElement;
+  THREE: typeof import("three");
+  mouseControls?: boolean;
+  touchControls?: boolean;
+  gyroControls?: boolean;
+  minHeight?: number;
+  minWidth?: number;
+  backgroundColor?: number;
+  color?: number;
+}) => VantaEffect;
+
+const WebinarHome = () => {
+  const vantaRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    let vantaEffect: VantaEffect | null = null;
+
+    const loadVanta = async () => {
+      if (!vantaRef.current) return;
+
+      const modules = await import("../../../../../vanta/dist/vanta.globe.min");
+      const GLOBE = modules.default as unknown as  VantaGlobe;
+
+      vantaEffect = GLOBE({
+        el: vantaRef.current,
+        THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        backgroundColor: 0x23153c,
+        color: 0xff3f81,
+      });
+    };
+
+    loadVanta();
+
+    return () => {
+      if (vantaEffect) {
+        vantaEffect.destroy();
+      }
+    };
+  }, []);
+  return (
+    <section
+      ref={vantaRef}
+      className="relative w-screen h-screen
+       flex items-center justify-center px-6 overflow-hidden"
+    >  
+      {/* CENTER CONTENT */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="text-center text-white max-w-3xl"
+        transition={{ duration: 0.8 }}
+        className="text-center text-white max-w-3xl z-10"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide">
           Vairaa Coders
@@ -58,54 +74,23 @@ const WebinarHome = () => {
         </p>
 
         <p className="text-white/90 mb-8 text-base md:text-lg">
-          Learn • Build • Grow together with career-oriented webinars, projects,
-          and mentorship in MERN, Next.js, Testing, and AI.
+          Learn • Build • Grow together with career-oriented webinars,
+          projects, and mentorship in MERN, Next.js, Testing, and AI.
         </p>
 
         <div className="flex justify-center gap-4 flex-wrap">
           <Button className="rounded-2xl px-8 py-5 text-lg">
             Join Community
           </Button>
+
           <Button
             variant="outline"
             className="rounded-2xl px-8 py-5 text-lg text-black"
           >
             View Webinars
-    </Button>
+          </Button>
         </div>
-    </motion.div>
-
-      {/* Right Side Image */}
-
-       <div className=" absolute right-4 bg-white rounded-xl shadow-xl p-2 w-[120px] md:w-[160px]">
-        <Image
-          src="/webinar1.jpg"
-          alt="Webinar"
-          width={200}
-          height={150}
-          className="rounded-lg object-cover"
-        />
-      </div>
-
-      <div className=" absolute top-4 right-6 bg-white rounded-xl shadow-xl p-2 w-[120px] md:w-[160px]">
-        <Image
-        src="/webinar1.jpg"
-        alt="Webinar"
-        width={200}
-        height={150}
-        className="rounded-lg object-cover"
-        />
-    </div>
-      <div className=" absolute right-4 bottom-2 bg-white rounded-xl shadow-xl p-2 w-[120px] md:w-[160px]">
-        <Image
-          src="/webinar1.jpg"
-          alt="Webinar"
-          width={200}
-          height={150}
-          className="rounded-lg object-cover"
-        />
-    </div>
-      
+      </motion.div>
     </section>
   );
 };

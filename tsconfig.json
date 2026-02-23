@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "types", "src/app/components/pages/My-Community/MyCommunity.tsx", "src/app/my-community/page.tsx",
   ],
   "exclude": ["node_modules"]
 }
