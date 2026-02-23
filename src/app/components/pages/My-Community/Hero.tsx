@@ -11,7 +11,7 @@ const CommunityHero = () => {
       <MyCommunityBg3D />
 
       {/* 🔲 Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur z-10" />
+      <div className="absolute inset-0 z-10" />
 
       {/* 📝 Hero Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">

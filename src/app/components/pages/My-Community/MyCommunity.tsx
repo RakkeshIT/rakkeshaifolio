@@ -46,8 +46,8 @@ export default function MyCommunityBg3D() {
         THREE: THREE,
         mouseControls: true,
         touchControls: true,
-        backgroundColor: 0x23153c,
-        color: 0xff3f81,
+        backgroundColor: 0x222222,
+        color: 0xff8820,
       });
     };
 
