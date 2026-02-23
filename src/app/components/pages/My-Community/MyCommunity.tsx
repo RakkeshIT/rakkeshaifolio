@@ -1,45 +1,51 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type * as THREEType from "three";
 import * as THREE from "three";
 
-type VantaEffect = {
-  destroy: () => void;
-};
+declare global {
+  interface Window {
+    THREE: typeof THREEType;
+  }
+}
 
-type VantaDots = (options: {
-  el: HTMLElement;
-  THREE: typeof THREE;
-  mouseControls?: boolean;
-  touchControls?: boolean;
-  gyroControls?: boolean;
-  minHeight?: number;
-  minWidth?: number;
-  backgroundColor?: number;
-  color?: number;
-}) => VantaEffect;
+ interface VantaOptions {
+    el: HTMLElement;
+    mouseControls?: boolean;
+    touchControls?: boolean;
+    gyroControls?: boolean;
+    minHeight?: number;
+    minWidth?: number;
+    backgroundColor?: number;
+    color?: number;
+  }
 
 export default function MyCommunityBg3D() {
   const vantaRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let effect: VantaEffect | null = null;
+    let effect: { destroy: () => void } | null = null;
 
     const init = async () => {
       if (!vantaRef.current) return;
 
-      const VANTA = (await import(
-        "vanta/dist/vanta.dots.min"
-      )).default as unknown as VantaDots;
+      // // 1️⃣ Import THREE
+      // const THREEImport = await import("three");
+      // const THREE = THREEImport.default ?? THREEImport;
 
+      // 2️⃣ Attach to window (typed)
+      window.THREE = THREE as typeof THREEType;
+
+      // 3️⃣ Import Vanta AFTER attaching THREE
+      const VANTA = (await import("vanta/dist/vanta.dots.min")).default;
+
+      // 4️⃣ Initialize
       effect = VANTA({
         el: vantaRef.current,
-        THREE: THREE, // ✅ REQUIRED
+        THREE: THREE,
         mouseControls: true,
         touchControls: true,
-        gyroControls: false,
-        minHeight: 200,
-        minWidth: 200,
         backgroundColor: 0x23153c,
         color: 0xff3f81,
       });
@@ -48,14 +54,16 @@ export default function MyCommunityBg3D() {
     init();
 
     return () => {
-      if (effect) effect.destroy();
+      if (effect) {
+        effect.destroy();
+      }
     };
   }, []);
 
   return (
     <div
       ref={vantaRef}
-      className="absolute inset-0 -z-10"
+      style={{ height: "100vh", width: "100%" }}
     />
   );
 }
