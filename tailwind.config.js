@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require("@tailwindcss/typography")],
   safelist: [
     // Add any dynamic classes here if needed
   ]

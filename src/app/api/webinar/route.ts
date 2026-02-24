@@ -78,3 +78,24 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message }, { status: 500 });
   }
 }
+// GET:  /api/webinars
+export async function GET() {
+  try {
+    const { data, error } = await supabaseAdmin
+      .from("webinars")
+      .select("*")
+    if (error) {
+      console.log(error.message)
+      return NextResponse.json({ message: error.message }, { status: 500 });
+    }
+    return NextResponse.json(
+      { message: "Webinar Fetched", data },
+      { status: 200 },
+    );
+  } catch (error: unknown) {
+    const message =
+      error instanceof Error ? error.message : "Something went wrong";
+
+    return NextResponse.json({ message }, { status: 500 });
+  }
+}

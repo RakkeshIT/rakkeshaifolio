@@ -350,7 +350,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                       >
                         <li>
                           <a
-                            href="#web"
+                            href="/webinar"
                             className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
                           >
                             My Webinars [Free]
