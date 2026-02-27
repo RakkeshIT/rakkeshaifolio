@@ -200,12 +200,12 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="#mobile"
+                    <Link
+                      href="/course"
                       className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
                     >
                       Courses [Free]
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -349,28 +349,28 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                         className="ml-4 mt-2 flex flex-col overflow-hidden border-l border-neutral-200"
                       >
                         <li>
-                          <a
+                          <Link
                             href="/webinar"
                             className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
                           >
                             My Webinars [Free]
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="#courses"
+                          <Link
+                            href="/course"
                             className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
                           >
                             Courses [Free]
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             href="/my-community"
                             className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
                           >
                             My Student Community
-                          </a>
+                          </Link>
                         </li>
                       </motion.ul>
                     )}
