@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-
+import { Details } from './Data/Details'
 interface Webinar {
   id: string;
   title: string;
@@ -20,26 +20,9 @@ interface WebinarApiResponse {
 }
 
 export default function WebinarCards() {
-  const [webinars, setWebinars] = useState<Webinar[]>([]);
-  const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<"all" | "completed" | "upcoming">("all");
 
-  useEffect(() => {
-    const fetchWebinars = async () => {
-      try {
-        const res = await axios.get<WebinarApiResponse>("/api/webinar");
-        setWebinars(res.data.data);
-      } catch (err) {
-        console.error("Failed to fetch webinars", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchWebinars();
-  }, []);
-
-  const filteredTabs = webinars.filter((w) =>
+  const filteredTabs = Details.filter((w) =>
     activeTab === "all" ? true : w.status.toLowerCase() === activeTab
   );
 
@@ -75,14 +58,14 @@ export default function WebinarCards() {
         </div>
 
         {/* Loading */}
-        {loading && (
+        {/* {loading && (
           <div className="text-center text-gray-400 text-lg">
             Loading webinars...
           </div>
-        )}
+        )} */}
 
         {/* Grid */}
-        {!loading && (
+        
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredTabs.length > 0 ? (
               filteredTabs.map((webinar) => (
@@ -140,7 +123,7 @@ export default function WebinarCards() {
               </div>
             )}
           </div>
-        )}
+
       </div>
     </section>
   );

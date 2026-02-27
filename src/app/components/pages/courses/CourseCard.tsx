@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Clock, Star, Users } from "lucide-react";
-import axios from "axios";
-
+import { Clock, Users } from "lucide-react";
+import { Courses } from "./Data/Details";
+import { useRouter } from "next/navigation";
 interface Course {
-  _id: string;
+  id: string;
   title: string;
   shortDescription: string;
   thumbnail: string;
@@ -24,29 +24,12 @@ interface CourseApi {
 const tabs = ["All", "Completed", "Upcoming", "Ongoing"];
 
 export default function CourseCard() {
-  const [courses, setCourses] = useState<Course[]>([]);
   const [activeTab, setActiveTab] = useState("All");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const res = await axios.get<CourseApi>("/api/course");
-        setCourses(res.data.data);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCourses();
-  }, []);
-
+  const router = useRouter()
   const filteredCourses =
     activeTab === "All"
-      ? courses
-      : courses.filter((c) => c.status === activeTab);
+      ? Courses
+      : Courses.filter((c) => c.status === activeTab);
 
   return (
     <section className="relative py-24 px-6 lg:px-20 bg-gradient-to-br from-black via-neutral-900 to-black text-white">
@@ -78,16 +61,12 @@ export default function CourseCard() {
         ))}
       </div>
 
-      {/* Loader */}
-      {loading && (
-        <div className="text-center text-gray-400">Loading courses...</div>
-      )}
 
       {/* Course Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {filteredCourses.map((course, index) => (
           <motion.div
-            key={course._id}
+            key={course.id}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -117,7 +96,7 @@ export default function CourseCard() {
               </h3>
 
               <p className="text-gray-400 text-sm line-clamp-2">
-                {course.shortDescription}
+                {course.short_description}
               </p>
 
               <div className="flex items-center justify-between text-sm text-gray-300">
@@ -131,10 +110,10 @@ export default function CourseCard() {
 
               <div className="flex items-center justify-between pt-4">
                 <span className="text-lg font-bold text-orange-400">
-                  ₹ {course.price}
+                 {course.price ? `₹${course.price}` : "Free"}
                 </span>
 
-                <button className="bg-gradient-to-r from-orange-500 to-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition">
+                <button onClick={() => router.push(`/course/${course.id}`)} className="cursor-pointer bg-gradient-to-r from-orange-500 to-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition">
                   View Course
                 </button>
               </div>

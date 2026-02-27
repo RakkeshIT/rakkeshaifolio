@@ -196,7 +196,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                       href="/webinar"
                       className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
                     >
-                      My Webinars [Free]
+                      My Webinars
                     </Link>
                   </li>
                   <li>
@@ -204,7 +204,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                       href="/course"
                       className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
                     >
-                      Courses [Free]
+                      Courses
                     </Link>
                   </li>
                   <li>
@@ -353,7 +353,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                             href="/webinar"
                             className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
                           >
-                            My Webinars [Free]
+                            My Webinars
                           </Link>
                         </li>
                         <li>
@@ -361,7 +361,7 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                             href="/course"
                             className="block px-4 py-2 text-sm text-heading hover:bg-neutral-100 rounded-md"
                           >
-                            Courses [Free]
+                            Courses
                           </Link>
                         </li>
                         <li>

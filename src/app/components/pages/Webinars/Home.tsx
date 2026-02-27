@@ -2,8 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, RefObject } from "react";
 import * as THREE from "three";
+import Link from "next/link";
 
 
 type VantaEffect = {
@@ -22,7 +23,11 @@ type VantaGlobe = (options: {
   color?: number;
 }) => VantaEffect;
 
-const WebinarHome = () => {
+type Props = {
+  cardRef: React.RefObject<HTMLDivElement>,
+}
+
+const WebinarHome = ({section}: {section: Props}) => {
   const vantaRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     let vantaEffect: VantaEffect | null = null;
@@ -52,6 +57,11 @@ const WebinarHome = () => {
       }
     };
   }, []);
+
+  const scrollTo = (e: React.MouseEvent<HTMLButtonElement>,ref:React.RefObject<HTMLDivElement> ) => {
+    e.preventDefault()
+    ref.current?.scrollIntoView({behavior: "smooth"})
+  }
   return (
     <section
       ref={vantaRef}
@@ -65,6 +75,7 @@ const WebinarHome = () => {
         transition={{ duration: 0.8 }}
         className="text-center text-white max-w-3xl z-10"
       >
+    <Link href='/' className="underline font-bold">Back to Home</Link>
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide">
           Vairaa Coders
         </h1>
@@ -75,7 +86,7 @@ const WebinarHome = () => {
 
         <p className="text-white/90 mb-8 text-base md:text-lg">
           Learn • Build • Grow together with career-oriented webinars,
-          projects, and mentorship in MERN, Next.js, Testing, and AI.
+          projects, and mentorship.
         </p>
 
         <div className="flex justify-center gap-4 flex-wrap">
@@ -85,7 +96,8 @@ const WebinarHome = () => {
 
           <Button
             variant="outline"
-            className="rounded-2xl px-8 py-5 text-lg text-black"
+            className="rounded-2xl px-8 py-5 text-lg text-black cursor-pointer"
+            onClick={(e) => scrollTo(e, section.cardRef)}
           >
             View Webinars
           </Button>

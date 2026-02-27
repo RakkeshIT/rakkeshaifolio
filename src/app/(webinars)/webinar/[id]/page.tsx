@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-
+import { Details } from "@/app/components/pages/Webinars/Data/Details";
 interface Webinar {
   id: string;
   title: string;
@@ -31,53 +31,12 @@ interface Webinar {
 
 export default function WebinarDetailsPage() {
   const { id } = useParams();
-  const [webinar, setWebinar] = useState<Webinar | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
 
-  useEffect(() => {
-    if (!id) return;
-
-    const fetchWebinar = async () => {
-      try {
-        const res = await fetch(`/api/webinar/${id}`);
-        const result = await res.json();
-
-        if (!res.ok) {
-          throw new Error(result.message || "Failed to fetch webinar");
-        }
-
-        setWebinar(result.data);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchWebinar();
-  }, [id]);
+  const webinar: Webinar | undefined = (Details as Webinar[]).find((w) => w.id == id)
 
   const displayValue = (value: string | null | undefined) => {
     return value && value !== "" ? value : "Not Available";
   };
-
-  if (loading) {
-    return (
-      <div className="h-screen flex items-center justify-center text-lg font-semibold">
-        Loading Webinar...
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="h-screen flex items-center justify-center text-red-500 text-lg">
-        {error}
-      </div>
-    );
-  }
 
   if (!webinar) {
     return (
@@ -157,7 +116,7 @@ export default function WebinarDetailsPage() {
           <DetailCard label="Agenda Link" value={webinar.agenda_link} isLink />
           <DetailCard
             label="Registration Link"
-            value={webinar.registration_link}
+            value={ webinar.registration_link }
             isLink
           />
         </div>
@@ -202,11 +161,6 @@ export default function WebinarDetailsPage() {
                 <p className="text-gray-400">Portfolio Not Available</p>
               )}
             </div>
-          </div>
-
-          <div className="text-sm text-gray-500">
-            <p>Created: {displayValue(webinar.created_at)}</p>
-            <p>Updated: {displayValue(webinar.updated_at)}</p>
           </div>
         </div>
       </section>
