@@ -208,12 +208,12 @@ const HeaderNavbar = ({section}: {section: Props}) => {
                     </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/my-community"
                       className="block px-4 py-2 text-sm text-heading hover:bg-gray-100 rounded-md"
                     >
                       My Student Community
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>

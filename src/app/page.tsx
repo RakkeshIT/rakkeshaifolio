@@ -27,7 +27,7 @@ export default function Home() {
       />
 
       <div ref={homeRef}>
-      <HomePage/>
+      <HomePage section={{contactRef}}/>
       </div>
       <div ref={aboutRef}>
       <About/>

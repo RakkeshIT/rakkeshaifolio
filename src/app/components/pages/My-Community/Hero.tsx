@@ -36,9 +36,9 @@ const CommunityHero = () => {
         </p>
 
         <div className="mt-8 flex gap-4 flex-wrap justify-center">
-          <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 rounded-xl font-semibold transition">
+           <a href='mailto:vairaacoders@gmail.com' target="__blank" className="rounded-2xl bg-black px-8 text-lg text-center py-2">
             Join Community
-          </button>
+          </a>
 
           <button className="px-8 py-3 border border-white/30 hover:border-orange-500 rounded-xl transition">
             Explore Programs

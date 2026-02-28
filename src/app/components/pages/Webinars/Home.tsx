@@ -90,9 +90,9 @@ const WebinarHome = ({section}: {section: Props}) => {
         </p>
 
         <div className="flex justify-center gap-4 flex-wrap">
-          <Button className="rounded-2xl px-8 py-5 text-lg">
+          <a href='mailto:vairaacoders@gmail.com' target="__blank" className="rounded-2xl bg-black px-8 text-lg text-center py-2">
             Join Community
-          </Button>
+          </a>
 
           <Button
             variant="outline"
