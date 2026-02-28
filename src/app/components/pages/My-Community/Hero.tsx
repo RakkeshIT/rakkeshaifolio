@@ -5,7 +5,17 @@ import MyCommunityBg3D from "./MyCommunity";
 import Link from "next/link";
 import { LinkIcon, Youtube, Instagram } from "lucide-react";
 
-const CommunityHero = () => {
+interface Props {
+  programRef: React.RefObject<HTMLDivElement>
+}
+
+const CommunityHero = ({section}: {section: Props}) => {
+
+    const scrollTo = (e: React.MouseEvent<HTMLButtonElement>, ref: React.RefObject<HTMLDivElement>) => {
+    e.preventDefault()
+
+    ref.current.scrollIntoView({behavior: "smooth"})
+  }
   return (
     <section className="relative h-screen w-full overflow-hidden text-white">
       {/* 🌌 3D Background */}
@@ -90,7 +100,7 @@ const CommunityHero = () => {
             Join Community
           </a>
 
-          <button className="px-8 py-3 border border-white/30 hover:border-orange-500 rounded-xl transition">
+          <button onClick={(e) => scrollTo(e, section.programRef)} className="px-8 py-3 border border-white/30 hover:border-orange-500 rounded-xl transition">
             Explore Programs
           </button>
         </div>
