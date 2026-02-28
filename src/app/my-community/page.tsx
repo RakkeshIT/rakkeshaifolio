@@ -10,7 +10,7 @@ const MyCommunityPage = () => {
   const programRef = useRef<HTMLDivElement>(null!)
   return (
     <div>
-     <CommunityHero section={programRef}/>
+     <CommunityHero section={{programRef}}/>
      <AboutSection/>
      <OwnersSection/>
      <div ref={programRef}>
