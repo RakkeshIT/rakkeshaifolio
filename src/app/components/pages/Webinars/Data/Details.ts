@@ -151,7 +151,7 @@ export const Details = [
     speaker_role: "Software Trainer and Developer",
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
-    cover_image: "interview-preparation-ai-webinar.png",
+    cover_image: Smart_InterviewPre ,
     created_at: "2026-03-04 00:00:00+00",
     updated_at: "2026-03-04 00:00:00+00",
   },
