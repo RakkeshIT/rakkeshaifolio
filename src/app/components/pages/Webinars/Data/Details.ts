@@ -131,7 +131,7 @@ export const Details = [
     updated_at: "2026-02-27 00:00:00+00",
   },
   {
-    id: "c9d0e1f2-3a4b-5c6d-7e8f-901234567890",
+    id: "c9d0e1f2-3a4b-5c6d-7e8f-9012345677690",
     title: "Crack Interviews Smartly: Master Preparation Strategy + AI Tools",
     short_description:
       "Live Webinar: Learn how to prepare for interviews, understand interview rounds, use AI tools smartly, and build a powerful problem-solving strategy.",
