@@ -2,7 +2,7 @@ import Fresher_Roadmap_2026 from "../../../assets/webinars/Fresher_Roadmap_2026.
 import CareerRoadmap from "../../../assets/webinars/CareerRoadmap.jpg";
 import MERNwithAI from "../../../assets/webinars/MERNwithAI.png";
 import ZeroReferel from "../../../assets/webinars/ZeroReferel.png";
-import Smart_InterviewPre from "../../../assets/webinars/Smart_InterviewPre.png";
+// import Smart_InterviewPre from "../../../assets/webinars/Smart_InterviewPre.png";
 export const Details = [
   {
     id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69a5",
@@ -130,29 +130,29 @@ export const Details = [
     created_at: "2026-02-27 00:00:00+00",
     updated_at: "2026-02-27 00:00:00+00",
   },
-  {
-    id: "c9d0e1f2-3a4b-5c6d-7e8f-9012345677690",
-    title: "Interviews Preparation Strategy with AI Tools",
-    short_description:
-      "Live Webinar: Learn how to prepare for interviews, understand interview rounds, use AI tools smartly, and build a powerful problem-solving strategy.",
-    description:
-      "🚀 LIVE WEBINAR\n\nJoin “Crack Interviews Smartly: Master Preparation Strategy + AI Tools” hosted by Rakkesh Kumar, MERN Developer & Career Mentor.\n\nIn this session, you will learn:\n\n1️⃣ How to Prepare for Interviews Step-by-Step\n2️⃣ Understanding Different Interview Rounds (Aptitude, Technical, HR & Managerial)\n3️⃣ Smart Planning & 30-Day Interview Preparation Strategy\n4️⃣ How to Use AI Tools for Interview Preparation\n5️⃣ How to Find the Best Study Materials Using Google & AI\n6️⃣ Problem-Solving Approach for Coding Interviews\n7️⃣ Resume Improvement & Mock Interview Strategy\n\n🎁 BONUS FOR ATTENDEES:\n- Interview Preparation Checklist\n- AI Prompt List for Interview Practice\n- Resume Improvement Tips\n- 30-Day Preparation Planner\n- Live Demonstration\n\n📅 Date: Saturday, 07/03/2026\n⏰ Time: 5:30 PM – 7:00 PM IST\n💻 Venue: Online (Google Meet)\n🎟️ Free Registration – Limited Seats\n🔗 Register Now: https://rakkeshaifolio.vercel.app/webinar",
-    date: "2026-03-07",
-    start_time: "5:30 PM",
-    end_time: "7:00 PM",
-    duration: "1.5",
-    location_type: "Online",
-    location: "Google Meet",
-    venue: "Google Meet",
-    status: "Upcoming",
-    agenda_link: "https://drive.google.com/file/d/1-CgxRfDH-5SMocPRGMAgzoxUsyYM6IY6/view?usp=drive_link",
-    registration_link: "https://forms.gle/gU5v1b83m546RqGR9",
-    speaker_name: "Rakkesh Kumar",
-    speaker_role: "Software Trainer and Developer",
-    speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
-    speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
-    cover_image: Smart_InterviewPre ,
-    created_at: "2026-03-04 00:00:00+00",
-    updated_at: "2026-03-04 00:00:00+00",
-  },
+  // {
+  //   id: "c9d0e1f2-3a4b-5c6d-7e8f-9012345677690",
+  //   title: "Interviews Preparation Strategy with AI Tools",
+  //   short_description:
+  //     "Live Webinar: Learn how to prepare for interviews, understand interview rounds, use AI tools smartly, and build a powerful problem-solving strategy.",
+  //   description:
+  //     "🚀 LIVE WEBINAR\n\nJoin “Crack Interviews Smartly: Master Preparation Strategy + AI Tools” hosted by Rakkesh Kumar, MERN Developer & Career Mentor.\n\nIn this session, you will learn:\n\n1️⃣ How to Prepare for Interviews Step-by-Step\n2️⃣ Understanding Different Interview Rounds (Aptitude, Technical, HR & Managerial)\n3️⃣ Smart Planning & 30-Day Interview Preparation Strategy\n4️⃣ How to Use AI Tools for Interview Preparation\n5️⃣ How to Find the Best Study Materials Using Google & AI\n6️⃣ Problem-Solving Approach for Coding Interviews\n7️⃣ Resume Improvement & Mock Interview Strategy\n\n🎁 BONUS FOR ATTENDEES:\n- Interview Preparation Checklist\n- AI Prompt List for Interview Practice\n- Resume Improvement Tips\n- 30-Day Preparation Planner\n- Live Demonstration\n\n📅 Date: Saturday, 07/03/2026\n⏰ Time: 5:30 PM – 7:00 PM IST\n💻 Venue: Online (Google Meet)\n🎟️ Free Registration – Limited Seats\n🔗 Register Now: https://rakkeshaifolio.vercel.app/webinar",
+  //   date: "2026-03-07",
+  //   start_time: "5:30 PM",
+  //   end_time: "7:00 PM",
+  //   duration: "1.5",
+  //   location_type: "Online",
+  //   location: "Google Meet",
+  //   venue: "Google Meet",
+  //   status: "Upcoming",
+  //   agenda_link: "https://drive.google.com/file/d/1-CgxRfDH-5SMocPRGMAgzoxUsyYM6IY6/view?usp=drive_link",
+  //   registration_link: "https://forms.gle/gU5v1b83m546RqGR9",
+  //   speaker_name: "Rakkesh Kumar",
+  //   speaker_role: "Software Trainer and Developer",
+  //   speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
+  //   speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
+  //   cover_image: Smart_InterviewPre ,
+  //   created_at: "2026-03-04 00:00:00+00",
+  //   updated_at: "2026-03-04 00:00:00+00",
+  // },
 ];
