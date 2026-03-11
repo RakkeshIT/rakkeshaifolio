@@ -2,7 +2,8 @@ import Fresher_Roadmap_2026 from "../../../assets/webinars/Fresher_Roadmap_2026.
 import CareerRoadmap from "../../../assets/webinars/CareerRoadmap.jpg";
 import MERNwithAI from "../../../assets/webinars/MERNwithAI.png";
 import ZeroReferel from "../../../assets/webinars/ZeroReferel.png";
-// import Smart_InterviewPre from "../../../assets/webinars/Smart_InterviewPre.png";
+import LinkedIn from "../../../assets/webinars/LinkedInBanner.png";
+import LinkedInPoster from "../../../assets/webinars/LinkedInPoster.png";
 export const Details = [
   {
     id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69a5",
@@ -27,6 +28,7 @@ export const Details = [
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image:
       "https://res.cloudinary.com/ddmgvjurl/image/upload/v1771835242/webinars/bcbmp3yif4z0rwk6wi5e.jpg",
+    poster: "https://res.cloudinary.com/ddmgvjurl/image/upload/v1771835242/webinars/bcbmp3yif4z0rwk6wi5e.jpg",
     created_at: "2026-02-23 08:27:23.351431+00",
     updated_at: "2026-02-23 08:27:23.351431+00",
   },
@@ -52,6 +54,7 @@ export const Details = [
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image: Fresher_Roadmap_2026,
+    poster: Fresher_Roadmap_2026,
     created_at: "2026-02-27 00:00:00+00",
     updated_at: "2026-02-27 00:00:00+00",
   },
@@ -77,6 +80,7 @@ export const Details = [
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image: CareerRoadmap,
+    poster: CareerRoadmap,
     created_at: "2026-02-27 00:00:00+00",
     updated_at: "2026-02-27 00:00:00+00",
   },
@@ -102,6 +106,7 @@ export const Details = [
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image: MERNwithAI,
+    poster: MERNwithAI,
     created_at: "2026-02-27 00:00:00+00",
     updated_at: "2026-02-27 00:00:00+00",
   },
@@ -127,6 +132,7 @@ export const Details = [
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image: ZeroReferel,
+    poster: ZeroReferel,
     created_at: "2026-02-27 00:00:00+00",
     updated_at: "2026-02-27 00:00:00+00",
   },
@@ -155,4 +161,28 @@ export const Details = [
   //   created_at: "2026-03-04 00:00:00+00",
   //   updated_at: "2026-03-04 00:00:00+00",
   // },
+  {
+    id: "b7a2d1c3-4e5f-6a7b-8c9d-101112131415",
+    title: "LinkedIn Mastery: Build Your Professional Brand",
+    short_description: "Live Webinar: Learn how to build a powerful LinkedIn profile, grow your network, and attract job opportunities.",
+    description: "🚀 LIVE WEBINAR\n\nJoin “LinkedIn Mastery: From Beginner to Professional” hosted by Rakkesh Kumar, Software Developer & Students Mentor.\n\nIn this session, you will learn:\n\n1️⃣ How to Create a Professional LinkedIn Profile\n2️⃣ How to Optimize Your Profile for Job Opportunities\n3️⃣ How to Build a Strong Professional Network\n4️⃣ LinkedIn Content Strategy for Beginners\n5️⃣ How to Attract Recruiters Using LinkedIn\n6️⃣ Job Search Techniques Using LinkedIn\n7️⃣ Common LinkedIn Mistakes to Avoid\n\n🎁 BONUS FOR ATTENDEES:\n- LinkedIn Profile Checklist\n- LinkedIn Post Templates\n- Networking Message Templates\n- Job Search Strategy Guide\n- Live Profile Optimization Demo\n\n📅 Date: Sunday, 15/03/2026\n⏰ Time: 11:00 AM – 12:30 PM IST\n💻 Venue: Online (Google Meet)\n🎟️ Free Registration – Limited Seats\n🔗 Register Now: https://forms.gle/YOUR_FORM_LINK",
+    date: "2026-03-15",
+    start_time: "5:00 PM",
+    end_time: "6:30 PM",
+    duration: "1.5",
+    location_type: "Online",
+    location: "Google Meet",
+    venue: "Google Meet",
+    status: "Upcoming",
+    agenda_link: "",
+    registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdZ-_uzVjjIqcr0CG4GRpgDuyRBJ5TccdRFiqk2IZgrEQcK2g/viewform?usp=header",
+    speaker_name: "Rakkesh Kumar",
+    speaker_role: "Software Developer and Students Mentor",
+    speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
+    speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
+    cover_image: LinkedIn,
+    poster: LinkedInPoster,
+    created_at: "2026-03-11 00:00:00+00",
+    updated_at: "2026-03-11 00:00:00+00"
+  }
 ];
