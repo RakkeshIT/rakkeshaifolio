@@ -173,7 +173,7 @@ export const Details = [
     location_type: "Online",
     location: "Google Meet",
     venue: "Google Meet",
-    status: "Upcoming",
+    status: "Completed",
     agenda_link: "https://drive.google.com/file/d/164WCD0B7-vMX8PQBHUMh0qflbQaJ2FdZ/view?usp=drive_link",
     registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSdZ-_uzVjjIqcr0CG4GRpgDuyRBJ5TccdRFiqk2IZgrEQcK2g/viewform?usp=header",
     speaker_name: "Rakkesh Kumar",
