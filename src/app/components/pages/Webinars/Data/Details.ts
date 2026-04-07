@@ -183,7 +183,7 @@ export const Details = [
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image: Interview,
-    created_at: "2026-03-04 00:00:00+00",
-    updated_at: "2026-03-04 00:00:00+00",
+    created_at: "2026-04-07 00:00:00+00",
+    updated_at: "2026-04-07 00:00:00+00",
   },
 ];
