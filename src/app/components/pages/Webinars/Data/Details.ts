@@ -171,7 +171,7 @@ export const Details = [
     date: "2026-04-12",
     start_time: "10:30 AM",
     end_time: "11:300 AM",
-    duration: "1",
+    duration: "1 Hrs",
     location_type: "Online",
     location: "Google Meet",
     venue: "Google Meet",
