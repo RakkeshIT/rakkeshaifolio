@@ -5,6 +5,8 @@ import ZeroReferel from "../../../assets/webinars/ZeroReferel.png";
 import LinkedIn from "../../../assets/webinars/LinkedInBanner.png";
 import LinkedInPoster from "../../../assets/webinars/LinkedInPoster.png";
 import Interview from "../../../assets/webinars/Interview.png";
+import CoverInterview from "../../../assets/webinars/int.png";
+
 export const Details = [
   {
     id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69a5",
@@ -156,7 +158,7 @@ export const Details = [
     speaker_role: "Software Developer and Students Mentor",
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
-    cover_image: LinkedIn,
+    cover_image: CoverInterview,
     poster: LinkedInPoster,
     created_at: "2026-03-11 00:00:00+00",
     updated_at: "2026-03-11 00:00:00+00"
@@ -167,22 +169,23 @@ export const Details = [
     short_description:
       "Live Webinar: Learn how to prepare for interviews, understand interview rounds, use AI tools smartly, and build a powerful problem-solving strategy.",
     description:
-      "🚀 LIVE WEBINAR\n\nJoin “Crack Interviews Smartly: Master Preparation Strategy + AI Tools” hosted by Rakkesh Kumar, MERN Developer & Career Mentor.\n\nIn this session, you will learn:\n\n1️⃣ How to Prepare for Interviews Step-by-Step\n2️⃣ Understanding Different Interview Rounds (Aptitude, Technical, HR & Managerial)\n3️⃣ Smart Planning & 30-Day Interview Preparation Strategy\n4️⃣ How to Use AI Tools for Interview Preparation\n5️⃣ How to Find the Best Study Materials Using Google & AI\n6️⃣ Problem-Solving Approach for Coding Interviews\n7️⃣ Resume Improvement & Mock Interview Strategy\n\n🎁 BONUS FOR ATTENDEES:\n- Interview Preparation Checklist\n- AI Prompt List for Interview Practice\n- Resume Improvement Tips\n- 30-Day Preparation Planner\n- Live Demonstration\n\n📅 Date: Saturday, 07/03/2026\n⏰ Time: 5:30 PM – 7:00 PM IST\n💻 Venue: Online (Google Meet)\n🎟️ Free Registration – Limited Seats\n🔗 Register Now: https://rakkeshaifolio.vercel.app/webinar",
+      "🚀 LIVE WEBINAR\n\nJoin “Crack Interviews Smartly: Master Preparation Strategy + AI Tools” hosted by Rakkesh Kumar, MERN Developer & Career Mentor.\n\nIn this session, you will learn:\n\n1️⃣ How to Prepare for Interviews Step-by-Step\n2️⃣ Understanding Different Interview Rounds (Aptitude, Technical, HR & Managerial)\n3️⃣ Smart Planning & 30-Day Interview Preparation Strategy\n4️⃣ How to Use AI Tools for Interview Preparation\n5️⃣ How to Find the Best Study Materials Using Google & AI\n6️⃣ Problem-Solving Approach for Coding Interviews\n7️⃣ Resume Improvement & Mock Interview Strategy\n\n🎁 BONUS FOR ATTENDEES:\n- Interview Preparation Checklist\n- AI Prompt List for Interview Practice\n- Resume Improvement Tips\n- 30-Day Preparation Planner\n- Live Demonstration\n\n📅 Date: Sunday, 12/04/2026\n⏰ Time: 10:30 AM – 11:30 AM IST\n💻 Venue: Online (Google Meet)\n🎟️ Free Registration – Limited Seats\n🔗 Register Now: https://rakkeshaifolio.vercel.app/webinar",
     date: "2026-04-12",
     start_time: "10:30 AM",
-    end_time: "11:300 AM",
+    end_time: "11:30 AM",
     duration: "1 Hrs",
     location_type: "Online",
     location: "Google Meet",
     venue: "Google Meet",
     status: "Upcoming",
-    agenda_link: "https://drive.google.com/drive/u/0/folders/18W-ojlEksE1OP2kSvsLZU_AHEWZnXZy_",
+    agenda_link: "https://drive.google.com/drive/u/0/folders/1oT0wiSkQI6fQjAemUMFDsDI08rIPR3Wa",
     registration_link: "https://forms.gle/Me8qwFz9UZs6UQEL9",
     speaker_name: "Rakkesh Kumar",
     speaker_role: "Software Trainer and Developer",
     speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
     speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
     cover_image: Interview,
+    poster: Interview,
     created_at: "2026-04-07 00:00:00+00",
     updated_at: "2026-04-07 00:00:00+00",
   },
