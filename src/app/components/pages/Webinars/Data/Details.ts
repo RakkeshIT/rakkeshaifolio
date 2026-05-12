@@ -199,14 +199,12 @@ export const Details = [
     description: "Finding a job in 2026 is not just about applying on job portals. Students need smart strategies, proper resume positioning, and effective job search methods to stand out.\n\nThis webinar, “Job Hunt 2026 – Search Smart, Get Hired”, is designed to help students and freshers understand how to approach job searching in a smarter and more practical way.\n\nIn this session, we will cover:\n\n🔍 1. How to Search Jobs Properly\nBest platforms to search jobs\nHow to find hidden opportunities\nCareer page search techniques\nSmart LinkedIn usage\nAvoiding fake job postings\n\n📄 2. Resume Focus Strategy\nHow recruiters review resumes\nATS-friendly resume tips\nImportant resume sections students miss\nPortfolio & GitHub optimization\nCommon resume mistakes\n\n🚀 3. Smart Job Apply Methods\nApplying effectively instead of randomly\nDirect HR contact methods\nCold email strategy\nLinkedIn networking basics\nHow to stand out from other candidates\n\n💬 4. Live Doubt Clearing Session\nStudents can ask career-related doubts live\nResume guidance\nJob application doubts\nInterview preparation questions\nCareer roadmap discussion\n\n🎯 5. Real-Time Demonstration\nLive job search demo\nPractical examples\nReal strategies students can use immediately\n\nThis webinar is focused on practical implementation and real-world career guidance to help students become more confident and job-ready.",
 
     date: "2026-05-17",
-    start_time: "11 AM",
-    end_time: "12 PM",
-    duration: "1",
-
+    start_time: "11:00 AM",
+    end_time: "12:00 PM",
+    duration: "1 Hour",
     location_type: "Online",
     location: "Google Meet",
     venue: "Google Meet",
-
     status: "Upcoming",
 
     agenda_link: "https://drive.google.com/file/d/1BpsQCZ39NvfCIGbm9hFtDX6-ZOH2fEAk/view?usp=sharing",
