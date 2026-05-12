@@ -6,7 +6,9 @@ import LinkedIn from "../../../assets/webinars/LinkedInBanner.png";
 import LinkedInPoster from "../../../assets/webinars/LinkedInPoster.png";
 import Interview from "../../../assets/webinars/Interview.png";
 import CoverInterview from "../../../assets/webinars/int.png";
-
+// Job Searching St
+import JobSearchingStart from "../../../assets/webinars/Job-searching-st.png"
+import JobSearchingStartPoster from "../../../assets/webinars/Job-search-st-poster.png"
 export const Details = [
   {
     id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69a5",
@@ -177,7 +179,7 @@ export const Details = [
     location_type: "Online",
     location: "Google Meet",
     venue: "Google Meet",
-    status: "Upcoming",
+    status: "Completed",
     agenda_link: "https://drive.google.com/drive/u/0/folders/1oT0wiSkQI6fQjAemUMFDsDI08rIPR3Wa",
     registration_link: "https://forms.gle/Me8qwFz9UZs6UQEL9",
     speaker_name: "Rakkesh Kumar",
@@ -189,4 +191,37 @@ export const Details = [
     created_at: "2026-04-07 00:00:00+00",
     updated_at: "2026-04-07 00:00:00+00",
   },
+  {
+    id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69b7",
+    title: "Job Hunt 2026 – Search Smart, Get Hired",
+    short_description: "Learn how to search jobs properly, build a strong resume, apply smartly, and clear your career doubts live. This webinar is designed for students and freshers who want practical job search strategies for 2026.",
+
+    description: "Finding a job in 2026 is not just about applying on job portals. Students need smart strategies, proper resume positioning, and effective job search methods to stand out.\n\nThis webinar, “Job Hunt 2026 – Search Smart, Get Hired”, is designed to help students and freshers understand how to approach job searching in a smarter and more practical way.\n\nIn this session, we will cover:\n\n🔍 1. How to Search Jobs Properly\nBest platforms to search jobs\nHow to find hidden opportunities\nCareer page search techniques\nSmart LinkedIn usage\nAvoiding fake job postings\n\n📄 2. Resume Focus Strategy\nHow recruiters review resumes\nATS-friendly resume tips\nImportant resume sections students miss\nPortfolio & GitHub optimization\nCommon resume mistakes\n\n🚀 3. Smart Job Apply Methods\nApplying effectively instead of randomly\nDirect HR contact methods\nCold email strategy\nLinkedIn networking basics\nHow to stand out from other candidates\n\n💬 4. Live Doubt Clearing Session\nStudents can ask career-related doubts live\nResume guidance\nJob application doubts\nInterview preparation questions\nCareer roadmap discussion\n\n🎯 5. Real-Time Demonstration\nLive job search demo\nPractical examples\nReal strategies students can use immediately\n\nThis webinar is focused on practical implementation and real-world career guidance to help students become more confident and job-ready.",
+
+    date: "2026-05-17",
+    start_time: "11 AM",
+    end_time: "1 PM",
+    duration: "1",
+
+    location_type: "Online",
+    location: "Google Meet",
+    venue: "Google Meet",
+
+    status: "Upcoming",
+
+    agenda_link: "https://drive.google.com/file/d/1BpsQCZ39NvfCIGbm9hFtDX6-ZOH2fEAk/view?usp=sharing",
+    registration_link: "https://forms.gle/pKZZVUqwDZdLXkRg6",
+
+    speaker_name: "Rakkesh Kumar J",
+    speaker_role: "Software Trainer & Founder of Vairaa Coders",
+
+    speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
+    speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
+
+    cover_image: JobSearchingStart,
+    poster: JobSearchingStartPoster,
+
+    created_at: "2026-05-12 08:27:23.351431+00",
+    updated_at: "2026-05-12 08:27:23.351431+00"
+  }
 ];
