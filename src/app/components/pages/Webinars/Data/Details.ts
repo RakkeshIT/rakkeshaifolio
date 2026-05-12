@@ -200,7 +200,7 @@ export const Details = [
 
     date: "2026-05-17",
     start_time: "11 AM",
-    end_time: "1 PM",
+    end_time: "12 PM",
     duration: "1",
 
     location_type: "Online",
