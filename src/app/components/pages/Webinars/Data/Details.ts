@@ -205,7 +205,7 @@ export const Details = [
     location_type: "Online",
     location: "Google Meet",
     venue: "Google Meet",
-    status: "Upcoming",
+    status: "Completed",
 
     agenda_link: "https://drive.google.com/file/d/1BpsQCZ39NvfCIGbm9hFtDX6-ZOH2fEAk/view?usp=sharing",
     registration_link: "https://forms.gle/pKZZVUqwDZdLXkRg6",
