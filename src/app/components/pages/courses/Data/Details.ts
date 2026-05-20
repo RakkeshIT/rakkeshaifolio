@@ -128,7 +128,7 @@ export const Courses = [
       "No prior experience required. Students, freshers, job seekers, and career switchers can join. Basic understanding of internet browsing and job portals is enough.",
 
     syllabus_link:
-      "https://drive.google.com/",
+      "https://drive.google.com/file/d/1VPFX_yfSsuWqRhdPET07mLJ80A32ZiMy/view?usp=sharing",
 
     preview_video_link: "https://www.youtube.com/watch?v=fUAat_QM-Aw&t=10s",
     register: "https://forms.gle/6yaMkTa1A2EUYYF28",
