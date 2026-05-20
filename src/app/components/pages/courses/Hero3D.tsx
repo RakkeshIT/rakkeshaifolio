@@ -57,11 +57,19 @@ function RotatingV() {
     </Float>
   );
 }
+type Props = {
+  courseRef: React.RefObject<HTMLDivElement>,
+}
 
-export default function Hero3D() {
+const scrollTo = (e: React.MouseEvent<HTMLButtonElement>, ref: React.RefObject<HTMLDivElement>) => {
+  e.preventDefault()
+  ref.current?.scrollIntoView({ behavior: "smooth" })
+}
+
+export default function Hero3D({ section }: { section: Props }) {
   return (
     <section className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 sm:px-10 lg:px-20 py-20 bg-black text-white overflow-hidden">
-      
+
       {/* LEFT CONTENT */}
       <div className="max-w-xl text-center lg:text-left space-y-6 z-10">
         <h1 className="text-4xl sm:text-3xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
@@ -73,7 +81,7 @@ export default function Hero3D() {
           innovation, and future-ready skills.
         </p>
 
-        <button className="bg-gradient-to-r from-orange-500 to-yellow-400 px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 shadow-xl shadow-orange-500/30">
+        <button onClick={(e) => scrollTo(e, section.courseRef)} className="bg-gradient-to-r from-orange-500 to-yellow-400 px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:scale-105 transition duration-300 shadow-xl shadow-orange-500/30">
           Explore Courses
         </button>
       </div>
