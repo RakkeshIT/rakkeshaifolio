@@ -2,12 +2,15 @@ import Python2Days from "../../../assets/Course/Python2Days.jpg";
 import FSD from "../../../assets/Course/FSD.jpg";
 import MERN from "../../../assets/Course/MERN.jpg";
 import Profile from "../../../assets/Profile1.png";
+import JobAccelerator from "../../../assets/Course/JobAccelerator.png";
+
 export const Courses = [
   {
     id: "d1e2f3g4-5h6i-7j8k-9l0m-123456789abc",
     title: "Python Course",
     category: "Programming",
     level: "Beginner",
+    register: "",
     price: null,
     discount_price: null,
     duration: "Daily 2 Hours (5-6 PM & 7-8 PM)",
@@ -39,6 +42,7 @@ export const Courses = [
     category: "Programming",
     level: "Beginner",
     price: null,
+    register: "",
     discount_price: null,
     duration: "Daily 3-4 Hours (Flexible Timing)",
     language: "English",
@@ -74,6 +78,7 @@ export const Courses = [
     discount_price: null,
     duration: "3 Months (Daily 2-3 Hours)",
     language: "English",
+    register: "",
     short_description:
       "Complete MERN Full Stack Course for students and job seekers to master modern web development.",
     description:
@@ -86,7 +91,7 @@ export const Courses = [
     preview_video_link: "",
     resource_link: "",
     thumbnail: MERN,
-    instructor_image_url:Profile,
+    instructor_image_url: Profile,
     instructor_name: "Rakkesh Kumar",
     instructor_role: "Software Developer & Trainer",
     instructor_bio:
@@ -101,4 +106,96 @@ export const Courses = [
     created_at: "2026-02-27 00:00:00+00",
     updated_at: "2026-02-27 00:00:00+00",
   },
+  {
+    id: "a1b2c3d4-job-ai-accelerator-2026",
+    title: "AI Job Search Accelerator Program",
+    category: "Career Development",
+    level: "Beginner to Intermediate",
+    price: "Free",
+    discount_price: null,
+    duration: "3 Days (Daily 1.5 Hours Live)",
+    language: "English + Tanglish",
+    short_description:
+      "A powerful 3-day live accelerator program to help students and job seekers master AI-powered job searching, ATS resumes, HR reach strategies, and live job applications.",
+
+    description:
+      "Join VAIRAA CODERS AI Job Search Accelerator Program — a practical 3-day live masterclass designed for students, freshers, job seekers, and career switchers. Learn how to build ATS-friendly resumes, optimize LinkedIn and GitHub profiles, use AI tools like ChatGPT, Claude, Gemini, Kimi AI, and Google AI Mode for smarter job searching. Discover effective HR reach strategies, hidden job search methods, and apply for 10+ jobs live during the session. This program focuses on practical implementation, real-world strategies, and AI-powered career growth.",
+
+    learnings:
+      "- Build ATS-Friendly Professional Resume\n- Learn AI Tools for Smart Job Searching\n- Optimize LinkedIn, GitHub & Portfolio\n- Learn Direct HR Reach & Email Strategies\n- Use Google AI Mode & Advanced Search Techniques\n- Find Hidden Job Opportunities\n- Apply Jobs Effectively Using AI\n- Apply 10+ Jobs Live During Session\n- Career Guidance & Q&A Support",
+
+    requirements:
+      "No prior experience required. Students, freshers, job seekers, and career switchers can join. Basic understanding of internet browsing and job portals is enough.",
+
+    syllabus_link:
+      "https://drive.google.com/",
+
+    preview_video_link: "https://www.youtube.com/watch?v=fUAat_QM-Aw&t=10s",
+    register: "https://forms.gle/6yaMkTa1A2EUYYF28",
+    resource_link: "",
+
+    thumbnail: JobAccelerator,
+
+    instructor_image_url: Profile,
+
+    instructor_name: "Rakkesh Kumar",
+
+    instructor_role: "Software Developer & Career Mentor",
+
+    instructor_bio:
+      "Full Stack Developer and Trainer with expertise in AI-powered workflows, modern web development, and career mentoring. Passionate about helping students and job seekers improve their profiles, master AI tools, and land better opportunities using smart job search strategies.",
+
+    instructor_linkedin:
+      "https://www.linkedin.com/in/rakkeshit/",
+
+    instructor_portfolio:
+      "https://rakkeshaifolio.vercel.app/",
+
+    eligibility:
+      "Open for all students, freshers, job seekers, and career switchers. Anyone interested in learning AI-powered job search strategies can join this free live accelerator program.",
+
+    poster_link:
+      "https://drive.google.com/file/d/1-H8G9jL_SmVwuuSGF4qrZq0jKqqcvbti/view?usp=sharing",
+
+    timings:
+    {
+      day_1: {
+        date: "22/05/2026",
+        day: "Friday",
+        time: "8:00 PM - 9:30 PM",
+        topic: "Build Your Foundation"
+      },
+
+      day_2: {
+        date: "23/05/2026",
+        day: "Saturday",
+        time: "6:30 PM - 8:00 PM",
+        topic: "Smart Job Search Strategies"
+      },
+
+      day_3: {
+        date: "24/05/2026",
+        day: "Sunday",
+        time: "5:00 PM - 6:30 PM",
+        topic: "Apply 10+ Jobs Live + Q&A"
+      }
+    },
+
+    tools_covered:
+      [
+        "ChatGPT",
+        "Claude AI",
+        "Gemini AI",
+        "Perplexity AI",
+        "Kimi AI",
+        "Google AI Mode"
+      ],
+
+    status: "Upcoming",
+
+    created_at: "2026-05-20 00:00:00+00",
+
+    updated_at: "2026-05-20 00:00:00+00",
+  }
+
 ];
