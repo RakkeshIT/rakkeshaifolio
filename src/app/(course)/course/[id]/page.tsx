@@ -11,8 +11,8 @@ interface Course {
     title: string;
     category: string;
     level: string;
-    price: number | null;
-    discount_price: number | null;
+    price: string | number | null;
+    discount_price: string | number | null;
     duration: string;
     language: string;
     short_description: string;
@@ -55,6 +55,7 @@ interface Course {
             topic: string;
         };
     };
+    tools_covered?: string[];
 }
 
 export default function CourseDetailsPage() {
