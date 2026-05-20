@@ -155,7 +155,7 @@ export const Courses = [
       "Open for all students, freshers, job seekers, and career switchers. Anyone interested in learning AI-powered job search strategies can join this free live accelerator program.",
 
     poster_link:
-      "https://drive.google.com/file/d/1-H8G9jL_SmVwuuSGF4qrZq0jKqqcvbti/view?usp=sharing",
+      "https://drive.google.com/file/d/1YSxo7KzbVKT8twlK6MaOFJOr3CIy-XEL/view?usp=sharing",
 
     timings:
     {
