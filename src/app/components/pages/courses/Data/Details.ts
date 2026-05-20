@@ -128,7 +128,7 @@ export const Courses = [
       "No prior experience required. Students, freshers, job seekers, and career switchers can join. Basic understanding of internet browsing and job portals is enough.",
 
     syllabus_link:
-      "https://drive.google.com/file/d/1VPFX_yfSsuWqRhdPET07mLJ80A32ZiMy/view?usp=sharing",
+      "https://drive.google.com/file/d/124zvUWGq8Oig9Wip3ZURbM80Naz_dUXa/view?usp=sharing",
 
     preview_video_link: "https://www.youtube.com/watch?v=fUAat_QM-Aw&t=10s",
     register: "https://forms.gle/6yaMkTa1A2EUYYF28",
@@ -162,7 +162,7 @@ export const Courses = [
       day_1: {
         date: "22/05/2026",
         day: "Friday",
-        time: "8:00 PM - 9:30 PM",
+        time: "8:00 AM - 9:30 AM",
         topic: "Build Your Foundation"
       },
 
