@@ -102,7 +102,7 @@ const Contacts = () => {
           {/* LINKS */}
           <div className="mt-6 space-y-3 text-sm">
             <Link
-              href=""
+              href="tel:+919025377342"
               className="flex justify-between bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl transition"
             >
               <span>📞 Phone</span>
@@ -110,7 +110,7 @@ const Contacts = () => {
             </Link>
 
             <Link
-              href=""
+              href="mailto:rakkeshit@gmail.com"
               className="flex justify-between bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl transition"
             >
               <span>📧 Email</span>
@@ -118,7 +118,7 @@ const Contacts = () => {
             </Link>
 
             <Link
-              href=""
+              href="https://www.linkedin.com/in/rakkeshit/"
               className="flex justify-between bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl transition"
             >
               <span>💼 LinkedIn</span>
@@ -126,7 +126,7 @@ const Contacts = () => {
             </Link>
 
             <Link
-              href=""
+              href="https://github.com/RakkeshIT"
               className="flex justify-between bg-white/5 hover:bg-white/10 px-4 py-3 rounded-xl transition"
             >
               <span>🐙 GitHub</span>
