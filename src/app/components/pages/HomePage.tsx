@@ -71,7 +71,7 @@ const HomePage = ({section}: {section: Props}) => {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {/* Resume Button */}
             <a
-              href="https://drive.google.com/file/d/1sHfOf1VIV4xf3aCzP-KzX-cZx9rOzhI6/view?usp=sharing"
+              href="https://drive.google.com/file/d/1TcofeEal1XOcUgIXI5gU3GNXAzNMzI8X/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full 

@@ -124,7 +124,7 @@ export default function ExperienceHero({ section }: { section: Props }) {
           {/* Resource Links */}
           <div className="mt-10 flex flex-wrap gap-6 text-sm text-gray-400">
             <a
-              href="https://drive.google.com/file/d/12pdquIe47Nri9XPoydNNuftsySC1H_pa/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1TcofeEal1XOcUgIXI5gU3GNXAzNMzI8X/view?usp=sharing"
               target="_blank"
               className="flex items-center gap-2 hover:text-orange-500 transition"
             >
