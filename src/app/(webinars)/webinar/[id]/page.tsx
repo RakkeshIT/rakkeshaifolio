@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Details } from "@/app/components/pages/Webinars/Data/Details";
 
@@ -25,10 +25,11 @@ interface Webinar {
   speaker_role: string;
   speaker_linkedin: string;
   speaker_portfolio: string;
-  cover_image: string;
-  poster: string;
+  cover_image: string | StaticImageData;
+  poster: string | StaticImageData;
   created_at: string;
   updated_at: string;
+  fees?: string;
 }
 
 export default function WebinarDetailsPage() {
@@ -96,6 +97,15 @@ export default function WebinarDetailsPage() {
                 style={{ background: "linear-gradient(90deg, #f97316, #ec4899)", color: "#fff" }}
               >
                 {displayValue(webinar.status)}
+              </span>
+            </div>
+
+            <div className="mb-4">
+              <span
+                className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest"
+                style={{ background: "linear-gradient(90deg, #f97316, #ec4899)", color: "#fff" }}
+              >
+                You Can Pay for This Webinar Only - {displayValue(webinar.fees)}
               </span>
             </div>
 
