@@ -83,7 +83,7 @@ export default function ExperienceHero({ section }: { section: Props }) {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-10 mt-12 max-w-lg">
             <div>
-              <h2 className="text-4xl font-bold text-orange-500">1.5+ </h2>
+              <h2 className="text-4xl font-bold text-orange-500">2+ </h2>
               <p className="text-gray-400 text-sm mt-2">Years Experience</p>
             </div>
             <div>
