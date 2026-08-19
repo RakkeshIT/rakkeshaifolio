@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Details } from "@/app/components/pages/Webinars/Data/Details";
 
@@ -25,10 +25,11 @@ interface Webinar {
   speaker_role: string;
   speaker_linkedin: string;
   speaker_portfolio: string;
-  cover_image: string;
-  poster: string;
+  cover_image: string | StaticImageData;
+  poster: string | StaticImageData;
   created_at: string;
   updated_at: string;
+  fees?: string;
 }
 
 export default function WebinarDetailsPage() {
@@ -44,13 +45,13 @@ export default function WebinarDetailsPage() {
 
   if (!webinar) {
     return (
-      <div className="h-screen flex items-center justify-center"
+      <div className="min-h-screen flex items-center justify-center px-6"
         style={{ background: "linear-gradient(135deg, #0f0c29, #302b63, #24243e)" }}>
         <div className="text-center">
-          <div className="text-8xl mb-6">📭</div>
-          <p className="text-white text-2xl font-bold">Webinar Not Found</p>
+          <div className="text-6xl sm:text-8xl mb-6">📭</div>
+          <p className="text-white text-xl sm:text-2xl font-bold">Webinar Not Found</p>
           <Link href="/webinar"
-            className="mt-6 inline-block px-8 py-3 rounded-full text-white font-semibold"
+            className="mt-6 inline-block px-6 sm:px-8 py-3 rounded-full text-white font-semibold text-sm sm:text-base"
             style={{ background: "linear-gradient(90deg, #f97316, #ec4899)" }}>
             ← Back to Webinars
           </Link>
@@ -69,54 +70,62 @@ export default function WebinarDetailsPage() {
         className="relative w-full overflow-hidden"
         style={{
           background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
-          minHeight: "420px",
         }}
       >
         {/* Decorative circles */}
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10"
+        <div className="absolute top-0 right-0 w-56 h-56 sm:w-96 sm:h-96 rounded-full opacity-10"
           style={{ background: "radial-gradient(circle, #f97316, transparent)", transform: "translate(30%, -30%)" }} />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10"
+        <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-72 sm:h-72 rounded-full opacity-10"
           style={{ background: "radial-gradient(circle, #ec4899, transparent)", transform: "translate(-30%, 30%)" }} />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row gap-10 items-start">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 flex flex-col md:flex-row gap-8 sm:gap-10 items-start">
           {/* Left: text */}
-          <div className="flex-1 text-white">
+          <div className="flex-1 text-white w-full order-2 md:order-1">
             <Link
               href="/webinar"
-              className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-full mb-5 sm:mb-6"
               style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.2)" }}
             >
               ← Back to Webinars
             </Link>
 
             {/* Status badge */}
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <span
-                className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest"
+                className="inline-block px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest"
                 style={{ background: "linear-gradient(90deg, #f97316, #ec4899)", color: "#fff" }}
               >
                 {displayValue(webinar.status)}
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4"
+            <div className="mb-4">
+              <span
+                className="inline-block px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest break-words"
+                style={{ background: "linear-gradient(90deg, #f97316, #ec4899)", color: "#fff" }}
+              >
+                You Can Pay for This Webinar Only - {displayValue(webinar?.fees)}
+              </span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-4 break-words"
               style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
               {displayValue(webinar.title)}
             </h1>
 
-            <p className="text-lg opacity-80 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg opacity-80 max-w-xl leading-relaxed">
               {displayValue(webinar.short_description)}
             </p>
 
             {/* Quick stats row */}
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
               {[
                 { icon: "📅", text: webinar.date },
                 { icon: "⏱️", text: webinar.duration },
                 { icon: "📍", text: webinar.location_type },
               ].map((item, i) => (
                 <div key={i}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold"
+                  className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold"
                   style={{ background: "rgba(255,255,255,0.12)", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.15)" }}>
                   <span>{item.icon}</span>
                   <span>{item.text || "N/A"}</span>
@@ -129,7 +138,7 @@ export default function WebinarDetailsPage() {
               <a
                 href={webinar.registration_link}
                 target="_blank"
-                className="mt-8 inline-block px-8 py-4 rounded-2xl font-bold text-white text-lg shadow-2xl transition-transform hover:scale-105"
+                className="mt-6 sm:mt-8 block sm:inline-block text-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold text-white text-base sm:text-lg shadow-2xl transition-transform hover:scale-105"
                 style={{ background: "linear-gradient(90deg, #f97316, #ec4899)", boxShadow: "0 8px 32px rgba(249,115,22,0.4)" }}
               >
                 Register Now →
@@ -138,9 +147,9 @@ export default function WebinarDetailsPage() {
           </div>
 
           {/* Right: Poster Image Card — prominent display */}
-          <div className="flex-shrink-0 w-full md:w-80 lg:w-96">
+          <div className="flex-shrink-0 w-full max-w-xs mx-auto md:mx-0 md:w-80 lg:w-96 order-1 md:order-2">
             <div
-              className="rounded-3xl overflow-hidden shadow-2xl"
+              className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl"
               style={{
                 border: "3px solid rgba(255,255,255,0.2)",
                 boxShadow: "0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05)",
@@ -154,21 +163,22 @@ export default function WebinarDetailsPage() {
                     fill
                     className="object-cover"
                     priority
+                    sizes="(max-width: 768px) 90vw, 384px"
                   />
                 ) : (
                   <div
                     className="w-full h-full flex flex-col items-center justify-center gap-3"
                     style={{ background: "linear-gradient(135deg, #667eea, #764ba2)" }}
                   >
-                    <span className="text-6xl">🎙️</span>
-                    <p className="text-white font-semibold text-sm opacity-70">No Poster Available</p>
+                    <span className="text-5xl sm:text-6xl">🎙️</span>
+                    <p className="text-white font-semibold text-xs sm:text-sm opacity-70">No Poster Available</p>
                   </div>
                 )}
               </div>
               {/* Poster caption */}
-              <div className="px-4 py-3 text-center"
+              <div className="px-4 py-2.5 sm:py-3 text-center"
                 style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(10px)" }}>
-                <p className="text-white text-xs font-semibold uppercase tracking-widest opacity-60">
+                <p className="text-white text-[10px] sm:text-xs font-semibold uppercase tracking-widest opacity-60">
                   Event Poster
                 </p>
               </div>
@@ -180,13 +190,13 @@ export default function WebinarDetailsPage() {
       {/* ══════════════════════════════════════════
           MAIN CONTENT
       ══════════════════════════════════════════ */}
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-10 sm:space-y-16">
 
         {/* ── ABOUT ── */}
         <section>
           <SectionHeading emoji="📖" title="About This Webinar" color="#6366f1" />
           <div
-            className="rounded-3xl p-8 leading-loose text-gray-700 whitespace-pre-line text-base"
+            className="rounded-2xl sm:rounded-3xl p-5 sm:p-8 leading-loose text-gray-700 whitespace-pre-line text-sm sm:text-base"
             style={{
               background: "#fff",
               borderLeft: "6px solid #6366f1",
@@ -200,7 +210,7 @@ export default function WebinarDetailsPage() {
         {/* ── WEBINAR INFO GRID ── */}
         <section>
           <SectionHeading emoji="ℹ️" title="Webinar Information" color="#0ea5e9" />
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
             <DetailCard icon="📅" label="Date" value={webinar.date} accent="#f97316" />
             <DetailCard icon="🕐" label="Start Time" value={webinar.start_time} accent="#10b981" />
             <DetailCard icon="🕔" label="End Time" value={webinar.end_time} accent="#3b82f6" />
@@ -218,7 +228,7 @@ export default function WebinarDetailsPage() {
           <SectionHeading emoji="🎤" title="Meet the Speaker" color="#ec4899" />
 
           <div
-            className="rounded-3xl overflow-hidden"
+            className="rounded-2xl sm:rounded-3xl overflow-hidden"
             style={{
               background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%)",
               boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
@@ -227,19 +237,19 @@ export default function WebinarDetailsPage() {
             {/* Top accent bar */}
             <div className="h-2 w-full" style={{ background: "linear-gradient(90deg, #f97316, #ec4899, #8b5cf6, #3b82f6)" }} />
 
-            <div className="p-10 grid md:grid-cols-2 gap-10 items-center">
+            <div className="p-6 sm:p-10 grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
               {/* Speaker info */}
-              <div className="text-white">
+              <div className="text-white order-2 md:order-1">
                 <div
-                  className="inline-flex items-center justify-center w-20 h-20 rounded-2xl text-4xl mb-6"
+                  className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl text-3xl sm:text-4xl mb-5 sm:mb-6"
                   style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}
                 >
                   🎙️
                 </div>
-                <h3 className="text-3xl font-black mb-2">
+                <h3 className="text-2xl sm:text-3xl font-black mb-2 break-words">
                   {displayValue(webinar.speaker_name)}
                 </h3>
-                <p className="text-lg opacity-70 mb-6">
+                <p className="text-base sm:text-lg opacity-70 mb-5 sm:mb-6">
                   {displayValue(webinar.speaker_role)}
                 </p>
 
@@ -248,7 +258,7 @@ export default function WebinarDetailsPage() {
                     <a
                       href={webinar.speaker_linkedin}
                       target="_blank"
-                      className="inline-flex items-center gap-3 px-5 py-3 rounded-xl font-semibold text-sm transition-transform hover:scale-105"
+                      className="inline-flex items-center gap-3 px-5 py-3 rounded-xl font-semibold text-sm transition-transform hover:scale-105 w-fit"
                       style={{ background: "#0077b5", color: "#fff" }}
                     >
                       <span>in</span> LinkedIn Profile
@@ -261,7 +271,7 @@ export default function WebinarDetailsPage() {
                     <a
                       href={webinar.speaker_portfolio}
                       target="_blank"
-                      className="inline-flex items-center gap-3 px-5 py-3 rounded-xl font-semibold text-sm transition-transform hover:scale-105"
+                      className="inline-flex items-center gap-3 px-5 py-3 rounded-xl font-semibold text-sm transition-transform hover:scale-105 w-fit"
                       style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff" }}
                     >
                       🌐 Portfolio Website
@@ -273,13 +283,13 @@ export default function WebinarDetailsPage() {
               </div>
 
               {/* Decorative visual */}
-              <div className="flex items-center justify-center">
-                <div className="relative w-48 h-48">
+              <div className="flex items-center justify-center order-1 md:order-2">
+                <div className="relative w-32 h-32 sm:w-48 sm:h-48">
                   <div className="absolute inset-0 rounded-full opacity-20 animate-ping"
                     style={{ background: "radial-gradient(circle, #ec4899, transparent)", animationDuration: "3s" }} />
                   <div className="absolute inset-4 rounded-full opacity-30"
                     style={{ background: "radial-gradient(circle, #f97316, transparent)" }} />
-                  <div className="absolute inset-8 rounded-full flex items-center justify-center text-6xl"
+                  <div className="absolute inset-8 rounded-full flex items-center justify-center text-4xl sm:text-6xl"
                     style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}>
                     🎤
                   </div>
@@ -295,10 +305,9 @@ export default function WebinarDetailsPage() {
             <SectionHeading emoji="🖼️" title="Event Poster" color="#f97316" />
             <div className="flex justify-center">
               <div
-                className="rounded-3xl overflow-hidden shadow-2xl"
+                className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl w-full"
                 style={{
                   maxWidth: "480px",
-                  width: "100%",
                   border: "4px solid transparent",
                   backgroundClip: "padding-box",
                   boxShadow: "0 0 0 4px #f97316, 0 24px 80px rgba(249,115,22,0.25)",
@@ -310,6 +319,7 @@ export default function WebinarDetailsPage() {
                     alt={`${webinar.title} Full Poster`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 640px) 90vw, 480px"
                   />
                 </div>
               </div>
@@ -321,7 +331,7 @@ export default function WebinarDetailsPage() {
 
       {/* FOOTER STRIP */}
       <div
-        className="py-8 text-center text-white text-sm font-medium"
+        className="py-6 sm:py-8 text-center text-white text-xs sm:text-sm font-medium px-4"
         style={{ background: "linear-gradient(90deg, #1a1a2e, #0f3460, #533483)" }}
       >
         <p className="opacity-50">© Webinar Platform · All rights reserved</p>
@@ -344,9 +354,9 @@ function SectionHeading({
   color: string;
 }) {
   return (
-    <div className="flex items-center gap-3 mb-6">
-      <span className="text-3xl">{emoji}</span>
-      <h2 className="text-2xl font-black" style={{ color }}>
+    <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
+      <span className="text-2xl sm:text-3xl">{emoji}</span>
+      <h2 className="text-xl sm:text-2xl font-black" style={{ color }}>
         {title}
       </h2>
       <div className="flex-1 h-px" style={{ background: `linear-gradient(90deg, ${color}44, transparent)` }} />
@@ -372,7 +382,7 @@ function DetailCard({
 
   return (
     <div
-      className="rounded-2xl p-5 transition-all hover:-translate-y-1"
+      className="rounded-2xl p-4 sm:p-5 transition-all hover:-translate-y-1"
       style={{
         background: "#fff",
         borderTop: `4px solid ${accent}`,
@@ -380,8 +390,8 @@ function DetailCard({
       }}
     >
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-xl">{icon}</span>
-        <p className="text-xs font-bold uppercase tracking-widest" style={{ color: accent }}>
+        <span className="text-lg sm:text-xl">{icon}</span>
+        <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest" style={{ color: accent }}>
           {label}
         </p>
       </div>
@@ -396,7 +406,7 @@ function DetailCard({
           Open Link ↗
         </a>
       ) : (
-        <p className="font-semibold text-gray-800 text-sm">{display}</p>
+        <p className="font-semibold text-gray-800 text-sm break-words">{display}</p>
       )}
     </div>
   );

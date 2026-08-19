@@ -9,6 +9,11 @@ import CoverInterview from "../../../assets/webinars/int.png";
 // Job Searching St
 import JobSearchingStart from "../../../assets/webinars/Job-searching-st.png"
 import JobSearchingStartPoster from "../../../assets/webinars/Job-search-st-poster.png"
+
+// 01/08/2026
+import Aug2026 from "../../../assets/webinars/02-aug.png"
+import Aug2026Poster from "../../../assets/webinars/01-aug-poster.png"
+
 export const Details = [
   {
     id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69a5",
@@ -221,5 +226,42 @@ export const Details = [
 
     created_at: "2026-05-12 08:27:23.351431+00",
     updated_at: "2026-05-12 08:27:23.351431+00"
+  },
+  {
+    id: "8b4ed9fb-4569-44e9-b9ee-629a6f4c69b9ists",
+
+    title: "Get Hired Faster – 2026 Edition",
+
+    short_description:
+      "Learn the exact strategies to search jobs effectively, optimize your resume, contact HRs, and increase your chances of getting interview calls in 2026. Includes a live job search demonstration and Q&A session.",
+
+    description:
+      "Finding a job is no longer about applying to hundreds of openings. In this webinar, you'll learn the practical job search strategies that helped me get interview calls and land a Full Stack Developer role.\n\nThis session is completely practical with live demonstrations that you can start using immediately.\n\n📌 What You'll Learn\n\n🚀 1. The Best Approach to Search Jobs\n• Company Career Pages\n• Google Search Techniques\n• LinkedIn Jobs\n• HR Email Outreach\n• HR Phone Calls\n• WhatsApp Messaging\n• Google Business Profile Search\n• Finding Hidden Opportunities\n\n🤖 2. Using AI to Search Jobs Smarter\n• ChatGPT for job searching\n• Claude for resume improvements\n• Kimi AI for research\n• AI prompts to find companies\n• AI-generated cold emails & HR messages\n\n🎯 3. How to Stay Consistent\n• Daily job search routine\n• Application tracking methods\n• Follow-up strategy\n• Weekly goals\n• Avoiding common mistakes\n\n💬 Live Q&A (2 Minutes)\nAsk your career-related questions and get practical guidance.\n\nBy the end of this webinar, you'll have a clear and repeatable job search strategy to increase your interview opportunities.",
+    date: "AUGUST 9, 2026",
+    start_time: "11:00 AM",
+    end_time: "12:00 PM",
+    duration: "1 Hour",
+
+    location_type: "Online",
+    location: "Google Meet",
+    venue: "Google Meet",
+
+    status: "Upcoming",
+
+    agenda_link: "https://docs.google.com/document/d/1FX2vnJZxu6XZIulQRYQRpZlt19EjFCfS/edit?usp=sharing&ouid=113524210708981357379&rtpof=true&sd=true",
+    registration_link: "https://forms.gle/ooDrptnRvKpSrZv78",
+
+    speaker_name: "Rakkesh Kumar J",
+    speaker_role: "Full Stack Developer & Founder of Vairaa Coders",
+
+    speaker_linkedin: "https://www.linkedin.com/in/rakkeshit/",
+    speaker_portfolio: "https://rakkeshaifolio.vercel.app/",
+
+    cover_image: Aug2026,
+    poster: Aug2026Poster,
+    fees: "₹20",
+
+    created_at: "2026-07-26 08:27:23.351431+00",
+    updated_at: "2026-07-26 08:27:23.351431+00"
   }
 ];
