@@ -1,6 +1,31 @@
+import type { StaticImageData } from "next/image";
 import jobSearchCover from "../../assets/blogs/job-search-cover.png";
 
-export const blogPosts = [
+export type BlogKit = {
+    label: string;
+    link: string;
+};
+
+export type BlogPost = {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    category: string;
+    tags: string[];
+    author: { name: string; role: string };
+    publishedAt: string;
+    readingTime: string;
+    coverImage: StaticImageData;
+    featured: boolean;
+    content: any[];
+    // Optional: add { label, link } pairs to show a "Kits & Resources"
+    // section at the bottom of the post. Omit or leave empty and that
+    // section is automatically hidden.
+    kits?: BlogKit[];
+};
+
+export const blogPosts: BlogPost[] = [
     {
         id: 1,
 
@@ -903,23 +928,5 @@ You can follow my channels for more practical resources, templates, courses, web
                 ],
             },
         ],
-
-        // Optional: add { label, link } pairs here to show a "Kits & Resources"
-        // section at the bottom of the post. Leave the array empty (or remove
-        // the field) and that section is automatically hidden.
-        // kits: [
-        //     {
-        //         label: "Resume Template",
-        //         link: "/resources/resume-template",
-        //     },
-        //     {
-        //         label: "Email Templates",
-        //         link: "/resources/email-templates",
-        //     },
-        //     {
-        //         label: "Job Searching Guide",
-        //         link: "/resources/job-search-guide",
-        //     },
-        // ],
     },
 ];
