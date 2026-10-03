@@ -32,8 +32,8 @@ export default function ProjectTabs({ active, setActive }: Props) {
   }, [active]);
 
 return (
-<div className="mb-12 border-b border-neutral-800 px-4">
-  <div className="flex gap-6 overflow-x-auto scrollbar-hide">
+<div className="mb-8 sm:mb-12 border-b border-neutral-800 px-4">
+  <div className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide">
     {tabs.map((tab) => (
       <button
         key={tab}

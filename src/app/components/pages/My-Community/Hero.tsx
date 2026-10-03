@@ -31,17 +31,17 @@ const CommunityHero = ({ section }: { section: Props }) => {
         <div className="">
           <Link
             href="/"
-            className="flex gap-2 text-white underline tracking-widest text-xl font-bold"
+            className="flex gap-2 text-white underline tracking-widest text-base sm:text-xl font-bold"
           >
             <LinkIcon />
             <span>Visit Full Site</span>
           </Link>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
           Welcome to <span className="text-orange-500">Vairra Community</span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-gray-300 text-lg">
+        <p className="mt-6 max-w-2xl text-gray-300 text-base sm:text-lg">
           Empowering students through free webinars, college tech talks, premium
           industry sessions, product development support, and AI-driven
           assistance.
@@ -97,7 +97,7 @@ const CommunityHero = ({ section }: { section: Props }) => {
           <a
             href="mailto:vairaacoders@gmail.com"
             target="__blank"
-            className="rounded-2xl bg-black px-8 text-lg text-center py-2"
+            className="rounded-2xl bg-black px-6 sm:px-8 text-base sm:text-lg text-center py-2"
           >
             Join Community
           </a>

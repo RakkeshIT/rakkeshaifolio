@@ -11,7 +11,7 @@ import {
 
 export default function AboutSection() {
   return (
-    <section className="relative py-28 px-6 text-black overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-28 px-6 text-black overflow-hidden">
       
       {/* Soft Glow Background */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-orange-500/10 blur-[180px] rounded-full -z-10" />
@@ -23,7 +23,7 @@ export default function AboutSection() {
           <p className="text-orange-400 font-semibold tracking-wide uppercase">
             Who We Are
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4">
             Building the Future of{" "}
             <span className="text-orange-500">Student Tech Communities</span>
           </h2>
@@ -34,14 +34,14 @@ export default function AboutSection() {
         </div>
 
         {/* Layout */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left Side – Vision Story */}
           <div className="space-y-8">
 
             <div className="flex gap-5">
               <div className="p-4 bg-orange-500/10 rounded-xl">
-                <Target className="text-orange-500" size={28} />
+                <Target className="text-orange-500 w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Our Mission</h3>
@@ -54,7 +54,7 @@ export default function AboutSection() {
 
             <div className="flex gap-5">
               <div className="p-4 bg-orange-500/10 rounded-xl">
-                <Sparkles className="text-orange-500" size={28} />
+                <Sparkles className="text-orange-500 w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Our Vision</h3>
@@ -67,7 +67,7 @@ export default function AboutSection() {
 
             <div className="flex gap-5">
               <div className="p-4 bg-orange-500/10 rounded-xl">
-                <Users className="text-orange-500" size={28} />
+                <Users className="text-orange-500 w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Community Impact</h3>

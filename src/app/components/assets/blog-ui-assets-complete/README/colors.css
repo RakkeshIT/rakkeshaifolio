@@ -1,0 +1,12 @@
+:root {
+  --blog-navy: #07142d;
+  --blog-blue: #2563eb;
+  --blog-indigo: #6366f1;
+  --blog-purple: #7c3aed;
+  --blog-cyan: #22d3ee;
+  --blog-text: #f8fafc;
+  --blog-muted: #94a3b8;
+  --glass-border: rgba(255,255,255,.22);
+  --glass-bg: rgba(255,255,255,.10);
+  --glass-blur: 20px;
+}

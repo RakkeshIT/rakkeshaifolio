@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CommunityEndSection() {
   return (
-    <section className="relative py-28 px-6 overflow-hidden bg-gradient-to-b from-white to-orange-50">
+    <section className="relative py-16 sm:py-20 lg:py-28 px-6 overflow-hidden bg-gradient-to-b from-white to-orange-50">
       {/* Background Glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
@@ -14,7 +14,7 @@ export default function CommunityEndSection() {
 
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
           Ready to <span className="text-orange-500">Build Your Future?</span>
         </h2>
 
@@ -71,25 +71,25 @@ export default function CommunityEndSection() {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           <div className="bg-white/60 backdrop-blur-xl border border-orange-100 rounded-2xl p-6 shadow-sm">
-            <Users className="mx-auto text-orange-500 mb-3" size={28} />
+            <Users className="mx-auto text-orange-500 mb-3 w-6 h-6 sm:w-7 sm:h-7" />
             <h3 className="text-2xl font-bold">500+</h3>
             <p className="text-gray-500 text-sm">Active Members</p>
           </div>
 
           <div className="bg-white/60 backdrop-blur-xl border border-orange-100 rounded-2xl p-6 shadow-sm">
-            <Rocket className="mx-auto text-orange-500 mb-3" size={28} />
+            <Rocket className="mx-auto text-orange-500 mb-3 w-6 h-6 sm:w-7 sm:h-7" />
             <h3 className="text-2xl font-bold">10+</h3>
             <p className="text-gray-500 text-sm">Projects Built</p>
           </div>
 
           <div className="bg-white/60 backdrop-blur-xl border border-orange-100 rounded-2xl p-6 shadow-sm">
-            <Globe className="mx-auto text-orange-500 mb-3" size={28} />
+            <Globe className="mx-auto text-orange-500 mb-3 w-6 h-6 sm:w-7 sm:h-7" />
             <h3 className="text-2xl font-bold">20+</h3>
             <p className="text-gray-500 text-sm">Workshops</p>
           </div>
 
           <div className="bg-white/60 backdrop-blur-xl border border-orange-100 rounded-2xl p-6 shadow-sm">
-            <MessageCircle className="mx-auto text-orange-500 mb-3" size={28} />
+            <MessageCircle className="mx-auto text-orange-500 mb-3 w-6 h-6 sm:w-7 sm:h-7" />
             <h3 className="text-2xl font-bold">24/7</h3>
             <p className="text-gray-500 text-sm">Community Support</p>
           </div>

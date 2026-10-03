@@ -38,7 +38,14 @@ const ProjectCarousel = ({ folder }: props) => {
       <CarouselContent>
         {images.map((image, i) => (
           <CarouselItem key={i} className="h-full w-full">
-            <Image src={image} alt="" width={1000} height={1000}/>
+            <Image
+              src={image}
+              alt=""
+              width={1000}
+              height={1000}
+              className="h-auto w-full object-contain"
+              sizes="(max-width: 768px) 100vw, 1000px"
+            />
           </CarouselItem>
         ))}
 

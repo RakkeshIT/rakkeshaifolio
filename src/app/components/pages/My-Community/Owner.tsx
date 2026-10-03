@@ -25,15 +25,15 @@ const owners = [
 
 export default function OwnersSection() {
   return (
-    <section className="relative py-28 px-6 text-black overflow-hidden">
-      
+    <section className="relative py-16 sm:py-20 md:py-28 px-6 text-black overflow-hidden">
+
       {/* Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-orange-500/10 blur-[160px] rounded-full -z-10" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] h-[320px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] bg-orange-500/10 blur-[160px] rounded-full -z-10" />
 
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
           Meet The <span className="text-orange-500">Founders</span>
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto mb-16">
@@ -42,16 +42,16 @@ export default function OwnersSection() {
         </p>
 
         {/* Owners Grid */}
-        <div className="grid md:grid-cols-2 gap-20 md:gap-16">
+        <div className="grid md:grid-cols-2 gap-10 sm:gap-14 md:gap-16">
 
           {owners.map((owner, index) => (
             <div
               key={index}
-              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-orange-500 transition duration-300"
+              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 hover:border-orange-500 transition duration-300"
             >
               
               {/* Image */}
-              <div className="relative w-50 h-50 mx-auto mb-6">
+              <div className="relative w-32 h-32 sm:w-50 sm:h-50 mx-auto mb-6">
                 <Image
                   src={owner.image}
                   alt={owner.name}

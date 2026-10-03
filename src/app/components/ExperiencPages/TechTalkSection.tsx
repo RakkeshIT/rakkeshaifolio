@@ -5,12 +5,12 @@ import Image from "next/image";
 
 export default function TechTalkSection() {
   return (
-    <section id="techtalks" className="bg-gray-50 py-24">
+    <section id="techtalks" className="bg-gray-50 py-14 sm:py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Heading */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold tracking-tight">
+        <div className="mb-10 sm:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Tech Talks & Workshops
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
@@ -19,7 +19,7 @@ export default function TechTalkSection() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
 
           {techTalks.map((talk) => (
             <div
@@ -38,10 +38,10 @@ export default function TechTalkSection() {
               </div>
 
               {/* Card Content */}
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
 
                 <div className="flex items-center gap-3 mb-4">
-                  <Mic className="text-orange-600" />
+                  <Mic className="text-orange-600 shrink-0" />
                   <h3 className="text-xl font-semibold leading-snug">
                     {talk.title}
                   </h3>

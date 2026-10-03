@@ -104,7 +104,7 @@ const HomePage = ({section}: {section: Props}) => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative w-[92%] max-w-lg rounded-2xl bg-white p-8 shadow-2xl"
+              className="relative w-[92%] max-w-lg rounded-2xl bg-white p-6 sm:p-8 shadow-2xl"
             >
               {/* Close Button */}
               <button

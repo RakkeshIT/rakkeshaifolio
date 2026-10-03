@@ -39,15 +39,15 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       />
 
       {/* Card */}
-      <div className="relative h-[520px] w-[400px] rounded-3xl bg-[#0b0b14] border border-white/10 p-8 text-center backdrop-blur-xl">
+      <div className="relative h-auto min-h-[480px] w-full max-w-[400px] sm:h-[520px] rounded-3xl bg-[#0b0b14] border border-white/10 p-6 sm:p-8 text-center backdrop-blur-xl">
 
         {/* Avatar */}
-        <div className="mx-auto relative h-32 w-32 rounded-full overflow-hidden border-4 border-purple-500/40 shadow-lg">
+        <div className="mx-auto relative h-24 w-24 sm:h-32 sm:w-32 rounded-full overflow-hidden border-4 border-purple-500/40 shadow-lg">
           <Image src={image} alt={name} fill className="object-cover" />
         </div>
 
         {/* Name */}
-        <h3 className="mt-6 text-2xl font-bold text-white tracking-wide">
+        <h3 className="mt-6 text-xl sm:text-2xl font-bold text-white tracking-wide">
           {name}
         </h3>
 
@@ -65,9 +65,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
          <p className="mt-1 text-sm text-purple-400 font-medium">
           {community}
         </p>
-        
+
         {/* Buttons */}
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="mailto:contact@vairaa.com"
             className="rounded-full bg-purple-600 px-5 py-2 text-sm text-white hover:bg-purple-700 transition"

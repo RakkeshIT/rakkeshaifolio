@@ -80,7 +80,7 @@ const Project = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <a
               href={project.links.live}
               className="rounded-lg bg-white px-5 py-2 text-sm font-medium text-black"

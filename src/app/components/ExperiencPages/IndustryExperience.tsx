@@ -4,11 +4,11 @@ import { Briefcase, Calendar, GraduationCap, LetterText } from "lucide-react";
 
 export default function IndustryExperience() {
   return (
-    <section id="industry" className="bg-white text-black py-24">
+    <section id="industry" className="bg-white text-black py-14 sm:py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold">
+        <div className="mb-10 sm:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Industry Experience
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
@@ -18,15 +18,15 @@ export default function IndustryExperience() {
         </div>
 
         {/* Timeline Wrapper */}
-        <div className="relative border-l border-gray-200 pl-8 space-y-16">
+        <div className="relative border-l border-gray-200 pl-6 sm:pl-8 space-y-10 sm:space-y-16">
           {/* FireSky Experience */}
           <div className="relative">
             {/* Dot */}
             <div className="absolute -left-[10px] top-2 w-4 h-4 bg-orange-600 rounded-full" />
 
-            <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+            <div className="bg-gray-50 p-5 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
-                <Briefcase className="text-orange-600" size={20} />
+                <Briefcase className="text-orange-600 shrink-0" size={20} />
                 <h3 className="text-xl font-semibold">MERN Stack Developer</h3>
               </div>
 
@@ -66,9 +66,9 @@ export default function IndustryExperience() {
           <div className="relative">
             <div className="absolute -left-[10px] top-2 w-4 h-4 bg-orange-600 rounded-full" />
 
-            <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+            <div className="bg-gray-50 p-5 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
-                <Briefcase className="text-orange-600" size={20} />
+                <Briefcase className="text-orange-600 shrink-0" size={20} />
                 <h3 className="text-xl font-semibold">
                   Software Trainer & Full Stack Developer
                 </h3>
@@ -119,9 +119,9 @@ export default function IndustryExperience() {
           <div className="relative">
             <div className="absolute -left-[10px] top-2 w-4 h-4 bg-orange-600 rounded-full" />
 
-            <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+            <div className="bg-gray-50 p-5 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
-                <Briefcase className="text-orange-600" size={20} />
+                <Briefcase className="text-orange-600 shrink-0" size={20} />
                 <h3 className="text-xl font-semibold">
                   Full Stack Developer Intern
                 </h3>

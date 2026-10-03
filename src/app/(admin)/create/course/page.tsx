@@ -127,13 +127,13 @@ export default function CreateCoursePage() {
   ============================ */
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50 p-8">
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-10">
-        <h1 className="text-4xl font-bold text-orange-600 mb-10">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50 p-4 sm:p-6 md:p-8">
+      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-4 sm:p-6 md:p-10">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-6 md:mb-10">
           Create New Course
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-12">
+        <form onSubmit={handleSubmit} className="space-y-8 md:space-y-12">
           <Section title="Basic Information" icon={<BookOpen size={20} />}>
             <Input label="Course Title" name="title" value={form.title} onChange={handleChange} required />
             <Input label="Category" name="category" value={form.category} onChange={handleChange} />
@@ -178,7 +178,7 @@ export default function CreateCoursePage() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-10 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
+              className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-6 sm:px-10 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
             >
               {loading ? "Saving..." : "Create Course"}
             </button>
@@ -201,12 +201,12 @@ interface SectionProps {
 
 function Section({ title, icon, children }: SectionProps) {
   return (
-    <section className="bg-white border border-orange-400 border-orange-200 rounded-3xl p-8 shadow-sm">
-      <h2 className="flex items-center gap-3 text-2xl font-semibold text-orange-600 mb-8">
+    <section className="bg-white border border-orange-400 border-orange-200 rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm">
+      <h2 className="flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-semibold text-orange-600 mb-4 md:mb-8">
         <span className="bg-orange-100 p-2 rounded-lg">{icon}</span>
         {title}
       </h2>
-      <div className="grid md:grid-cols-2 gap-6">{children}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">{children}</div>
     </section>
   );
 }

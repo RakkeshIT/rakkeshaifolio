@@ -41,7 +41,7 @@ const ProjectGithunDialog = ({showDialog, close , title, description, server, cl
         exit='hidden'
       >
         <motion.div
-        className='bg-white rounded-lg shadow-lg w-80 p-6'
+        className='bg-white rounded-lg shadow-lg w-[90vw] max-w-80 p-6'
         variants={contentVariant}
         animate='visible'
         initial="hidden"

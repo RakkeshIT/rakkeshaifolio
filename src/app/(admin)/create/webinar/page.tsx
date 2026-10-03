@@ -103,11 +103,11 @@ export default function CreateWebinarPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white p-6 md:p-10">
-      <div className="max-w-6xl mx-auto bg-neutral-900 rounded-2xl shadow-xl p-8">
-        <h1 className="text-3xl font-bold mb-8">Create Webinar</h1>
+    <div className="min-h-screen bg-neutral-950 text-white p-4 sm:p-6 md:p-10">
+      <div className="max-w-6xl mx-auto bg-neutral-900 rounded-2xl shadow-xl p-4 sm:p-6 md:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8">Create Webinar</h1>
 
-        <form onSubmit={handleSubmit} className="space-y-10">
+        <form onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
           {/* BASIC INFO */}
           <section>
             <h2 className="text-xl font-semibold mb-6 border-b border-neutral-700 pb-2">
@@ -373,7 +373,7 @@ export default function CreateWebinarPage() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-3 rounded-xl font-semibold hover:opacity-90 disabled:opacity-50"
+              className="w-full sm:w-auto bg-gradient-to-r from-indigo-500 to-purple-600 px-6 sm:px-8 py-3 rounded-xl font-semibold hover:opacity-90 disabled:opacity-50"
             >
               {loading ? "Saving..." : "Save Webinar"}
             </button>

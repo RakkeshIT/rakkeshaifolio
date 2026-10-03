@@ -10,14 +10,14 @@ const About = () => {
         <OrbitingCirclesDemo />
 
         {/* About Card */}
-        <div className="mt-20 relative max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-12 border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-105">
+        <div className="mt-10 sm:mt-14 lg:mt-20 relative max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 lg:p-12 border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-105">
           {/* Header */}
-          <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             About <span className="text-indigo-500">Me</span>
           </h2>
 
           {/* Paragraph */}
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
             Hi! I'm{" "}
             <span className="font-semibold text-indigo-500">Rakkesh</span>, a
             passionate full-stack developer specializing in creating

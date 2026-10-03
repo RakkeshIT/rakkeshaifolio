@@ -27,16 +27,16 @@ export default function WebinarCards() {
   );
 
   return (
-    <section className="min-h-screen bg-gray-800 py-20 px-6">
+    <section className="min-h-screen bg-gray-800 py-12 sm:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-white text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-10">
           My Webinars
         </h2>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="flex bg-white/5 backdrop-blur-lg p-1 rounded-xl border border-white/10">
+        <div className="flex justify-center mb-12 px-2">
+          <div className="flex bg-white/5 backdrop-blur-lg p-1 rounded-xl border border-white/10 overflow-x-auto max-w-full">
             {[
               { label: "All", value: "all" },
               { label: "Completed", value: "completed" },
@@ -45,7 +45,7 @@ export default function WebinarCards() {
               <button
                 key={tab.value}
                 onClick={() => setActiveTab(tab.value as typeof activeTab)}
-                className={`px-6 py-2 rounded-lg text-sm font-medium transition ${
+                className={`px-4 sm:px-6 py-2 rounded-lg text-sm font-medium transition whitespace-nowrap ${
                   activeTab === tab.value
                     ? "bg-orange-500 text-white shadow-md"
                     : "text-gray-400 hover:text-white"
@@ -66,7 +66,7 @@ export default function WebinarCards() {
 
         {/* Grid */}
         
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredTabs.length > 0 ? (
               filteredTabs.map((webinar) => (
                 <div
@@ -74,7 +74,7 @@ export default function WebinarCards() {
                   className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-orange-500 transition-all duration-300"
                 >
                   {/* Image */}
-                  <div className="relative h-52 w-full overflow-hidden">
+                  <div className="relative h-44 sm:h-52 w-full overflow-hidden">
                     <Image
                       src={webinar.cover_image}
                       alt={webinar.title}
@@ -84,9 +84,9 @@ export default function WebinarCards() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 flex flex-col justify-between h-[220px]">
+                  <div className="p-4 sm:p-6 flex flex-col justify-between min-h-[220px]">
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
+                      <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 break-words">
                         {webinar.title}
                       </h3>
 

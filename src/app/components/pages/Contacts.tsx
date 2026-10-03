@@ -58,7 +58,7 @@ const Contacts = () => {
       >
         {loading && (
           <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 backdrop-blur-md">
-            <div className="flex w-100 flex-col items-center gap-4 bg-white/10 border border-white/20 px-10 py-8 rounded-2xl shadow-2xl">
+            <div className="flex w-[85%] max-w-100 flex-col items-center gap-4 bg-white/10 border border-white/20 px-6 sm:px-10 py-8 rounded-2xl shadow-2xl">
               <Spinner size={36} className="text-white" />
 
               <h1 className="text-lg font-semibold text-white">

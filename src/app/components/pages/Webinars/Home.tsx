@@ -65,8 +65,8 @@ const WebinarHome = ({section}: {section: Props}) => {
   return (
     <section
       ref={vantaRef}
-      className="relative w-screen h-screen
-       flex items-center justify-center px-6 overflow-hidden"
+      className="relative w-full h-screen
+       flex items-center justify-center px-4 sm:px-6 overflow-hidden"
     >  
       {/* CENTER CONTENT */}
       <motion.div
@@ -76,7 +76,7 @@ const WebinarHome = ({section}: {section: Props}) => {
         className="text-center text-white max-w-3xl z-10"
       >
     <Link href='/' className="underline font-bold">Back to Home</Link>
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">
           Vairaa Coders
         </h1>
 
@@ -90,13 +90,13 @@ const WebinarHome = ({section}: {section: Props}) => {
         </p>
 
         <div className="flex justify-center gap-4 flex-wrap">
-          <a href='mailto:vairaacoders@gmail.com' target="__blank" className="rounded-2xl bg-black px-8 text-lg text-center py-2">
+          <a href='mailto:vairaacoders@gmail.com' target="__blank" className="rounded-2xl bg-black px-6 sm:px-8 text-base sm:text-lg text-center py-2">
             Join Community
           </a>
 
           <Button
             variant="outline"
-            className="rounded-2xl px-8 py-5 text-lg text-black cursor-pointer"
+            className="rounded-2xl px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg text-black cursor-pointer"
             onClick={(e) => scrollTo(e, section.cardRef)}
           >
             View Webinars

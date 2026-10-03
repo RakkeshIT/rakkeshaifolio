@@ -56,11 +56,11 @@ export default function ExperienceHero({ section }: { section: Props }) {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="relative min-h-screen bg-black text-white flex items-center overflow-hidden  py-8 md:py-2">
+    <section className="relative min-h-screen bg-black text-white flex items-center overflow-hidden  py-8 md:p-10">
       {/* Background Glow */}
-      <div className="absolute w-[600px] h-[600px] bg-orange-600/20 blur-[150px] rounded-full top-[-120px] right-[-120px]" />
+      <div className="absolute w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] bg-orange-600/20 blur-[80px] sm:blur-[120px] lg:blur-[150px] rounded-full top-[-80px] right-[-80px] lg:top-[-120px] lg:right-[-120px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
         {/* LEFT CONTENT */}
         <div>
           <Link href="/" className="underline">
@@ -70,7 +70,7 @@ export default function ExperienceHero({ section }: { section: Props }) {
             Full Stack Developer with AI
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
             Rakkesh Kumar J
           </h1>
 
@@ -81,18 +81,18 @@ export default function ExperienceHero({ section }: { section: Props }) {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-10 mt-12 max-w-lg">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-10 mt-12 max-w-lg">
             <div>
-              <h2 className="text-4xl font-bold text-orange-500">2+ </h2>
-              <p className="text-gray-400 text-sm mt-2">Years Experience</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500">2+ </h2>
+              <p className="text-gray-400 text-xs sm:text-sm mt-2">Years Experience</p>
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-orange-500">5+</h2>
-              <p className="text-gray-400 text-sm mt-2">Projects Delivered</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500">5+</h2>
+              <p className="text-gray-400 text-xs sm:text-sm mt-2">Projects Delivered</p>
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-orange-500">5+</h2>
-              <p className="text-gray-400 text-sm mt-2">Tech Talks</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500">5+</h2>
+              <p className="text-gray-400 text-xs sm:text-sm mt-2">Tech Talks</p>
             </div>
           </div>
 
@@ -171,10 +171,10 @@ export default function ExperienceHero({ section }: { section: Props }) {
         {/* RIGHT IMAGE */}
         <div className="relative flex justify-center">
           {/* Accent Layer */}
-          <div className="absolute w-[340px] h-[440px] bg-orange-600/20 rounded-3xl rotate-6 blur-md" />
+          <div className="absolute w-[240px] h-[310px] sm:w-[300px] sm:h-[390px] lg:w-[340px] lg:h-[440px] bg-orange-600/20 rounded-3xl rotate-6 blur-md" />
 
           {/* Image Card */}
-          <div className="relative w-[340px] h-[440px] rounded-3xl overflow-hidden border border-neutral-800 shadow-2xl">
+          <div className="relative w-[240px] h-[310px] sm:w-[300px] sm:h-[390px] lg:w-[340px] lg:h-[440px] rounded-3xl overflow-hidden border border-neutral-800 shadow-2xl">
             <Image
               src={profile}
               alt="Rakkesh Kumar"
@@ -187,7 +187,7 @@ export default function ExperienceHero({ section }: { section: Props }) {
 
       {modalType && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="relative w-[95%] max-w-lg bg-neutral-900 border border-neutral-800 rounded-2xl p-8 shadow-2xl">
+          <div className="relative w-[95%] max-w-lg bg-neutral-900 border border-neutral-800 rounded-2xl p-5 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setModalType(null)}
@@ -209,18 +209,18 @@ export default function ExperienceHero({ section }: { section: Props }) {
               ).map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between bg-neutral-800 p-4 rounded-xl border border-neutral-700"
+                  className="flex items-center justify-between flex-wrap gap-3 bg-neutral-800 p-4 rounded-xl border border-neutral-700"
                 >
-                  <div>
-                    <p className="text-white font-semibold">{item.role}</p>
-                    <p className="text-sm text-gray-400">{item.company}</p>
+                  <div className="min-w-0">
+                    <p className="text-white font-semibold break-words">{item.role}</p>
+                    <p className="text-sm text-gray-400 break-words">{item.company}</p>
                   </div>
 
                   <a
                     href={item.file}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-orange-600 rounded-full text-sm hover:bg-orange-500 transition"
+                    className="flex items-center gap-2 px-4 py-2 bg-orange-600 rounded-full text-sm hover:bg-orange-500 transition shrink-0"
                   >
                     <Download size={16} />
                     Download

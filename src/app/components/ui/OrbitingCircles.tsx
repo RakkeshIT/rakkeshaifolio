@@ -3,7 +3,7 @@ import Me from "../assets/ME.png";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden scale-50 sm:h-[375px] sm:scale-75 md:h-[450px] md:scale-90 lg:h-[500px] lg:scale-100">
       <OrbitingCircles
         iconSize={40}
         centerImage={Me.src}

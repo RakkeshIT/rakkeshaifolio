@@ -12,7 +12,7 @@ const Projects = () => {
       ? ProjectMaper
       : ProjectMaper.filter((p) => p.category === active);
   return (
-    <div className="min-h-screen w-full px-12 py-10">
+    <div className="min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 py-10">
       {/* Card Container */}
       <ProjectTabs active={active} setActive={setActive} />
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

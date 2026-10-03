@@ -113,7 +113,7 @@ export default function DashboardLayout({
           </button>
         </header>
 
-        <main className="p-6 flex-1">
+        <main className="p-4 sm:p-6 flex-1 overflow-x-auto">
           {children}
         </main>
       </div>

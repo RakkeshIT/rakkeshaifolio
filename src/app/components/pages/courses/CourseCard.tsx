@@ -32,11 +32,11 @@ export default function CourseCard() {
       : Courses.filter((c) => c.status === activeTab);
 
   return (
-    <section className="relative py-24 px-6 lg:px-20 bg-gradient-to-br from-black via-neutral-900 to-black text-white">
-      
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-20 bg-gradient-to-br from-black via-neutral-900 to-black text-white">
+
       {/* Section Title */}
-      <div className="text-center mb-14">
-        <h2 className="text-4xl md:text-5xl font-extrabold">
+      <div className="text-center mb-10 sm:mb-12 lg:mb-14">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
           Explore Our <span className="text-orange-500">Courses</span>
         </h2>
         <p className="text-gray-400 mt-4">
@@ -63,7 +63,7 @@ export default function CourseCard() {
 
 
       {/* Course Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
         {filteredCourses.map((course, index) => (
           <motion.div
             key={course.id}
@@ -74,7 +74,7 @@ export default function CourseCard() {
             className="relative group rounded-3xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl"
           >
             {/* Image */}
-            <div className="relative h-60 overflow-hidden">
+            <div className="relative h-48 sm:h-56 lg:h-60 overflow-hidden">
               <Image
                 src={course.thumbnail}
                 alt={course.title}

@@ -52,7 +52,7 @@ const programs = [
 export default function Programs() {
 
   return (
-    <section className="min-h-screen bg-black text-white px-6 py-20 overflow-hidden">
+    <section className="min-h-screen bg-black text-white px-6 py-14 sm:py-16 lg:py-20 overflow-hidden">
       {/* HERO */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
@@ -60,7 +60,7 @@ export default function Programs() {
         transition={{ duration: 0.6 }}
         className="text-center max-w-3xl mx-auto"
       >
-        <h1 className="text-5xl md:text-6xl font-bold">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
           Community Explore Programs
         </h1>
         <p className="mt-6 text-gray-400 text-lg">
@@ -185,7 +185,7 @@ export default function Programs() {
               />
 
               <div className="relative z-10">
-                <Icon className="text-orange-500 mb-6" size={40} />
+                <Icon className="text-orange-500 mb-6 w-8 h-8 sm:w-10 sm:h-10" />
 
                 <h3 className="text-2xl font-semibold mb-4">{program.title}</h3>
 

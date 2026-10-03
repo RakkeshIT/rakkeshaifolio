@@ -76,7 +76,7 @@ export default function CourseDetailsPage() {
         <div className="min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-50">
 
             {/* HERO SECTION */}
-            <div className="relative w-full h-[500px]">
+            <div className="relative w-full h-[380px] sm:h-[440px] md:h-[500px]">
                 {course.thumbnail ? (
                     <Image
                         src={course.thumbnail}
@@ -93,12 +93,12 @@ export default function CourseDetailsPage() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40 flex items-center">
-                    <div className="max-w-6xl mx-auto px-8 text-white">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-white">
                         <Link href="/course" className="underline text-sm hover:text-orange-400 transition">
                             ← Back to Courses
                         </Link>
 
-                        <h1 className="text-5xl font-bold mt-4 animate-fadeIn">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 animate-fadeIn break-words">
                             {displayValue(course.title)}
                         </h1>
 
@@ -141,7 +141,7 @@ export default function CourseDetailsPage() {
             </div>
 
             {/* CONTENT SECTION */}
-            <div className="max-w-6xl mx-auto px-8 py-16 space-y-16">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16 space-y-10 md:space-y-16">
 
                 {/* DESCRIPTION */}
                 <motion.section
@@ -149,8 +149,8 @@ export default function CourseDetailsPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl font-bold mb-6">About This Course</h2>
-                    <div className="bg-white shadow-xl rounded-2xl p-10 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-6">About This Course</h2>
+                    <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 md:p-10 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
                         {displayValue(course.description)}
                     </div>
                 </motion.section>
@@ -161,7 +161,7 @@ export default function CourseDetailsPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <h2 className="text-3xl font-bold mb-8">Course Details</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-8">Course Details</h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         <DetailCard label="Category" value={course.category} />
                         <DetailCard label="Level" value={course.level} />
@@ -184,14 +184,14 @@ export default function CourseDetailsPage() {
                 >
                     <div className="grid md:grid-cols-2 gap-10">
                         <div>
-                            <h2 className="text-3xl font-bold mb-4">What You Will Learn</h2>
-                            <div className="bg-white shadow-lg rounded-xl p-8 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
+                            <h2 className="text-2xl sm:text-3xl font-bold mb-4">What You Will Learn</h2>
+                            <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
                                 {displayValue(course.learnings)}
                             </div>
                         </div>
                         <div>
-                            <h2 className="text-3xl font-bold mb-4">Requirements</h2>
-                            <div className="bg-white shadow-lg rounded-xl p-8 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
+                            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Requirements</h2>
+                            <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
                                 {displayValue(course.requirements)}
                             </div>
                         </div>
@@ -205,8 +205,8 @@ export default function CourseDetailsPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <h2 className="text-3xl font-bold mb-6">Eligibility</h2>
-                        <div className="bg-white shadow-lg rounded-xl p-8 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Eligibility</h2>
+                        <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 leading-relaxed text-gray-700 whitespace-pre-line hover:shadow-2xl transition">
                             {course.eligibility}
                         </div>
                     </motion.section>
@@ -219,7 +219,7 @@ export default function CourseDetailsPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.7 }}
                     >
-                        <h2 className="text-3xl font-bold mb-8">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-8">
                             Program Schedule
                         </h2>
 
@@ -391,8 +391,8 @@ export default function CourseDetailsPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                    <h2 className="text-3xl font-bold mb-8">Instructor</h2>
-                    <div className="bg-white shadow-2xl rounded-3xl p-10 grid md:grid-cols-2 gap-8 items-center hover:scale-105 transition-transform duration-500">
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-8">Instructor</h2>
+                    <div className="bg-white shadow-2xl rounded-3xl p-6 sm:p-8 md:p-10 grid md:grid-cols-2 gap-8 items-center hover:scale-105 transition-transform duration-500">
                         <div className="relative w-full h-80 md:h-100 lg:h-[600px]">
                             {course.instructor_image_url ? (
                                 <Image

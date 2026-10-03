@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title:"Rakkesh developer portfolio",
+  title: "Rakkesh developer portfolio",
   description:
     "Rakkesh developer portfolio website showcasing skills and projects.",
   icons: {
@@ -32,8 +32,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ClickSpark sparkColor="red">
-          <main>
-          {children}
+          <main className="overflow-x-hidden">
+            {children}
           </main>
         </ClickSpark>
       </body>

@@ -25,10 +25,10 @@ export default function TechTalkDetails() {
   if (!talk) return <div className="p-20 text-white">Talk Not Found</div>;
 
   return (
-    <section className="relative bg-black text-white py-24 overflow-hidden ">
+    <section className="relative bg-black text-white py-16 sm:py-20 lg:py-24 overflow-hidden ">
       {/* Background Glow */}
-      <div className="absolute w-[500px] h-[500px] bg-orange-600/20 blur-[140px] rounded-full top-[-100px] right-[-100px]" />
-      <div className="absolute w-[400px] h-[400px] bg-purple-600/20 blur-[120px] rounded-full bottom-[-100px] left-[-100px]" />
+      <div className="absolute w-[220px] h-[220px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] bg-orange-600/20 blur-[70px] sm:blur-[110px] lg:blur-[140px] rounded-full top-[-60px] right-[-60px] lg:top-[-100px] lg:right-[-100px]" />
+      <div className="absolute w-[180px] h-[180px] sm:w-[280px] sm:h-[280px] lg:w-[400px] lg:h-[400px] bg-purple-600/20 blur-[60px] sm:blur-[90px] lg:blur-[120px] rounded-full bottom-[-60px] left-[-60px] lg:bottom-[-100px] lg:left-[-100px]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <Link href="/experience" className="underline text-blue-300 ">
@@ -43,15 +43,15 @@ export default function TechTalkDetails() {
         </div>
 
         <div className="mb-20">
-          <h2 className="text-3xl font-semibold mb-10">Event Highlights</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-10">Event Highlights</h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Students */}
-            <div className="relative border border-neutral-800 rounded-2xl p-8 text-center overflow-hidden group">
+            <div className="relative border border-neutral-800 rounded-2xl p-6 sm:p-8 text-center overflow-hidden group">
               {/* Glow */}
               <div className="absolute w-40 h-40 bg-orange-600/20 blur-3xl rounded-full -top-10 -right-10 group-hover:bg-orange-600/30 transition" />
 
-              <h3 className="text-5xl font-bold text-orange-500 relative z-10">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-orange-500 relative z-10">
                 {talk.highlights.studentCount}+
               </h3>
               <p className="text-gray-400 mt-3 relative z-10">
@@ -60,10 +60,10 @@ export default function TechTalkDetails() {
             </div>
 
             {/* Duration */}
-            <div className="relative  border border-neutral-800 rounded-2xl p-8 text-center overflow-hidden group">
+            <div className="relative  border border-neutral-800 rounded-2xl p-6 sm:p-8 text-center overflow-hidden group">
               <div className="absolute w-40 h-40 bg-purple-600/20 blur-3xl rounded-full -top-10 -right-10 group-hover:bg-purple-600/30 transition" />
 
-              <h3 className="text-5xl font-bold text-purple-500 relative z-10">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-500 relative z-10">
                 {talk.highlights.hours} Hrs
               </h3>
               <p className="text-gray-400 mt-3 relative z-10">
@@ -72,7 +72,7 @@ export default function TechTalkDetails() {
             </div>
 
             {/* Topic */}
-            <div className="relative  border border-neutral-800 rounded-2xl p-8 text-center overflow-hidden group">
+            <div className="relative  border border-neutral-800 rounded-2xl p-6 sm:p-8 text-center overflow-hidden group">
               <div className="absolute w-40 h-40 bg-blue-600/20 blur-3xl rounded-full -top-10 -right-10 group-hover:bg-blue-600/30 transition" />
 
               <h3 className="text-2xl font-semibold text-blue-400 relative z-10">
@@ -86,7 +86,7 @@ export default function TechTalkDetails() {
         </div>
 
         {/* Description Card */}
-        <div className="bg-neutral-900/60 border border-neutral-800 backdrop-blur-xl p-8 rounded-2xl mb-16">
+        <div className="bg-neutral-900/60 border border-neutral-800 backdrop-blur-xl p-5 sm:p-8 rounded-2xl mb-16">
           <p className="text-gray-300 leading-relaxed">{talk.description}</p>
         </div>
 
@@ -101,14 +101,14 @@ export default function TechTalkDetails() {
         {/* Feedback Videos */}
         {talk.feedbackVideos && (
           <>    
-            <h2 className="text-3xl font-semibold mb-8">Feedback</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-8">Feedback</h2>
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
               {talk.feedbackVideos.map((video, index) => (
                 <div
                   key={index}
                   className="bg-neutral-900 border-4 border-white overflow-hidden shadow-lg"
                 >
-                  <iframe src={video} className="w-full h-72" allowFullScreen />
+                  <iframe src={video} className="w-full h-56 sm:h-72" allowFullScreen />
                 </div>
               ))}
             </div>
