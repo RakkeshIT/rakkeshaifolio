@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 import jobSearchCover from "../../assets/blogs/job-search-cover.png";
+import pffr from "../../assets/blogs/Proof-First Fresher Resume Guide.webp";
 
 export type BlogKit = {
     label: string;
@@ -920,6 +921,949 @@ You can follow my channels for more practical resources, templates, courses, web
                     {
                         label: "Instagram",
                         url: "https://www.instagram.com/vairaacoders?stkn=bnQ5NTIycTNyenMw",
+                    },
+                    {
+                        label: "LinkedIn",
+                        url: "https://www.linkedin.com/in/rakkeshit/",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 2,
+        title:
+            "PFFR: A Proof-First Fresher Resume That Shows What You Can Actually Build",
+        slug:
+            "pffr-proof-first-fresher-resume-format-for-developers",
+        description:
+            "A practical Proof-First Fresher Resume (PFFR) approach for freshers and entry-level developers, covering ATS-friendly structure, project-focused resume writing, technical proof, skills, internships, achievements, and targeted resumes.",
+        category: "Career",
+        tags: [
+            "PFFR",
+            "Resume",
+            "Fresher Resume",
+            "ATS Resume",
+            "Career",
+            "Freshers",
+            "Resume Tips",
+            "Projects",
+            "Full Stack Developer",
+            "Job Search",
+            "Interview"
+        ],
+        author: {
+            name: "Rakkesh",
+            role: "Full Stack Developer",
+        },
+        publishedAt: "2026-10-08",
+        readingTime: "10 min read",
+        coverImage: pffr,
+        featured: true,
+        content: [
+            {
+                type: "intro",
+
+                title: "Stop Saying You Have Skills. Start Proving Them.",
+
+                content: `
+If you are a fresher or an entry-level developer looking for your first software development opportunity, creating a resume can be confusing.
+
+You may know HTML, CSS, JavaScript, React, Node.js, Python, databases, APIs, or AI tools.
+
+But there is one important question a recruiter may have:
+
+"What have you actually built with these skills?"
+
+Many fresher resumes focus heavily on:
+
+- Career objectives
+- Education
+- Skill lists
+- Certifications
+- Generic statements
+
+The problem is that these things don't always prove that you can actually use your technical knowledge.
+
+This is why I created the idea of:
+
+PFFR — Proof-First Fresher Resume.
+
+The principle is simple:
+
+Don't ask recruiters to believe that you have technical skills.
+
+Show them evidence that you have applied those skills.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "What Is PFFR?",
+
+                content: `
+PFFR stands for Proof-First Fresher Resume.
+
+It is a project-driven and ATS-friendly resume approach designed specifically for freshers and entry-level candidates.
+
+The main idea is to move the focus from:
+
+"I know these technologies."
+
+to:
+
+"I have used these technologies to build something."
+
+A strong fresher resume should make it easy for both an ATS and a recruiter to understand:
+
+- Who you are
+- What role you are targeting
+- What technologies you know
+- What you have built
+- How you applied those technologies
+- What technical problems you solved
+- What evidence you can provide
+            `,
+            },
+
+            {
+                type: "quote",
+
+                content: `
+Don't ask the recruiter to believe that you have skills.
+
+Show evidence that you applied them.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Why I Created the PFFR Approach",
+
+                content: `
+One common problem I see in fresher resumes is that candidates list many technologies without showing how they used them.
+
+For example:
+
+"React, Node.js, MongoDB, Express, JavaScript."
+
+This tells the recruiter what the candidate claims to know.
+
+But it doesn't answer:
+
+What did you build?
+
+Did you create APIs?
+
+Did you connect a database?
+
+Did you implement authentication?
+
+Did you deploy the project?
+
+Did you solve a real problem?
+
+A proof-first resume tries to answer these questions.
+
+Instead of simply listing skills, it connects skills with projects and practical implementation.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "The PFFR Resume Structure",
+
+                content: `
+A recommended PFFR resume structure is:
+
+Header
+↓
+Professional Summary
+↓
+Featured Projects
+↓
+Technical Skills
+↓
+Internship Experience
+↓
+Achievements & Technical Activities
+↓
+Certifications
+↓
+Education
+↓
+Languages
+
+The most important change is that strong projects appear near the top of the resume.
+
+For a fresher, projects can provide practical evidence when professional experience is limited.
+            `,
+            },
+
+            {
+                type: "subheading",
+
+                title: "1. Header",
+
+                content: `
+Your header should immediately tell the recruiter who you are and how they can contact you.
+
+Include:
+
+- Full name
+- Target role
+- City / Location
+- Phone number
+- Professional email
+- LinkedIn
+- GitHub
+- Portfolio
+
+For example:
+
+Rakkesh Kumar
+Full Stack Developer
+Chennai, Tamil Nadu, India
+
+Email
+Phone
+LinkedIn
+GitHub
+Portfolio
+
+Avoid unnecessary information such as a complete residential address.
+
+Keep the contact information simple and easy to read.
+            `,
+            },
+
+            {
+                type: "subheading",
+
+                title: "2. Professional Summary",
+
+                content: `
+Keep your professional summary short.
+
+Around 3–4 lines is usually enough.
+
+Your summary should answer:
+
+Who are you?
+
+What technologies do you work with?
+
+What have you built?
+
+What role are you targeting?
+
+For example:
+
+"Full Stack Developer with hands-on experience building web applications using React, Next.js, Node.js, Express and MongoDB. Experienced in developing REST APIs, authentication systems, database-driven applications and AI-powered features."
+
+Avoid generic statements such as:
+
+"I am a hardworking and passionate individual looking for a challenging opportunity."
+
+Instead, focus on your technical identity and evidence.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Featured Projects — The Core of PFFR",
+
+                content: `
+For freshers, projects are one of the strongest ways to demonstrate technical ability.
+
+Feature your 2–3 strongest and most relevant projects.
+
+Each project should answer four questions:
+
+1. What problem were you solving?
+
+2. What did you build?
+
+3. How did you build it?
+
+4. What was the result?
+
+A strong project description should include:
+
+- Project name
+- Role
+- Technology stack
+- Problem or goal
+- Solution
+- Technical implementation
+- Result or impact
+- GitHub link
+- Live demo link
+
+Don't write:
+
+"Created a React project."
+
+Write something like:
+
+"Built a task management platform using React and Node.js, integrated REST APIs for task creation and updates, and implemented user authentication."
+            `,
+            },
+
+            {
+                type: "subheading",
+
+                title: "The PFFR Project Writing Formula",
+
+                content: `
+Use this formula when writing project bullets:
+
+Action Verb + What You Built + Technology + Result / Impact
+
+Examples:
+
+Built a full-stack task management platform using React, Node.js and MongoDB with REST API integration.
+
+Developed an AI-powered chatbot using an LLM API and implemented contextual responses through a Node.js backend.
+
+Created reusable React components and integrated REST APIs to support dynamic application workflows.
+
+The important part is not using impressive words.
+
+The important part is explaining what you actually did.
+            `,
+            },
+
+            {
+                type: "subheading",
+
+                title: "Weak vs Strong Project Description",
+
+                content: `
+Weak:
+
+"Worked on a React project."
+
+Strong:
+
+"Built reusable React components for a task management platform and integrated REST APIs for task creation and updates."
+
+Weak:
+
+"Created an AI chatbot."
+
+Strong:
+
+"Built an AI-powered chatbot using an LLM API and implemented contextual responses through a Node.js backend."
+
+The strong versions provide technical evidence.
+
+That is the core idea behind PFFR.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Technical Skills",
+
+                content: `
+Your technical skills section should be easy for an ATS and recruiter to scan.
+
+Group your skills into categories.
+
+For example:
+
+Languages:
+JavaScript, TypeScript, Python
+
+Frontend:
+HTML, CSS, React, Next.js
+
+Backend:
+Node.js, Express.js, NestJS, REST APIs
+
+Database:
+MongoDB, PostgreSQL, Prisma
+
+AI / ML:
+LLM APIs, AI Integration, RAG
+
+Tools:
+Git, GitHub, Postman
+
+Only list technologies that you can actually explain during an interview.
+
+Do not add a technology just because it appears in a job description.
+            `,
+            },
+
+            {
+                type: "subheading",
+
+                title: "Core Technical Skills",
+
+                content: `
+Don't limit your resume to technology names.
+
+Technical concepts are also important.
+
+Examples:
+
+- OOP
+- REST APIs
+- Authentication
+- Database Design
+- Debugging
+- Testing
+- Git
+- Problem Solving
+- DSA
+- DBMS
+- System Design Fundamentals
+
+These concepts can demonstrate your understanding beyond simply knowing a framework.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Internship Experience",
+
+                content: `
+If you have an internship or relevant professional training experience, include it.
+
+Use reverse chronological order.
+
+For each experience, focus on:
+
+Action
++
+Work
++
+Technology
++
+Result
+
+Instead of:
+
+"Worked on frontend development."
+
+Write:
+
+"Developed reusable React components and integrated REST APIs to support application workflows."
+
+Your bullets should describe actual work you performed.
+
+Never invent responsibilities or achievements.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Achievements & Technical Activities",
+
+                content: `
+Use this section to show additional technical proof.
+
+Examples include:
+
+- LeetCode problems solved
+- HackerRank achievements
+- Coding competitions
+- Hackathons
+- Open-source contributions
+- Technical leadership
+- Developer communities
+- Technical projects
+
+For example:
+
+"Solved 250+ LeetCode problems."
+
+or:
+
+"Contributed to an open-source React component library."
+
+Only include achievements that are real and verifiable.
+
+Don't add weak participation items just to make the resume longer.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Certifications",
+
+                content: `
+Certifications are optional.
+
+Prioritize certifications that are relevant to your target role.
+
+For example:
+
+- React
+- JavaScript
+- Python
+- Cloud
+- Database
+- AI
+- Backend development
+
+Avoid filling your resume with unrelated webinar or participation certificates.
+
+A strong project can often provide more practical evidence than a collection of generic certificates.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Education",
+
+                content: `
+Education is still important for freshers.
+
+Include:
+
+- Degree
+- Institution
+- Location
+- Graduation year
+- CGPA / Percentage when it strengthens your profile
+
+For example:
+
+Master of Computer Applications
+University Name
+Chennai, India
+2025
+CGPA: 8.2
+
+For candidates with multiple qualifications, use reverse chronological order.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "ATS-Friendly Resume Design",
+
+                content: `
+A good resume should not only contain strong content.
+
+It should also be easy for an ATS to parse.
+
+Recommended design:
+
+- Single-column layout
+- Standard headings
+- Standard fonts
+- Selectable text
+- Consistent formatting
+- Clear section hierarchy
+- Natural keywords
+- Simple bullet points
+- White background
+
+Avoid:
+
+- Skill bars
+- Charts
+- Decorative graphics
+- Profile photos
+- Logos
+- Complex tables
+- Multiple columns
+- Important text inside images
+
+Your resume should be designed for readability first.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "One Page or Two Pages?",
+
+                content: `
+For most freshers, one page should be the default.
+
+Use one page when you can communicate your strongest evidence clearly.
+
+A second page can make sense when you have:
+
+- Meaningful internships
+- Strong technical projects
+- Significant achievements
+- Relevant professional experience
+
+Don't add a second page simply to make your resume look bigger.
+
+More content does not automatically mean a stronger resume.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "PFFR Resume as JSON Data",
+
+                content: `
+If you are building a portfolio, resume builder, or developer profile platform, the PFFR structure can also be represented as structured JSON.
+
+This makes the resume content reusable across:
+
+- Portfolio websites
+- Resume builders
+- Job platforms
+- Developer profiles
+- PDF resume generators
+- AI resume tools
+
+A simplified structure looks like this:
+            `,
+            },
+
+            {
+                type: "code",
+
+                language: "json",
+
+                content: `
+{
+  "personal": {
+    "name": "Your Name",
+    "targetRole": "Full Stack Developer",
+    "location": "Chennai, Tamil Nadu, India",
+    "email": "your@email.com",
+    "phone": "+91XXXXXXXXXX",
+    "linkedin": "https://linkedin.com/in/username",
+    "github": "https://github.com/username",
+    "portfolio": "https://yourportfolio.com"
+  },
+
+  "summary": {
+    "text": "Full Stack Developer with hands-on experience building web applications using React, Node.js and MongoDB."
+  },
+
+  "projects": [
+    {
+      "title": "Project Name",
+      "role": "Full Stack Developer",
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+      "problem": "Describe the problem.",
+      "solution": "Describe what you built.",
+      "implementation": [
+        "Built frontend",
+        "Developed REST APIs",
+        "Implemented authentication",
+        "Connected database"
+      ],
+      "impact": "Describe the actual result.",
+      "github": "https://github.com/username/project",
+      "liveDemo": "https://project.vercel.app"
+    }
+  ],
+
+  "technicalSkills": {
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML",
+      "CSS",
+      "React",
+      "Next.js"
+    ],
+    "backend": [
+      "Node.js",
+      "Express",
+      "NestJS"
+    ],
+    "database": [
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "ai": [
+      "LLM APIs",
+      "AI Integration",
+      "RAG"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Postman"
+    ]
+  },
+
+  "experience": [],
+
+  "achievements": [],
+
+  "certifications": [],
+
+  "education": [],
+
+  "languages": []
+}
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Target Your Resume to the Job",
+
+                content: `
+PFFR is not a single fixed resume.
+
+You can create targeted versions for different roles without changing the truth of your profile.
+
+For a MERN / Full Stack Developer role, emphasize:
+
+React
+Next.js
+Node.js
+Express
+MongoDB
+REST APIs
+
+For a React / Frontend Developer role, emphasize:
+
+React
+Next.js
+TypeScript
+UI
+Performance
+Accessibility
+
+For a Backend Developer role, emphasize:
+
+Node.js
+NestJS
+APIs
+Databases
+Authentication
+Testing
+
+For an AI Full Stack Developer role, emphasize:
+
+LLM APIs
+AI Integrations
+RAG
+Backend
+React
+AI Projects
+
+The goal is not to create fake experience.
+
+The goal is to highlight the most relevant parts of your real experience.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "Never Fake Proof",
+
+                content: `
+This is one of the most important rules of PFFR.
+
+Never invent:
+
+- Projects
+- Metrics
+- Skills
+- Certifications
+- Achievements
+- Work experience
+- Technical contributions
+
+If you built it, show it.
+
+If you deployed it, link it.
+
+If you solved coding problems, show the actual number.
+
+If you contributed to open source, show the contribution.
+
+If you don't have a measurable result, don't create a fake number.
+
+A resume should make your real ability visible.
+
+It should not create an artificial version of your career.
+            `,
+            },
+
+            {
+                type: "quote",
+
+                content: `
+Skills tell recruiters what you know.
+
+Projects prove that you can use them.
+
+Achievements provide additional evidence.
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "The PFFR Quality Checklist",
+
+                content: `
+Before sending your resume, check the following:
+
+☐ Name and contact details are clear
+
+☐ Target role is visible
+
+☐ Summary is concise and relevant
+
+☐ 2–3 strongest projects are featured
+
+☐ Each project explains what was built
+
+☐ Technical implementation is clear
+
+☐ Technical skills use standard keywords
+
+☐ Internship is included when applicable
+
+☐ Achievements contain real technical proof
+
+☐ Certifications are relevant
+
+☐ Education is complete
+
+☐ No fake metrics or skills
+
+☐ Single-column layout is used
+
+☐ No unnecessary graphics
+
+☐ Formatting is consistent
+
+☐ Resume is targeted to the job description
+
+☐ Final PDF contains selectable text
+            `,
+            },
+
+            {
+                type: "heading",
+
+                title: "The Real Purpose of a Fresher Resume",
+
+                content: `
+Your resume is not supposed to tell your entire life story.
+
+Its job is to create enough confidence for a recruiter to take the next step.
+
+For a fresher, the strongest evidence can come from:
+
+Projects
++
+Technical Skills
++
+GitHub
++
+Live Applications
++
+Internships
++
+Technical Achievements
+
+This creates a much stronger story than simply listing technologies.
+            `,
+            },
+            {
+                type: "heading",
+
+                title: "PFFR Guide PDF",
+
+                content: `
+To make this process easier, I am also preparing some resources that you can use make your PFFR Resume.
+        `,
+            },
+
+            {
+                type: "resource",
+
+                title: "PFFR Guide",
+
+                description:
+                    "A practical resume structure designed for developers and freshers.",
+
+                link: "https://drive.google.com/file/d/1Op8Fa4P4FZEC_FB1E1J0WpjPof7gAVhg/view?usp=sharing",
+            },
+
+            {
+                type: "heading",
+
+                title: "Final Thoughts",
+
+                content: `
+If you are a fresher searching for your first developer job, don't focus only on making your resume look attractive.
+
+Focus on making your resume believable.
+
+Build real projects.
+
+Deploy them.
+
+Maintain your GitHub.
+
+Explain your technical decisions.
+
+Show what you actually built.
+
+Use your resume to connect your skills with evidence.
+
+That is the idea behind PFFR:
+
+Proof-First Fresher Resume.
+
+Don't just tell recruiters what you know.
+
+Show them what you can build.
+            `,
+            },
+
+            {
+                type: "cta",
+
+                title: "Want More Developer Career Resources?",
+
+                content: `
+I regularly share practical content about Full Stack Development, AI tools, career growth, job searching, interview preparation, resume building, and developer learning.
+
+Follow my channels for more practical resources, templates, projects, and career guidance.
+            `,
+
+                links: [
+                    {
+                        label: "YouTube",
+                        url: "https://www.youtube.com/@VairaaCoders",
+                    },
+                    {
+                        label: "Instagram",
+                        url: "https://www.instagram.com/vairaacoders",
                     },
                     {
                         label: "LinkedIn",
