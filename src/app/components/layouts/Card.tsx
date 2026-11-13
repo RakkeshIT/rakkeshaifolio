@@ -58,17 +58,28 @@ const ProjectCard = ({
         </p>
 
         <div className="mt-3 flex flex-wrap gap-2">
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-orange-600 hover:bg-orange-500 px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-white transition-colors"
+            >
+              Live Demo
+            </a>
+          )}
+
           <button
             onClick={handleViewCode}
             className="rounded-lg bg-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-black hover:bg-gray-200"
           >
-            View Project
+            View Code
           </button>
 
           {href && (
             <Link
               href={href}
-              className="rounded-lg border border-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-white"
+              className="rounded-lg border border-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-white hover:bg-white/10 transition-colors"
             >
               More Details
             </Link>

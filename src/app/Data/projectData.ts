@@ -50,4 +50,14 @@ export const ProjectMaper = [
   category: "Full Stack"
 
 },
+{
+  id: 5,
+  image: "/whiteboard.svg",
+  title: "Vairaa Whiteboard",
+  desc: "Interactive Collaborative Whiteboard Application built with React & Canvas",
+  liveLink: "https://vairaa-whiteboard.vercel.app/",
+  moreDetails: "A responsive, feature-rich web whiteboard application for sketching diagrams, brainstorming workflows, and digital freehand drawing directly in the browser.",
+  gitHubCode: "https://github.com/RakkeshIT",
+  category: "Frontend"
+},
 ];

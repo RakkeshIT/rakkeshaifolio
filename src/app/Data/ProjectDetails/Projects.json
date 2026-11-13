@@ -346,7 +346,77 @@
     "Team workspace collaboration",
     "Mobile app integration"
   ]
+},
+{
+  "id": 5,
+  "title": "Vairaa Whiteboard – Interactive Drawing & Canvas Tool",
+  "tagline": "Real-time collaborative browser canvas for sketching, diagrams, and workflow brainstorming.",
+  "description": "Vairaa Whiteboard is a lightweight, responsive browser application designed for developers, designers, and students to quickly sketch out ideas, architecture diagrams, and brainstorm concepts. Built with React and HTML5 Canvas API, it supports versatile drawing tools, shapes, custom colors, brush size toggles, and instant canvas export.",
+  "techStack": [
+    "React",
+    "HTML5 Canvas",
+    "Tailwind CSS",
+    "TypeScript",
+    "Vercel"
+  ],
+  "links": {
+    "live": "https://vairaa-whiteboard.vercel.app/",
+    "gitHubCode": "https://github.com/RakkeshIT"
+  },
+  "preview": {
+    "image": "Whiteboard",
+    "video": null
+  },
+  "overview": {
+    "problem": "Collaborators and educators often need an instant, friction-free canvas to sketch thoughts or flowcharts without heavy logins or complicated setup.",
+    "solution": "Built a clean, responsive whiteboard application allowing immediate digital sketching, geometric shapes, and instant exports directly in any browser.",
+    "goal": "Deliver a fast, accessible, and intuitive whiteboard tool optimized for creative ideation and design thinking."
+  },
+  "projectInfo": {
+    "role": "Frontend Developer",
+    "duration": "2025",
+    "type": "Personal Project / Product",
+    "status": "Completed"
+  },
+  "features": [
+    "Smooth freehand drawing with variable brush sizes and color palette",
+    "Geometric shapes (rectangles, circles, lines, arrows)",
+    "Eraser and one-click canvas clear controls",
+    "Undo / Redo action history",
+    "Download and export sketches as image files",
+    "Responsive canvas interface with touch support"
+  ],
+  "architecture": {
+    "description": "The application is built on top of React with optimized Canvas 2D rendering contexts for latency-free stroke drawing and state synchronization.",
+    "flow": [
+      "User interacts with Canvas viewport",
+      "Event listeners capture mouse/pointer coordinates",
+      "Canvas 2D context renders path strokes and shapes",
+      "History state manages undo and redo stack",
+      "Canvas dataURL exported to image file on download"
+    ]
+  },
+  "challenges": [
+    {
+      "problem": "Ensuring smooth 60fps stroke rendering without lag during fast mouse movements",
+      "solution": "Optimized event handlers and batched path drawing instructions using requestAnimationFrame"
+    },
+    {
+      "problem": "Maintaining crisp canvas resolution across high-DPI (Retina) displays",
+      "solution": "Scaled canvas backing store by window.devicePixelRatio while keeping CSS dimensions constant"
+    }
+  ],
+  "results": {
+    "metrics": [
+      "Sub-10ms drawing response latency",
+      "Zero dependencies for canvas core rendering",
+      "Instant loading time on Vercel Edge network"
+    ]
+  },
+  "futureImprovements": [
+    "Multiplayer real-time collaboration with WebSockets",
+    "Cloud board saving and sharing via unique URL",
+    "Sticky notes and rich text elements"
+  ]
 }
-
-
 ]

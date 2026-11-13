@@ -40,6 +40,13 @@ type WorksLink = {
   href: string;
 };
 
+type ProductLink = {
+  label: string;
+  href: string;
+  desc?: string;
+  isExternal?: boolean;
+};
+
 /* =========================
    NAVIGATION DATA
 ========================= */
@@ -97,6 +104,15 @@ const worksLinks: WorksLink[] = [
   },
 ];
 
+const productLinks: ProductLink[] = [
+  {
+    label: "Whiteboard",
+    href: "https://vairaa-whiteboard.vercel.app/",
+    desc: "Interactive drawing & brainstorming canvas",
+    isExternal: true,
+  },
+];
+
 /* =========================
    COMPONENT
 ========================= */
@@ -106,6 +122,7 @@ const HeaderNavbar = ({ section }: { section: Props }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isWorksOpen, setIsWorksOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isContact, setIsContact] = useState(false);
 
   /* =========================
@@ -384,6 +401,59 @@ const HeaderNavbar = ({ section }: { section: Props }) => {
                   </ul>
                 </li>
 
+                {/* =========================
+                  PRODUCTS DROPDOWN
+              ========================= */}
+
+                <li className="relative group">
+                  <button className="text-heading hover:underline flex items-center gap-1">
+                    Products
+                  </button>
+
+                  <ul
+                    className="
+                    absolute left-0 mt-6 w-64
+                    bg-white/95 backdrop-blur-md
+                    border border-gray-200
+                    rounded-md shadow-lg
+                    opacity-0 invisible
+                    group-hover:opacity-100
+                    group-hover:visible
+                    transition-all duration-300
+                    ease-in-out
+                    transform -translate-y-2
+                    group-hover:translate-y-0
+                    z-50
+                    p-1.5
+                  "
+                  >
+                    {productLinks.map((item) => (
+                      <li key={item.href}>
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between px-3.5 py-2.5 text-sm text-heading hover:bg-gray-100 rounded-md transition-colors group/prod"
+                        >
+                          <div>
+                            <span className="font-semibold block text-gray-900 group-hover/prod:text-orange-600 transition-colors">
+                              {item.label}
+                            </span>
+                            {item.desc && (
+                              <span className="text-xs text-gray-500 block mt-0.5">
+                                {item.desc}
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-xs text-gray-400 group-hover/prod:text-orange-600 transition-colors ml-2">
+                            ↗
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+
                 {/* Contact */}
 
                 <li>
@@ -541,6 +611,91 @@ const HeaderNavbar = ({ section }: { section: Props }) => {
                             >
                               {item.label}
                             </Link>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* =========================
+                    MOBILE PRODUCTS
+                ========================= */}
+
+                <li>
+                  <button
+                    onClick={() => setIsProductsOpen(!isProductsOpen)}
+                    className="
+                      flex w-full
+                      items-center justify-between
+                      rounded-md px-3 py-2
+                      text-heading
+                      hover:bg-neutral-100
+                      transition
+                    "
+                  >
+                    <span>Products</span>
+
+                    <motion.span
+                      animate={{
+                        rotate: isProductsOpen ? 180 : 0,
+                      }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      ▾
+                    </motion.span>
+                  </button>
+
+                  <AnimatePresence>
+                    {isProductsOpen && (
+                      <motion.ul
+                        initial={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        animate={{
+                          height: "auto",
+                          opacity: 1,
+                        }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        transition={{
+                          duration: 0.25,
+                        }}
+                        className="
+                          ml-4 mt-2
+                          flex flex-col
+                          overflow-hidden
+                          border-l
+                          border-neutral-200
+                        "
+                      >
+                        {productLinks.map((item) => (
+                          <li key={item.href}>
+                            <a
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setIsMenuOpen(false)}
+                              className="
+                                flex items-center justify-between px-4 py-2
+                                text-sm text-heading
+                                hover:bg-neutral-100
+                                rounded-md
+                              "
+                            >
+                              <div>
+                                <span className="font-medium block">{item.label}</span>
+                                {item.desc && (
+                                  <span className="text-xs text-neutral-500 block">
+                                    {item.desc}
+                                  </span>
+                                )}
+                              </div>
+                              <span className="text-xs text-neutral-400">↗</span>
+                            </a>
                           </li>
                         ))}
                       </motion.ul>
